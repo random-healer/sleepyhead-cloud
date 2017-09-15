@@ -1,4 +1,12 @@
+Project: SleepyHead [Cloud Edition]
+-------------
+This is a personal learning exercise to attempt to modify the SleepyHead application to run on the cloud.
+
+Forked from https://gitlab.com/sleepyhead/sleepyhead-code/.
+
+
 SleepyHead v1.0 branch
+-------------
 
 SleepyHead is cross platform, opensource sleep tracking program for reviewing CPAP and Oximetry data, 
 which are devices used in the treatment of Sleep Disorders like Obstructive Sleep Apnea.
