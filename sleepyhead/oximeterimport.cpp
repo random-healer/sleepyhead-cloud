@@ -12,6 +12,8 @@
 #include <QStandardPaths>
 #include <QDesktopServices>
 
+#include "Common/DateTimeUtils.h"
+
 #include "Graphs/gYAxis.h"
 #include "Graphs/gXAxis.h"
 
@@ -26,7 +28,8 @@ extern MainWindow * mainwin;
 #include "SleepLib/loader_plugins/cms50f37_loader.h"
 #include "SleepLib/loader_plugins/md300w1_loader.h"
 
-Qt::DayOfWeek firstDayOfWeekFromLocale();
+using namespace SleepyHead::Common;
+
 QList<SerialOximeter *> GetOxiLoaders();
 
 OximeterImport::OximeterImport(QWidget *parent) :
@@ -67,7 +70,7 @@ OximeterImport::OximeterImport(QWidget *parent) :
     ui->calendarWidget->setWeekdayTextFormat(Qt::Saturday, format);
     ui->calendarWidget->setWeekdayTextFormat(Qt::Sunday, format);
     ui->calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);
-    Qt::DayOfWeek dow=firstDayOfWeekFromLocale();
+	Qt::DayOfWeek dow = DateTimeUtils::firstDayOfWeekFromLocale();
     ui->calendarWidget->setFirstDayOfWeek(dow);
 
     ui->dateTimeEdit->setMinimumHeight(ui->dateTimeEdit->height() + 10);

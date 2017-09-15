@@ -32,6 +32,7 @@
 #include <QPushButton>
 #include <QCalendarWidget>
 
+#include "Common/DateTimeUtils.h"
 #include "Common/GraphicsEngine.h"
 
 #include "common_gui.h"
@@ -159,7 +160,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTextCharFormat format = ui->statStartDate->calendarWidget()->weekdayTextFormat(Qt::Saturday);
     format.setForeground(QBrush(Qt::black, Qt::SolidPattern));
-    Qt::DayOfWeek dow=firstDayOfWeekFromLocale();
+	Qt::DayOfWeek dow = DateTimeUtils::firstDayOfWeekFromLocale();
     ui->statStartDate->calendarWidget()->setWeekdayTextFormat(Qt::Saturday, format);
     ui->statStartDate->calendarWidget()->setWeekdayTextFormat(Qt::Sunday, format);
     ui->statStartDate->calendarWidget()->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader);

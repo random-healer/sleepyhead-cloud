@@ -18,6 +18,10 @@
 #include "ui_exportcsv.h"
 #include "mainwindow.h"
 
+#include "Common/DateTimeUtils.h"
+
+using namespace SleepyHead::Common;
+
 extern MainWindow *mainwin;
 
 ExportCSV::ExportCSV(QWidget *parent) :
@@ -46,7 +50,7 @@ ExportCSV::ExportCSV(QWidget *parent) :
     ui->endDate->calendarWidget()->setWeekdayTextFormat(Qt::Saturday, format);
     ui->endDate->calendarWidget()->setWeekdayTextFormat(Qt::Sunday, format);
 
-    Qt::DayOfWeek dow = firstDayOfWeekFromLocale();
+	Qt::DayOfWeek dow = DateTimeUtils::firstDayOfWeekFromLocale();
 
     ui->startDate->calendarWidget()->setFirstDayOfWeek(dow);
     ui->endDate->calendarWidget()->setFirstDayOfWeek(dow);

@@ -14,6 +14,8 @@
 #include <QMessageBox>
 #include <QApplication>
 
+#include "Common/FlagColors.h"
+
 #include "common.h"
 #include "schema.h"
 #include "common_gui.h"

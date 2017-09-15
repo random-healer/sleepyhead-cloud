@@ -25,6 +25,7 @@
 //#include <QPrinter>
 //#include <QProgressBar>
 
+#include "Common/DateTimeUtils.h"
 #include "Common/GraphName.h"
 
 #include "daily.h"
@@ -375,7 +376,7 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
     ui->calendar->setWeekdayTextFormat(Qt::Saturday, format);
     ui->calendar->setWeekdayTextFormat(Qt::Sunday, format);
 
-    Qt::DayOfWeek dow=firstDayOfWeekFromLocale();
+	Qt::DayOfWeek dow = DateTimeUtils::firstDayOfWeekFromLocale();
 
     ui->calendar->setFirstDayOfWeek(dow);
 

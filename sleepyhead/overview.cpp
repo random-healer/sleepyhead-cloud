@@ -16,6 +16,7 @@
 #include <QMessageBox>
 //#include <QProgressBar>
 
+#include "Common/DateTimeUtils.h"
 #include "Common/GraphName.h"
 
 #include "SleepLib/profiles.h"
@@ -50,7 +51,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
     ui->dateStart->setDisplayFormat(shortformat);
     ui->dateEnd->setDisplayFormat(shortformat);
 
-    Qt::DayOfWeek dow = firstDayOfWeekFromLocale();
+	Qt::DayOfWeek dow = DateTimeUtils::firstDayOfWeekFromLocale();
 
     ui->dateStart->calendarWidget()->setFirstDayOfWeek(dow);
     ui->dateEnd->calendarWidget()->setFirstDayOfWeek(dow);
