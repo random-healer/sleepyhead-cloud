@@ -2204,8 +2204,8 @@ bool PRS1Import::ParseSummaryF0V6()
     // first, verify that this dataSize is where we expect
     //     each var pair in headerblock should be (indexByte, valueByte)
     if ( 0x01 != summary->m_headerblock[1 * 2] ) {
+		qDebug() << "PRS1Loader::ParseSummaryF0V6=" << "Bad datablock length";
         return false;  //nope, not here
-        qDebug() << "PRS1Loader::ParseSummaryF0V6=" << "Bad datablock length";
     }
     int dataBlockSize = summary->m_headerblock[1 * 2 + 1];
     //int zero = 0;

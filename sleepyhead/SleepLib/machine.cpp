@@ -821,7 +821,7 @@ void SaveTask::run()
 
 void Machine::queTask(ImportTask * task)
 {
-    if (0) { //p_profile->session->multithreading()) {
+    if (/* DISABLES CODE */ (0)) { //p_profile->session->multithreading()) {
         m_tasklist.push_back(task);
         return;
     }
