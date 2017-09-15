@@ -16,6 +16,8 @@
 #include <QMessageBox>
 //#include <QProgressBar>
 
+#include "Common/GraphName.h"
+
 #include "SleepLib/profiles.h"
 #include "overview.h"
 #include "ui_overview.h"
@@ -337,7 +339,7 @@ void Overview::RebuildGraphs(bool reset)
     ahi = new gAHIChart();
     AHI->AddLayer(ahi);
 
-    UC = createGraph(STR_GRAPH_Usage, tr("Usage"), tr("Usage\n(hours)"));
+	UC = createGraph(GraphName::STR_GRAPH_Usage, tr("Usage"), tr("Usage\n(hours)"));
     UC->AddLayer(uc = new gUsageChart());
 
     STG = createGraph("New Session", tr("Session Times"), tr("Session Times"),  YT_Time);
@@ -421,9 +423,9 @@ void Overview::RebuildGraphs(bool reset)
         AHIHR->AddLayer(new gSummaryChart(CPAP_AHI, MT_CPAP));
     } */
 
-    WEIGHT = createGraph(STR_GRAPH_Weight, STR_TR_Weight, STR_TR_Weight, YT_Weight);
-    BMI = createGraph(STR_GRAPH_BMI, STR_TR_BMI, tr("Body\nMass\nIndex"));
-    ZOMBIE = createGraph(STR_GRAPH_Zombie, STR_TR_Zombie, tr("How you felt\n(0-10)"));
+	WEIGHT = createGraph(GraphName::STR_GRAPH_Weight, STR_TR_Weight, STR_TR_Weight, YT_Weight);
+	BMI = createGraph(GraphName::STR_GRAPH_BMI, STR_TR_BMI, tr("Body\nMass\nIndex"));
+	ZOMBIE = createGraph(GraphName::STR_GRAPH_Zombie, STR_TR_Zombie, tr("How you felt\n(0-10)"));
 
     if (reset) {
 //        GraphView->setDay(nullptr);

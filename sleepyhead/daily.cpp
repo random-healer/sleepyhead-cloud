@@ -25,6 +25,8 @@
 //#include <QPrinter>
 //#include <QProgressBar>
 
+#include "Common/GraphName.h"
+
 #include "daily.h"
 #include "ui_daily.h"
 
@@ -164,7 +166,7 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
 //    SG->AddLayer(new gLabelArea(nullptr),LayerLeft,gYAxis::Margin);
 //    SG->AddLayer(new gDailySummary());
 
-    graphlist[STR_GRAPH_SleepFlags] = SF = new gGraph(STR_GRAPH_SleepFlags, GraphView, STR_TR_EventFlags, STR_TR_EventFlags, default_height);
+	graphlist[GraphName::STR_GRAPH_SleepFlags] = SF = new gGraph(GraphName::STR_GRAPH_SleepFlags, GraphView, STR_TR_EventFlags, STR_TR_EventFlags, default_height);
     SF->setPinned(true);
 
     ChannelID cpapcodes[] = {
@@ -200,7 +202,7 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
 
     graphlist["AHI"] = AHI;
 
-    graphlist[STR_GRAPH_EventBreakdown] = GAHI = new gGraph(STR_GRAPH_EventBreakdown, snapGV,tr("Breakdown"),tr("events"),172);
+	graphlist[GraphName::STR_GRAPH_EventBreakdown] = GAHI = new gGraph(GraphName::STR_GRAPH_EventBreakdown, snapGV,tr("Breakdown"),tr("events"),172);
     gSegmentChart * evseg=new gSegmentChart(GST_Pie);
     evseg->AddSlice(CPAP_Hypopnea,QColor(0x40,0x40,0xff,0xff),STR_TR_H);
     evseg->AddSlice(CPAP_Apnea,QColor(0x20,0x80,0x20,0xff),STR_TR_UA);
@@ -235,8 +237,8 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
 
     // The following list contains graphs that don't have standard xgrid/yaxis labels
     QStringList skipgraph;
-    skipgraph.push_back(STR_GRAPH_EventBreakdown);
-    skipgraph.push_back(STR_GRAPH_SleepFlags);
+    skipgraph.push_back(GraphName::STR_GRAPH_EventBreakdown);
+    skipgraph.push_back(GraphName::STR_GRAPH_SleepFlags);
     skipgraph.push_back(STR_GRAPH_DailySummary);
     skipgraph.push_back(STR_GRAPH_TAP);
 
@@ -2056,7 +2058,7 @@ void Daily::on_treeWidget_itemClicked(QTreeWidgetItem *item, int column)
         double st=t-(winsize/2);
         double et=t+(winsize/2);
 
-        gGraph *g=GraphView->findGraph(STR_GRAPH_SleepFlags);
+        gGraph *g=GraphView->findGraph(GraphName::STR_GRAPH_SleepFlags);
         if (!g) return;
         if (st<g->rmin_x) {
             st=g->rmin_x;
@@ -2157,7 +2159,7 @@ void Daily::on_evViewSlider_valueChanged(int value)
 
     int winsize=value*60;
 
-    gGraph *g=GraphView->findGraph(STR_GRAPH_SleepFlags);
+	gGraph *g=GraphView->findGraph(GraphName::STR_GRAPH_SleepFlags);
     if (!g) return;
     qint64 st=g->min_x;
     qint64 et=g->max_x;
@@ -2348,7 +2350,7 @@ void Daily::on_weightSpinBox_editingFinished()
     gGraphView *gv=mainwin->getOverview()->graphView();
     gGraph *g;
     if (gv) {
-        g=gv->findGraph(STR_GRAPH_Weight);
+		g=gv->findGraph(GraphName::STR_GRAPH_Weight);
         if (g) g->setDay(nullptr);
     }
     if ((height>0) && (kg>0)) {
@@ -2357,7 +2359,7 @@ void Daily::on_weightSpinBox_editingFinished()
         ui->BMI->setVisible(true);
         journal->settings[Journal_BMI]=bmi;
         if (gv) {
-            g=gv->findGraph(STR_GRAPH_BMI);
+			g=gv->findGraph(GraphName::STR_GRAPH_BMI);
             if (g) g->setDay(nullptr);
         }
     }
@@ -2389,7 +2391,7 @@ void Daily::on_ouncesSpinBox_editingFinished()
 
     gGraph *g;
     if (mainwin->getOverview()) {
-        g=mainwin->getOverview()->graphView()->findGraph(STR_GRAPH_Weight);
+        g=mainwin->getOverview()->graphView()->findGraph(GraphName::STR_GRAPH_Weight);
         if (g) g->setDay(nullptr);
     }
 
@@ -2400,7 +2402,7 @@ void Daily::on_ouncesSpinBox_editingFinished()
 
         journal->settings[Journal_BMI]=bmi;
         if (mainwin->getOverview()) {
-            g=mainwin->getOverview()->graphView()->findGraph(STR_GRAPH_BMI);
+            g=mainwin->getOverview()->graphView()->findGraph(GraphName::STR_GRAPH_BMI);
             if (g) g->setDay(nullptr);
         }
     }
