@@ -46,7 +46,7 @@ Machine::Machine(MachineID id)
     m_unsupported = false;
 
     if (!id) {
-        srand(time(nullptr));
+        srand((uint)time(nullptr));
         MachineID temp;
 
         do {
@@ -179,7 +179,7 @@ QDate Machine::pickDate(qint64 first)
     QTime split_time = p_profile->session->daySplitTime();
     int combine_sessions = p_profile->session->combineCloseSessions();
 
-    QDateTime d2 = QDateTime::fromTime_t(first / 1000);
+    QDateTime d2 = QDateTime::fromTime_t(uint(first / 1000));
 
     QDate date = d2.date();
     QTime time = d2.time();
@@ -192,8 +192,8 @@ QDate Machine::pickDate(qint64 first)
         QMap<QDate, Day *>::iterator dit = day.find(date.addDays(-1)); // Check Day Before
 
         if (dit != day.end()) {
-            QDateTime lt = QDateTime::fromTime_t(dit.value()->last() / 1000L);
-            closest_session = lt.secsTo(d2) / 60;
+            QDateTime lt = QDateTime::fromTime_t(uint(dit.value()->last() / 1000L));
+            closest_session = int(lt.secsTo(d2) / 60);
 
             if (closest_session < combine_sessions) {
                 date = date.addDays(-1);
@@ -238,14 +238,14 @@ bool Machine::AddSession(Session *s)
 
     int ignore_sessions = p_profile->session->ignoreShortSessions();
 
-    int session_length = s->last() - s->first();
+    int session_length = int(s->last() - s->first());
     session_length /= 60000;
 
     sessionlist[s->session()] = s; // To make sure it get's saved later even if it's not wanted.
 
     //int drift=p_profile->cpap->clockDrift();
 
-    QDateTime d2 = QDateTime::fromTime_t(s->first() / 1000);
+    QDateTime d2 = QDateTime::fromTime_t(uint(s->first() / 1000));
 
     QDate date = d2.date();
     QTime time = d2.time();
@@ -264,8 +264,8 @@ bool Machine::AddSession(Session *s)
         dit = day.find(date.addDays(-1)); // Check Day Before
 
         if (dit != day.end()) {
-            QDateTime lt = QDateTime::fromTime_t(dit.value()->last() / 1000);
-            closest_session = lt.secsTo(d2) / 60;
+            QDateTime lt = QDateTime::fromTime_t(uint(dit.value()->last() / 1000));
+            closest_session = int(lt.secsTo(d2) / 60);
 
             if (closest_session < combine_sessions) {
                 date = date.addDays(-1);
@@ -280,8 +280,8 @@ bool Machine::AddSession(Session *s)
             nextday = day.find(date.addDays(1)); // Check Day Afterwards
 
             if (nextday != day.end()) {
-                QDateTime lt = QDateTime::fromTime_t(nextday.value()->first() / 1000);
-                closest_session = d2.secsTo(lt) / 60;
+                QDateTime lt = QDateTime::fromTime_t(uint(nextday.value()->first() / 1000));
+                closest_session = int(d2.secsTo(lt) / 60);
 
                 if (closest_session < combine_sessions) {
                     // add todays here. pull all tomorrows records to this date.

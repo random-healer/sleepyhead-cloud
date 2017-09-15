@@ -319,7 +319,7 @@ int WeinmannLoader::Open(QString path)
     //////////////////////////////////////////////////////////////////////
 
     int ev_start = index[EventsOffset];
-    int ev_end = wmdata.size();
+    int ev_end = (int)wmdata.size();
     int ev_size = ev_end - ev_start;
 
     quint8 * ev = new quint8 [ev_size];

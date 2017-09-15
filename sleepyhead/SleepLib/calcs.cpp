@@ -65,7 +65,7 @@ bool SearchEvent(Session * session, ChannelID code, qint64 time, int dur, bool u
 
                     if (overlap) {
                         if (update) {
-                            qint32 delta = time-start;
+                            qint32 delta = (int)(time - start);
                             if (delta >= 0) {
                                 *tptr = delta;
                                 *dptr = (EventStoreType)dur;
@@ -1857,7 +1857,7 @@ void flagLargeLeaks(Session *session)
                 if (!LL) {
                     LL=session->AddEventList(CPAP_LargeLeak, EVL_Event);
                 }
-                int duration = (time - leaktime) / 1000L;
+                int duration = (int)((time - leaktime) / 1000L);
                 LL->AddEvent(time, duration);
             }
             lastvalue = value;
@@ -1869,7 +1869,7 @@ void flagLargeLeaks(Session *session)
         if (!LL) {
             LL=session->AddEventList(CPAP_LargeLeak, EVL_Event);
         }
-        int duration = (time - leaktime) / 1000L;
+        int duration = (int)((time - leaktime) / 1000L);
         LL->AddEvent(time, duration);
     }
 }

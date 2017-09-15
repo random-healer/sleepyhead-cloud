@@ -2371,7 +2371,7 @@ void MainWindow::doReprocessEvents()
                     tr("Recalculating Indices"));
 
     // For each day in history
-    int daycount = first.daysTo(date);
+    int daycount = (int)first.daysTo(date);
     int idx = 0;
 
     QList<Machine *> machines = p_profile->GetMachines(MT_CPAP);

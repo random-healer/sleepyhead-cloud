@@ -288,9 +288,9 @@ void UpdatesParser::readPackageUpdate()
             for (int i=0; i<xml.attributes().size(); ++i) {
                 const QXmlStreamAttribute & at = xml.attributes().at(i);
                 if (at.name().compare("CompressedSize", Qt::CaseInsensitive)==0) {
-                    package.compressedSize = at.value().toLong();
+                    package.compressedSize = at.value().toUInt();
                 } else if (at.name().compare("UncompressedSize",Qt::CaseInsensitive)==0) {
-                    package.uncompressedSize = at.value().toLong();
+                    package.uncompressedSize = at.value().toUInt();
                 } else if (at.name().compare("OS",Qt::CaseInsensitive)==0) {
                     package.os = at.value().toString();
                 }

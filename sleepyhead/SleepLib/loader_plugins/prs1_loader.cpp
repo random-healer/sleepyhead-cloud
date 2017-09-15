@@ -2688,7 +2688,7 @@ QList<PRS1DataChunk *> PRS1Loader::ParseFile(QString path)
         chunk->sessionid = (header[10] << 24) | (header[9] << 16) | (header[8] << 8) | header[7];
 
         if (!firstsession) {
-            firstsession = chunk->sessionid;
+            firstsession = (int)chunk->sessionid;
         }
         chunk->fileVersion = header[0];
         chunk->htype = header[3];  // 00 = normal ?? // 01=waveform ?? // could be a bool signifying extra header bytes?

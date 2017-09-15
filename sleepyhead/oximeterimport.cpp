@@ -668,7 +668,7 @@ void OximeterImport::updateLiveDisplay()
     int size = oximodule->oxirec->size();
 
     if (size > 0) {
-        int i = oximodule->startTime().secsTo(QDateTime::currentDateTime());
+        int i = (int)oximodule->startTime().secsTo(QDateTime::currentDateTime());
 
         int seconds = i % 60;
         int minutes = (i / 60) % 60;

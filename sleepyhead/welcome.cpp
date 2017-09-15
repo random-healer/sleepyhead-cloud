@@ -138,7 +138,7 @@ QString GenerateWelcomeHTML()
                     QString("<td align=center  onmouseover='ChangeColor(this, \"#efefa0\");' onmouseout='ChangeColor(this, \"#ffffc0\");' onclick='alert(\"daily=%1\");'>").arg(date.toString(Qt::ISODate))+"<b>"+
                     QObject::tr("The last time you used your %1...").arg(cpap->brand()+" "+cpap->model())+"</b><br/>";
 
-            int daysto = date.daysTo(QDate::currentDate());
+            int daysto = (int)date.daysTo(QDate::currentDate());
             QString daystring;
             if (daysto == 1) daystring += QObject::tr("last night");
             else if (daysto == 2) daystring += QObject::tr("yesterday");
@@ -219,7 +219,7 @@ QString GenerateWelcomeHTML()
         }
         if (haveoximeterdata) {
             QDate oxidate=p_profile->LastDay(MT_OXIMETER);
-            int daysto = oxidate.daysTo(QDate::currentDate());
+            int daysto = (int)oxidate.daysTo(QDate::currentDate());
 
             html += "<p>"+QObject::tr("Most recent Oximetery data: <a onclick='alert(\"daily=%2\");'>%1</a> ").arg(oxidate.toString(Qt::SystemLocaleLongDate)).arg(oxidate.toString(Qt::ISODate));
             if (daysto == 1) html += QObject::tr("(last night)");

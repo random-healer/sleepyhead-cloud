@@ -181,14 +181,14 @@ void Report::PrintReport(gGraphView *gv, QString name, QDate date)
         if (cpap) {
             time_t f = day->first(MT_CPAP) / 1000L;
             time_t l = day->last(MT_CPAP) / 1000L;
-            int tt = qint64(day->total_time(MT_CPAP)) / 1000L;
+            int tt = (int)(qint64(day->total_time(MT_CPAP)) / 1000L);
             int h = tt / 3600;
             int m = (tt / 60) % 60;
             int s = tt % 60;
 
             cpapinfo += STR_TR_MaskTime + QObject::tr(": %1 hours, %2 minutes, %3 seconds\n").arg(h).arg(m).arg(s);
-            cpapinfo += STR_TR_BedTime + ": " + QDateTime::fromTime_t(f).time().toString("HH:mm:ss") + " ";
-            cpapinfo += STR_TR_WakeUp + ": " + QDateTime::fromTime_t(l).time().toString("HH:mm:ss") + "\n\n";
+            cpapinfo += STR_TR_BedTime + ": " + QDateTime::fromTime_t((uint)f).time().toString("HH:mm:ss") + " ";
+            cpapinfo += STR_TR_WakeUp + ": " + QDateTime::fromTime_t((uint)l).time().toString("HH:mm:ss") + "\n\n";
             QString submodel;
             cpapinfo += STR_TR_Machine + ": ";
 
@@ -346,8 +346,8 @@ void Report::PrintReport(gGraphView *gv, QString name, QDate date)
             if (maxy + bounds.height() > maxy) { maxy = maxy + bounds.height(); }
         }
     } else if (name == STR_TR_Overview) {
-        QDateTime first = QDateTime::fromTime_t((*gv)[0]->min_x / 1000L);
-        QDateTime last = QDateTime::fromTime_t((*gv)[0]->max_x / 1000L);
+        QDateTime first = QDateTime::fromTime_t((uint)((*gv)[0]->min_x / 1000L));
+        QDateTime last = QDateTime::fromTime_t((uint)((*gv)[0]->max_x / 1000L));
         QString ovinfo = QObject::tr("Reporting from %1 to %2").
                 arg(first.date().toString(Qt::SystemLocaleShortDate)).
                 arg(last.date().toString(Qt::SystemLocaleShortDate));

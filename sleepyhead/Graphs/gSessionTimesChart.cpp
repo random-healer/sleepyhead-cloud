@@ -29,7 +29,7 @@ gSummaryChart::gSummaryChart(QString label, MachineType machtype)
     QDateTime d1 = QDateTime::currentDateTime();
     QDateTime d2 = d1;
     d1.setTimeSpec(Qt::UTC);  // CHECK: Does this deal with DST?
-    tz_offset = d2.secsTo(d1);
+    tz_offset = (int)d2.secsTo(d1);
     tz_hours = tz_offset / 3600.0;
     expected_slices = 5;
 
@@ -44,7 +44,7 @@ gSummaryChart::gSummaryChart(ChannelID code, MachineType machtype)
     QDateTime d1 = QDateTime::currentDateTime();
     QDateTime d2 = d1;
     d1.setTimeSpec(Qt::UTC);  // CHECK: Does this deal with DST?
-    tz_offset = d2.secsTo(d1);
+    tz_offset = (int)d2.secsTo(d1);
     tz_hours = tz_offset / 3600.0;
     expected_slices = 5;
 

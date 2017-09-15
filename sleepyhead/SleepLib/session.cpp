@@ -291,7 +291,7 @@ QDataStream & operator>>(QDataStream & in, SessionSlice & slice)
 QDataStream & operator<<(QDataStream & out, const SessionSlice & slice)
 {
     out << slice.start;
-    quint32 length = slice.end - slice.start;
+    quint32 length = uint(slice.end - slice.start);
     out << length;
     out << (quint16)slice.status;
     return out;
@@ -1062,7 +1062,7 @@ void Session::updateCountSummary(ChannelID code)
                 valsum[raw]++;
 
                 // elapsed time in seconds since last event occurred
-                len = (time - lasttime) / 1000L;
+                len = int((time - lasttime) / 1000L);
 
                 timesum[lastraw] += len;
 
@@ -1656,7 +1656,7 @@ double Session::rangeSum(ChannelID id, qint64 first, qint64 last)
         if (ev.type() == EVL_Waveform) {
             if (first > ev.first()) {
                 // Skip the samples before first
-                idx = (first - ev.first()) / rate;
+                idx = int((first - ev.first()) / rate);
             }
 
             dptr += idx; //???? foggy.
@@ -1725,7 +1725,7 @@ EventDataType Session::rangeMin(ChannelID id, qint64 first, qint64 last)
 
             if (first > ev.first()) {
                 // Skip the samples before first
-                idx = (first - ev.first()) / rate;
+                idx = int((first - ev.first()) / rate);
             }
 
             dptr += idx;
@@ -1801,7 +1801,7 @@ EventDataType Session::rangeMax(ChannelID id, qint64 first, qint64 last)
 
             if (first > ev.first()) {
                 // Skip the samples before first
-                idx = (first - ev.first()) / rate;
+                idx = int((first - ev.first()) / rate);
             }
 
             dptr += idx;
@@ -2253,8 +2253,7 @@ void Session::offsetSession(qint64 offset)
         }
     }
 
-    qDebug() << "Session now starts" << QDateTime::fromTime_t(s_first /
-             1000).toString("yyyy-MM-dd HH:mm:ss");
+    qDebug() << "Session now starts" << QDateTime::fromTime_t(uint(s_first / 1000)).toString("yyyy-MM-dd HH:mm:ss");
 
 }
 

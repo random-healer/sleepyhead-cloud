@@ -937,9 +937,9 @@ QString Daily::getSessionInformation(Day * day)
                 ((*s)->settings.find(CPAP_BrokenWaveform) != (*s)->settings.end()))
                     corrupted_waveform=true;
 
-            fd=QDateTime::fromTime_t((*s)->first()/1000L);
-            ld=QDateTime::fromTime_t((*s)->last()/1000L);
-            int len=(*s)->length()/1000L;
+            fd=QDateTime::fromTime_t((uint)((*s)->first() / 1000L));
+            ld=QDateTime::fromTime_t((uint)((*s)->last() / 1000L));
+            int len = (int)((*s)->length() / 1000L);
             int h=len/3600;
             int m=(len/60) % 60;
             int s1=len % 60;
@@ -1329,9 +1329,9 @@ QString Daily::getSleepTime(Day * day)
 
     html+="<table cellspacing=0 cellpadding=0 border=0 width='100%'>\n";
     html+="<tr><td align='center'><b>"+STR_TR_Date+"</b></td><td align='center'><b>"+tr("Sleep")+"</b></td><td align='center'><b>"+tr("Wake")+"</b></td><td align='center'><b>"+STR_UNIT_Hours+"</b></td></tr>";
-    int tt=qint64(day->total_time())/1000L;
-    QDateTime date=QDateTime::fromTime_t(day->first()/1000L);
-    QDateTime date2=QDateTime::fromTime_t(day->last()/1000L);
+    int tt = (int)qint64(day->total_time())/1000L;
+    QDateTime date = QDateTime::fromTime_t((uint)(day->first()/1000L));
+    QDateTime date2 = QDateTime::fromTime_t((uint)(day->last()/1000L));
 
     int h=tt/3600;
     int m=(tt/60)%60;
@@ -1773,7 +1773,7 @@ void Daily::Load(QDate date)
                 qint64 st=start.at(i).toLongLong(&ok)+drift;
                 qint64 et=end.at(i).toLongLong(&ok)+drift;
 
-                QDateTime d=QDateTime::fromTime_t(st/1000L);
+                QDateTime d=QDateTime::fromTime_t(uint(st/1000L));
                 //int row=ui->bookmarkTable->rowCount();
                 ui->bookmarkTable->insertRow(i);
                 QTableWidgetItem *tw=new QTableWidgetItem(notes.at(i));
@@ -2222,7 +2222,7 @@ void Daily::on_bookmarkTable_itemClicked(QTableWidgetItem *item)
 void Daily::addBookmark(qint64 st, qint64 et, QString text)
 {
     ui->bookmarkTable->blockSignals(true);
-    QDateTime d=QDateTime::fromTime_t(st/1000L, Qt::LocalTime);
+    QDateTime d=QDateTime::fromTime_t((uint)st/1000L, Qt::LocalTime);
     int row=ui->bookmarkTable->rowCount();
     ui->bookmarkTable->insertRow(row);
     QTableWidgetItem *tw=new QTableWidgetItem(text);
@@ -2250,7 +2250,7 @@ void Daily::on_addBookmarkButton_clicked()
 {
     qint64 st,et;
     GraphView->GetXBounds(st,et);
-    QDateTime d=QDateTime::fromTime_t(st/1000L, Qt::LocalTime);
+    QDateTime d=QDateTime::fromTime_t((uint)(st/1000L), Qt::LocalTime);
 
     addBookmark(st,et, tr("Bookmark at %1").arg(d.time().toString("HH:mm:ss")));
 }

@@ -24,7 +24,7 @@ SummaryChart::SummaryChart(QString label, GraphType type)
     QDateTime d1 = QDateTime::currentDateTime();
     QDateTime d2 = d1;
     d1.setTimeSpec(Qt::UTC);
-    tz_offset = d2.secsTo(d1);
+    tz_offset = (int)d2.secsTo(d1);
     tz_hours = tz_offset / 3600.0;
     m_layertype = LT_SummaryChart;
 }
@@ -135,7 +135,7 @@ void SummaryChart::SetDay(Day * nullday)
         tt = QDateTime(d.key(), QTime(0, 0, 0), Qt::UTC).toTime_t();
 
         // calculate day number
-        dn = tt / 86400;
+        dn = (int)(tt / 86400);
 
         // to ms since epoch.
         tt *= 1000L;
@@ -162,7 +162,7 @@ void SummaryChart::SetDay(Day * nullday)
             // skip any empty or irrelevant day records
             if (!day || (day->machine(m_machinetype) == nullptr)) { continue; }
 
-            int ft = qint64(day->first()) / 1000L;
+            int ft = (int)qint64(day->first()) / 1000L;
             ft += tz_offset; // convert to local time
 
             int dz2 = ft / 86400;
@@ -486,7 +486,7 @@ void SummaryChart::paint(QPainter &painter, gGraph &w, const QRegion &region)
     totalvalues.resize(numcodes);
     lastX.resize(numcodes);
     lastY.resize(numcodes);
-    int zd = minx / 86400000L;
+    int zd = (int)(minx / 86400000L);
     zd--;
     QHash<int, QMap<short, EventDataType> >::iterator d = m_values.find(zd);
 
@@ -572,7 +572,7 @@ void SummaryChart::paint(QPainter &painter, gGraph &w, const QRegion &region)
     QColor summaryColor = QColor("dark gray");
 
     for (qint64 Q = minx; Q <= maxx + ms_per_day; Q += ms_per_day) {
-        zd = Q / ms_per_day;
+        zd = (int)(Q / ms_per_day);
         d = m_values.find(zd);
 
         if (Q < minx) {
@@ -1073,7 +1073,7 @@ bool SummaryChart::mouseMoveEvent(QMouseEvent *event, gGraph *graph)
     qint64 mx = ceil(xmult * double(x - offset));
     mx += l_minx;
     mx = mx + l_offset; //-86400000L;
-    int zd = mx / 86400000L;
+    int zd = (int)(mx / 86400000L);
 
     Day *day;
     //if (hl_day!=zd)   // This line is an optimization

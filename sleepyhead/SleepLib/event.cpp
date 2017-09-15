@@ -87,7 +87,7 @@ void EventList::AddEvent(qint64 time, EventStoreType data)
         // This really shouldn't happen.
         qDebug() << "Unordered time detected in AddEvent().";
 
-        qint32 delta = (m_first - time);
+        qint32 delta = (int)(m_first - time);
 
         for (quint32 i = 0; i < m_count; ++i) {
             m_time[i] -= delta;
@@ -100,7 +100,7 @@ void EventList::AddEvent(qint64 time, EventStoreType data)
         m_last = time;
     }
 
-    quint32 delta = (time - m_first);
+    quint32 delta = (uint)(time - m_first);
 
     m_data.push_back(data);
     m_time.push_back(delta);

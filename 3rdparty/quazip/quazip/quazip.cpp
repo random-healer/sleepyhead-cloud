@@ -254,7 +254,7 @@ QString QuaZip::getComment()const
   QByteArray comment;
   if((fakeThis->p->zipError=unzGetGlobalInfo(p->unzFile_f, &globalInfo))!=UNZ_OK)
     return QString();
-  comment.resize(globalInfo.size_comment);
+  comment.resize((int)globalInfo.size_comment);
   if((fakeThis->p->zipError=unzGetGlobalComment(p->unzFile_f, comment.data(), comment.size())) < 0)
     return QString();
   fakeThis->p->zipError = UNZ_OK;
@@ -339,9 +339,9 @@ bool QuaZip::getCurrentFileInfo(QuaZipFileInfo *info)const
   if(!isOpen()||!hasCurrentFile()) return false;
   if((fakeThis->p->zipError=unzGetCurrentFileInfo(p->unzFile_f, &info_z, NULL, 0, NULL, 0, NULL, 0))!=UNZ_OK)
     return false;
-  fileName.resize(info_z.size_filename);
-  extra.resize(info_z.size_file_extra);
-  comment.resize(info_z.size_file_comment);
+  fileName.resize((int)info_z.size_filename);
+  extra.resize((int)info_z.size_file_extra);
+  comment.resize((int)info_z.size_file_comment);
   if((fakeThis->p->zipError=unzGetCurrentFileInfo(p->unzFile_f, NULL,
       fileName.data(), fileName.size(),
       extra.data(), extra.size(),
@@ -351,12 +351,12 @@ bool QuaZip::getCurrentFileInfo(QuaZipFileInfo *info)const
   info->versionNeeded=info_z.version_needed;
   info->flags=info_z.flag;
   info->method=info_z.compression_method;
-  info->crc=info_z.crc;
-  info->compressedSize=info_z.compressed_size;
-  info->uncompressedSize=info_z.uncompressed_size;
+  info->crc=(uint)info_z.crc;
+  info->compressedSize=(uint)info_z.compressed_size;
+  info->uncompressedSize=(uint)info_z.uncompressed_size;
   info->diskNumberStart=info_z.disk_num_start;
   info->internalAttr=info_z.internal_fa;
-  info->externalAttr=info_z.external_fa;
+  info->externalAttr=(uint)info_z.external_fa;
   info->name=p->fileNameCodec->toUnicode(fileName);
   info->comment=p->commentCodec->toUnicode(comment);
   info->extra=extra;

@@ -238,7 +238,7 @@ int FPIconLoader::OpenMachine(Machine *mach, QString &path)
         QMap<SessionID, Session *>::iterator it = Sessions.end();
         it--;
 
-        dt = QDateTime::fromTime_t(qint64(it.value()->first()) / 1000L);
+        dt = QDateTime::fromTime_t(uint(it.value()->first()) / 1000L);
         QDate date = dt.date().addDays(-7);
         it++;
 
@@ -248,7 +248,7 @@ int FPIconLoader::OpenMachine(Machine *mach, QString &path)
             sid = sess->session();
             hours = sess->hours();
             mins = hours * 60;
-            dt = QDateTime::fromTime_t(sid);
+            dt = QDateTime::fromTime_t(uint(sid));
 
             if (sess->channelDataExists(CPAP_FlowRate)) { a = "(flow)"; }
             else { a = ""; }

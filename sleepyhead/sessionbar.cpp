@@ -230,7 +230,7 @@ void SessionBar::paintEvent(QPaintEvent *)
 
         ex -= sx;
 
-        int len = L / 1000L;
+        int len = int(L / 1000L);
         int h = len / 3600;
         int m = (len / 60) % 60;
         //int s=len % 60;

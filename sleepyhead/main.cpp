@@ -413,7 +413,7 @@ retry_directory:
         lastchecked = PREF[STR_GEN_UpdatesLastChecked].toDateTime();
 
         if (PREF.contains(STR_GEN_UpdatesLastChecked)) {
-            days = lastchecked.secsTo(today);
+            days = (int)lastchecked.secsTo(today);
             days /= 86400;
         };
 

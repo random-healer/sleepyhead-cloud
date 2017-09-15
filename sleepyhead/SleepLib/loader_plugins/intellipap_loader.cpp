@@ -284,7 +284,7 @@ int IntellipapLoader::Open(QString path)
     int ep = epoch.toTime_t();
 
     do {
-        cnt = f.read((char *)buf, 9);
+        cnt = (int)f.read((char *)buf, 9);
         // big endian
         ts1 = (buf[0] << 24) | (buf[1] << 16) | (buf[2] << 8) | buf[3];
         ts2 = (buf[4] << 24) | (buf[5] << 16) | (buf[6] << 8) | buf[7];
@@ -308,7 +308,7 @@ int IntellipapLoader::Open(QString path)
 
     f.open(QFile::ReadOnly);
     long size = f.size();
-    int recs = size / 26;
+    int recs = int(size / 26);
     m_buffer = new unsigned char [size];
 
     if (size != f.read((char *)m_buffer, size)) {
@@ -374,7 +374,7 @@ int IntellipapLoader::Open(QString path)
                 }
             }
 
-            QDateTime d = QDateTime::fromTime_t(sid);
+            QDateTime d = QDateTime::fromTime_t(uint(sid));
             qDebug() << sid << "has double ups" << d;
             /*Session *sess=Sessions[sid];
             Sessions.erase(Sessions.find(sid));
@@ -436,7 +436,7 @@ int IntellipapLoader::Open(QString path)
                         if (!sess->eventlist.contains(CPAP_Ramp)) {
                             sess->AddEventList(CPAP_Ramp, EVL_Event);
                         }
-                        int duration = (time - rs) / 1000L;
+                        int duration = int((time - rs) / 1000L);
                         sess->eventlist[CPAP_Ramp][0]->AddEvent(time, duration);
 
                         rampstart.remove(sid);
@@ -539,7 +539,7 @@ int IntellipapLoader::Open(QString path)
                 sess->AddEventList(CPAP_Ramp, EVL_Event);
             }
 
-            int duration = (re - rs) / 1000L;
+            int duration = int((re - rs) / 1000L);
             sess->eventlist[CPAP_Ramp][0]->AddEvent(re, duration);
             rit.value() = 0;
 

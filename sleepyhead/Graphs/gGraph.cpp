@@ -796,7 +796,7 @@ void gGraph::mouseMoveEvent(QMouseEvent *event)
             qint64 a = double(a2 - a1) * xmult;
             m_selectedDuration = a;
             float d = double(a) / 86400000.0;
-            int h = a / 3600000;
+            int h = (int)(a / 3600000);
             int m = (a / 60000) % 60;
             int s = (a / 1000) % 60;
             int ms(a % 1000);

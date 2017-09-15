@@ -235,13 +235,13 @@ void ExportCSV::on_exportButton_clicked()
             QString data;
 
             if (ui->rb1_Summary->isChecked()) {
-                QDateTime start = QDateTime::fromTime_t(day->first() / 1000L);
-                QDateTime end = QDateTime::fromTime_t(day->last() / 1000L);
+                QDateTime start = QDateTime::fromTime_t((uint)day->first() / 1000L);
+                QDateTime end = QDateTime::fromTime_t((uint)day->last() / 1000L);
                 data = date.toString(Qt::ISODate);
                 data += sep + QString::number(day->size(), 10);
                 data += sep + start.toString(Qt::ISODate);
                 data += sep + end.toString(Qt::ISODate);
-                int time = day->total_time() / 1000L;
+                int time = (int)day->total_time() / 1000L;
                 int h = time / 3600;
                 int m = int(time / 60) % 60;
                 int s = int(time) % 60;
@@ -269,14 +269,14 @@ void ExportCSV::on_exportButton_clicked()
             } else if (ui->rb1_Sessions->isChecked()) {
                 for (int i = 0; i < day->size(); i++) {
                     Session *sess = (*day)[i];
-                    QDateTime start = QDateTime::fromTime_t(sess->first() / 1000L);
-                    QDateTime end = QDateTime::fromTime_t(sess->last() / 1000L);
+                    QDateTime start = QDateTime::fromTime_t((uint)(sess->first() / 1000L));
+                    QDateTime end = QDateTime::fromTime_t((uint)(sess->last() / 1000L));
 
                     data = date.toString(Qt::ISODate);
                     data += sep + QString::number(sess->session(), 10);
                     data += sep + start.toString(Qt::ISODate);
                     data += sep + end.toString(Qt::ISODate);
-                    int time = sess->length() / 1000L;
+                    int time = (int)(sess->length() / 1000L);
                     int h = time / 3600;
                     int m = int(time / 60) % 60;
                     int s = int(time) % 60;
@@ -321,7 +321,7 @@ void ExportCSV::on_exportButton_clicked()
                                 EventList *ev = fnd.value()[e];
 
                                 for (quint32 q = 0; q < ev->count(); q++) {
-                                    data = QDateTime::fromTime_t(ev->time(q) / 1000L).toString(Qt::ISODate);
+                                    data = QDateTime::fromTime_t((uint)(ev->time(q) / 1000L)).toString(Qt::ISODate);
                                     data += sep + QString::number(sess->session());
                                     data += sep + schema::channel[key].code();
                                     data += sep + QString::number(ev->data(q), 'f', 2);

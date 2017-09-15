@@ -102,7 +102,7 @@ void UpdaterWindow::checkForUpdates()
     if (QFile::exists(filename)) {
         QFileInfo fi(filename);
         QDateTime created = fi.created();
-        int age = created.secsTo(QDateTime::currentDateTime());
+        int age = (int)created.secsTo(QDateTime::currentDateTime());
 
         if (age < 900) {
             QFile file(filename);

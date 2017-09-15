@@ -246,7 +246,7 @@ bool compressFile(QString inpath, QString outpath)
         return false;
     }
 
-    gzwrite(gz, buf, size);
+    gzwrite(gz, buf, (uint)size);
     gzclose(gz);
     delete [] buf;
     return true;

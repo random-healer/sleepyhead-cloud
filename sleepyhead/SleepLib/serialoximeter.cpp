@@ -117,10 +117,10 @@ void SerialOximeter::dataAvailable()
 {
     QByteArray bytes;
 
-    int available = serial.bytesAvailable();
+    int available = (int)serial.bytesAvailable();
     bytes.resize(available);
 
-    int bytesread = serial.read(bytes.data(), available);
+    int bytesread = (int)serial.read(bytes.data(), available);
     if (bytesread == 0)
         return;
 

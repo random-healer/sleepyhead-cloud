@@ -165,14 +165,14 @@ void ResmedLoader::ParseSTR(Machine *mach, QStringList strfiles)
 
         //bool skipday;
 
-        int size = str.GetNumDataRecords();
+        int size = (int)str.GetNumDataRecords();
         int cnt=0;
         QDateTime dt = start;
 
         // For each data record, representing 1 day each
         for (int rec = 0; rec < str.GetNumDataRecords(); ++rec) {
             uint timestamp = dt.toTime_t();
-            int recstart = rec * maskon->nr;
+            int recstart = int(rec * maskon->nr);
 
            // skipday = false;
             if ((++cnt % 10) == 0) {
@@ -651,7 +651,7 @@ bool EDFParser::Parse()
     // this could be loaded quicker by transducer_type[signal] etc..
 
     // Initialize fixed-size signal list.
-    edfsignals.resize(num_signals);
+    edfsignals.resize((int)num_signals);
 
     for (int i = 0; i < num_signals; i++) {
         EDFSignal &sig = edfsignals[i];
@@ -756,7 +756,7 @@ bool EDFParser::Open(QString name)
         // Decompressed header and data block
         gzread(f, (char *)&header, EDFHeaderSize);
         buffer = new char [datasize];
-        gzread(f, buffer, datasize);
+        gzread(f, buffer, (uint)datasize);
         gzclose(f);
     } else {
 
@@ -924,10 +924,10 @@ void ResmedImport::run()
         STRRecord & R = it.value();
 
         // calculate the time between session record and mask-on record.
-        int gap = sessionid - R.maskon;
+        int gap = int(sessionid - R.maskon);
 
         if (gap > 3600*6) {
-            QDateTime dt = QDateTime::fromTime_t(sessionid);
+            QDateTime dt = QDateTime::fromTime_t((uint)sessionid);
             QDateTime rt = QDateTime::fromTime_t(R.maskon);
 
             QString msg = QString("Warning: Closest matching STR record for %1 is %2 by %3 seconds").
@@ -939,7 +939,7 @@ void ResmedImport::run()
 
 
         // Claim this session
-        R.sessionid = sessionid;
+        R.sessionid = (uint)sessionid;
 
 
         // Save maskon time in session setting so we can use it later to avoid doubleups.
@@ -1379,10 +1379,10 @@ int PeekAnnotations(const QString & path, quint32 &start, quint32 &end)
 
     // Notes: Event records have useless duration record.
 
-    start = edf.startdate / 1000L;
+    start = uint(edf.startdate / 1000L);
     // Process event annotation records
     for (int s = 0; s < edf.GetNumSignals(); s++) {
-        recs = edf.edfsignals[s].nr * edf.GetNumDataRecords() * 2;
+        recs = int(edf.edfsignals[s].nr * edf.GetNumDataRecords() * 2);
 
         data = (char *)edf.edfsignals[s].data;
         pos = 0;
@@ -2200,7 +2200,7 @@ int ResmedLoader::Open(QString path)
     qint64 numrecs = stredf.GetNumDataRecords();
     qint64 duration = numrecs * stredf.GetDuration();
 
-    int days = duration / 86400000L; // GetNumDataRecords = this.. Duh!
+    int days = int(duration / 86400000L); // GetNumDataRecords = this.. Duh!
 
     if (days<0) {
         qDebug() << "Error: Negative number of days in STR.edf, aborting import";
@@ -2266,8 +2266,8 @@ int ResmedLoader::Open(QString path)
         bool fnd = false;
         for (sessit = m->sessionlist.begin(); sessit != sessend; ++sessit) {
             sess = sessit.value();
-            quint32 s2 = sess->session();
-            quint32 e2 = s2 + (sess->length() / 1000L);
+            quint32 s2 = (uint)sess->session();
+            quint32 e2 = uint(s2 + (sess->length() / 1000L));
 
             if ((s1 < e2) && (s2 < e1)) {
                 strlist.push_back(it.key());
@@ -2277,8 +2277,8 @@ int ResmedLoader::Open(QString path)
         }
         if (!fnd) for (sit = new_sessions.begin(); sit != ns_end; ++sit) {
             sess = sit.value();
-            quint32 s2 = sess->session();
-            quint32 e2 = s2 + (sess->length() / 1000L);
+            quint32 s2 = (uint)sess->session();
+            quint32 e2 = uint(s2 + (sess->length() / 1000L));
 
             if ((s1 < e2) && (s2 < e1)) {
                 strlist.push_back(it.key());
@@ -2783,7 +2783,7 @@ bool ResmedLoader::LoadBRP(Session *sess, const QString & path)
             double rate = double(duration) / double(recs);
             EventList *a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
             a->setDimension(es.physical_dimension);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
             EventDataType min = a->Min();
             EventDataType max = a->Max();
 
@@ -2935,7 +2935,7 @@ void ResmedLoader::ToTimeDelta(Session *sess, EDFParser &edf, EDFSignal &es, Cha
     qint64 t = time.nsecsElapsed();
     int cnt = el->count();
     int bytes = cnt * (sizeof(EventStoreType) + sizeof(quint32));
-    int wvbytes = recs * (sizeof(EventStoreType));
+    int wvbytes = int(recs * (sizeof(EventStoreType)));
     QHash<ChannelID, qint64>::iterator it = channel_efficiency.find(code);
 
     if (it == channel_efficiency.end()) {
@@ -3052,7 +3052,7 @@ bool ResmedLoader::LoadPLD(Session *sess, const QString & path)
         } else if (matchSignal(CPAP_RespRate, es.label)) {
             code = CPAP_RespRate;
             a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
         } else if (matchSignal(CPAP_TidalVolume, es.label)) {
             code = CPAP_TidalVolume;
             es.gain *= 1000.0;
@@ -3084,7 +3084,7 @@ bool ResmedLoader::LoadPLD(Session *sess, const QString & path)
         } else if (matchSignal(CPAP_IE, es.label)) { //I:E ratio
             code = CPAP_IE;
             a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
             //a=ToTimeDelta(sess,edf,es, code,recs,duration,0,0);
         } else if (matchSignal(CPAP_Ti, es.label)) {
             code = CPAP_Ti;
@@ -3094,7 +3094,7 @@ bool ResmedLoader::LoadPLD(Session *sess, const QString & path)
                 continue;
             }
             a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
             //a=ToTimeDelta(sess,edf,es, code,recs,duration,0,0);
         } else if (matchSignal(CPAP_Te, es.label)) {
             code = CPAP_Te;
@@ -3103,12 +3103,12 @@ bool ResmedLoader::LoadPLD(Session *sess, const QString & path)
                 continue;
             }
             a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
             //a=ToTimeDelta(sess,edf,es, code,recs,duration,0,0);
         } else if (matchSignal(CPAP_TgMV, es.label)) {
             code = CPAP_TgMV;
             a = sess->AddEventList(code, EVL_Waveform, es.gain, es.offset, 0, 0, rate);
-            a->AddWaveform(edf.startdate, es.data, recs, duration);
+            a->AddWaveform(edf.startdate, es.data, (int)recs, duration);
             //a=ToTimeDelta(sess,edf,es, code,recs,duration,0,0);
         } else if (es.label == "") { // What the hell resmed??
             if (emptycnt == 0) {

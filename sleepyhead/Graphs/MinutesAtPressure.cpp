@@ -909,7 +909,7 @@ void RecalcMAP::updateTimes(PressureInfo & info, Session * sess)
                 d1 = qMax(minx, lasttime);
                 d2 = qMin(maxx, time);
 
-                duration = (d2 - d1) / 1000L;
+                duration = (int)((d2 - d1) / 1000L);
                 key = lastdata;
                 info.times[key] += duration;
 
@@ -937,7 +937,7 @@ void RecalcMAP::updateTimes(PressureInfo & info, Session * sess)
             d1 = qMax(lasttime, minx);
             d2 = qMin(maxx, EL->last());
 
-            duration = (d2 - d1) / 1000L;
+            duration = (int)((d2 - d1) / 1000L);
             key = lastdata;
             info.times[key] += duration;
             int cs = info.chans.size();

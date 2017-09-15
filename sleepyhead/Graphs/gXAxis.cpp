@@ -204,7 +204,7 @@ void gXAxis::paint(QPainter &painter, gGraph &w, const QRegion &region)
             if (tmpft > closest) {   // Find the closest scale to the number
                 closest = tmpft;     // that will fit
                 div = i;
-                fit_ticks = tmpft;
+                fit_ticks = (int)tmpft;
             }
         }
 
@@ -243,7 +243,7 @@ void gXAxis::paint(QPainter &painter, gGraph &w, const QRegion &region)
 
             if (i < 0) { i = 1; }
 
-            num_minor_ticks = i;
+            num_minor_ticks = (int)i;
         } else { num_minor_ticks = 10; }
 
         float xmult = double(width) / double(xx);
@@ -298,7 +298,7 @@ void gXAxis::paint(QPainter &painter, gGraph &w, const QRegion &region)
             //int d=(j/86400000) % 7;
 
             if (fitmode == 0) {
-                d = (j / 1000);
+                d = (int)(j / 1000);
                 QDateTime dt = QDateTime::fromTime_t(d).toUTC();
                 QDate date = dt.date();
                 // SLOW SLOW SLOW!!! On Mac especially, this function is pathetically slow.

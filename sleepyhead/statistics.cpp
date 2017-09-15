@@ -1196,7 +1196,7 @@ QString Statistics::GenerateHTML()
 
     int number_periods = 0;
     if (p_profile->general->statReportMode() == 1) {
-        number_periods = p_profile->FirstDay().daysTo(p_profile->LastDay()) / 30;
+        number_periods = int(p_profile->FirstDay().daysTo(p_profile->LastDay()) / 30);
         if (number_periods > 12) {
             number_periods = 12;
         }

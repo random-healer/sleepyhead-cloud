@@ -891,7 +891,7 @@ bool CMS50F37Loader::readSpoRFile(QString path)
 
         in >> samples;
 
-        int remainder = filesize - pos;
+        int remainder = (int)(filesize - pos);
 
         bytes_per_record = remainder / samples;
         qDebug() << samples << "samples of" << bytes_per_record << "bytes each";
