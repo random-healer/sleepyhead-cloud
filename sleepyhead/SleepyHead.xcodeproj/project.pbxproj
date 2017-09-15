@@ -73,6 +73,7 @@
 		719C2BF084CF1F77447683CE /* QtWebKitWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 18677CDA49AE5DB31CFCB1A5 /* QtWebKitWidgets.framework */; };
 		735C3FC91F6B71C6002FFC3B /* FlagColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FC71F6B71C6002FFC3B /* FlagColors.cpp */; };
 		735C3FCC1F6B8EBD002FFC3B /* CommonColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FCA1F6B8EBD002FFC3B /* CommonColors.cpp */; };
+		735C3FCF1F6C6947002FFC3B /* ChartColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */; };
 		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
 		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
 		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -240,6 +241,8 @@
 		735C3FC81F6B71C6002FFC3B /* FlagColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlagColors.h; path = Common/FlagColors.h; sourceTree = SOURCE_ROOT; };
 		735C3FCA1F6B8EBD002FFC3B /* CommonColors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CommonColors.cpp; path = Common/CommonColors.cpp; sourceTree = SOURCE_ROOT; };
 		735C3FCB1F6B8EBD002FFC3B /* CommonColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonColors.h; path = Common/CommonColors.h; sourceTree = SOURCE_ROOT; };
+		735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChartColors.cpp; path = Common/ChartColors.cpp; sourceTree = SOURCE_ROOT; };
+		735C3FCE1F6C6947002FFC3B /* ChartColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartColors.h; path = Common/ChartColors.h; sourceTree = SOURCE_ROOT; };
 		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
 		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
 		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
@@ -605,6 +608,8 @@
 				735C3FC81F6B71C6002FFC3B /* FlagColors.h */,
 				735C3FCA1F6B8EBD002FFC3B /* CommonColors.cpp */,
 				735C3FCB1F6B8EBD002FFC3B /* CommonColors.h */,
+				735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */,
+				735C3FCE1F6C6947002FFC3B /* ChartColors.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -872,6 +877,7 @@
 				C74EF97780ABFC2587B86354 /* quaadler32.cpp in Compile Sources */,
 				5E043D2B382CC36F2E037D88 /* quacrc32.cpp in Compile Sources */,
 				AB1F49013B1480974793FF8C /* quazip.cpp in Compile Sources */,
+				735C3FCF1F6C6947002FFC3B /* ChartColors.cpp in Compile Sources */,
 				5CFE4FB51EA2D0952D77869C /* quazipfile.cpp in Compile Sources */,
 				104535FCDE3BE69433D99066 /* quazipnewinfo.cpp in Compile Sources */,
 				DC9C955E37C887936A011FFB /* quazipfileinfo.cpp in Compile Sources */,
