@@ -1,0 +1,1208 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		8E4832B99F5727B78BFBFA2E /* Qt Preprocess */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SleepyHead" */;
+			buildPhases = (
+				5E618435888B9D49F8540165 /* Qt Qmake */,
+				7EF0942E79C014DCEC8976BC /* Qt Preprocessors */,
+			);
+			dependencies = (
+			);
+			name = "Qt Preprocess";
+			productName = "Qt Preprocess";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		007E4181C073F09BA0FB3DF9 /* cms50_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 01144CBD51ECF99B6D6867F4 /* cms50_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		024AD60809AE532FE98874E1 /* gSegmentChart.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = FA372EE46A0B265F7AF9D4A0 /* gSegmentChart.cpp */; settings = {ATTRIBUTES = (); }; };
+		0A5E39050CD46E1D16F32CE4 /* moc_machine_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = EDA01D3D23273551F6B1C40A /* moc_machine_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		0BD99D0A8093BC061DC06B2A /* JlCompress.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 12436CEFF9464E5A97182640 /* JlCompress.cpp */; settings = {ATTRIBUTES = (); }; };
+		0C9AC1EAEB345C16C8929527 /* moc_sessionbar.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 5FC87836A35FA3F5AC8DAA1A /* moc_sessionbar.cpp */; settings = {ATTRIBUTES = (); }; };
+		0E7964EE59C580C635259D65 /* machine_common.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = D731083E1D76D151A1C77FD9 /* machine_common.cpp */; settings = {ATTRIBUTES = (); }; };
+		0F2159D3B501024FF674EA1F /* moc_cms50_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 58C7C1A7E2063E48C4DFDEF3 /* moc_cms50_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		104535FCDE3BE69433D99066 /* quazipnewinfo.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 4C8C7CAEEDAB7569C8C19AB1 /* quazipnewinfo.cpp */; settings = {ATTRIBUTES = (); }; };
+		14958B44632EBCCAA8573794 /* moc_profileselect.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 088405B6FD63016272C6FCC1 /* moc_profileselect.cpp */; settings = {ATTRIBUTES = (); }; };
+		1792449FA8349D1ED590B08B /* MinutesAtPressure.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 582B05718A212A1FD663E36E /* MinutesAtPressure.cpp */; settings = {ATTRIBUTES = (); }; };
+		18EBCF2276A07D9922CE1221 /* profiles.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 0E17C144240C0B4FED7483BF /* profiles.cpp */; settings = {ATTRIBUTES = (); }; };
+		234B8E9117A26806B6C9C66D /* QtNetwork.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 4A9A3194B46043FD8F63B9E2 /* QtNetwork.framework */; };
+		263BFBB0A6AE9AB0BBAD7D00 /* serialoximeter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 84154A1ED6F7CF60854FC1F7 /* serialoximeter.cpp */; settings = {ATTRIBUTES = (); }; };
+		264C96D9E769D5E8D2DEA90A /* moc_mainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = ED0799FB003F8066AB15A1F6 /* moc_mainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		26EE0DF308AEE5C224F57CE4 /* QtSerialPort.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 6D5422AD022EBE8D0D931A5C /* QtSerialPort.framework */; };
+		2C38313A78AB1F5B2826D064 /* moc_machine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = F581EB9F251ABCCF6E9A94C6 /* moc_machine.cpp */; settings = {ATTRIBUTES = (); }; };
+		34D06BFAED0FB7288331AD2C /* prs1_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 1E89A4F1A991C8B429A955AF /* prs1_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		3881476AEDD0247856B05D71 /* moc_serialoximeter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 192F65B9D73B1E574B3D66E7 /* moc_serialoximeter.cpp */; settings = {ATTRIBUTES = (); }; };
+		3947416ACBD39183D77AD458 /* QtWebKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = DEFCF706F7C72DF94CAC3C71 /* QtWebKit.framework */; };
+		3D536E6F8D6E4AB63DA34722 /* statistics.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 670EBC36233A7FFE71977E17 /* statistics.cpp */; settings = {ATTRIBUTES = (); }; };
+		3D6DE77B8F77D0AD83CCA852 /* gLineChart.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = D2FE968CCDB735C4EF80CC15 /* gLineChart.cpp */; settings = {ATTRIBUTES = (); }; };
+		413D59823B030CF95EAA6CFC /* event.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 39D52D3B72E5F0066405B314 /* event.cpp */; settings = {ATTRIBUTES = (); }; };
+		4451816DE092658D6DF1E0AF /* gFlagsLine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 6D3DC7844E955EE9DFBBACFA /* gFlagsLine.cpp */; settings = {ATTRIBUTES = (); }; };
+		45A5CE7B1BB0BD29C3CA43E4 /* machine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 93092DAC891CB41A82616792 /* machine.cpp */; settings = {ATTRIBUTES = (); }; };
+		4675E3DF0097D6F84FF923D8 /* schema.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3FB7DDD1405331F89A0BE285 /* schema.cpp */; settings = {ATTRIBUTES = (); }; };
+		46F828D2F572D4C71A269320 /* gXAxis.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8CBC494A30546823579FA3BA /* gXAxis.cpp */; settings = {ATTRIBUTES = (); }; };
+		486185D286DCB21BA185FCEE /* QtXml.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 9AC09FAAD17980FE9928FB32 /* QtXml.framework */; };
+		4BF03C405EE360D70E836DD8 /* moc_daily.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 1A0CDCECC27F51555C07447A /* moc_daily.cpp */; settings = {ATTRIBUTES = (); }; };
+		4F1B436E970767AB0CA7498C /* moc_overview.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C5AED8DEC1013AC9F21B9855 /* moc_overview.cpp */; settings = {ATTRIBUTES = (); }; };
+		4FC37F047F03B757C239AB3F /* common.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = DD03D7EC3C3B62576F49D6B1 /* common.cpp */; settings = {ATTRIBUTES = (); }; };
+		560B8684A95A3924DEA3F1A9 /* mseries_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 48432D6898FEE91369A03468 /* mseries_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		5A04DD12D078D700F95F87BB /* icon_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 4DC9F39A72B048DF82E3E7EA /* icon_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		5CFE4FB51EA2D0952D77869C /* quazipfile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 688DBCF603DE5BF2B3471CEC /* quazipfile.cpp */; settings = {ATTRIBUTES = (); }; };
+		5E043D2B382CC36F2E037D88 /* quacrc32.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 58235930DBC64B5A454FFB46 /* quacrc32.cpp */; settings = {ATTRIBUTES = (); }; };
+		5F0DC61F0036AF2368BEEA20 /* glcommon.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2B4B8C82D84D4AA842124652 /* glcommon.cpp */; settings = {ATTRIBUTES = (); }; };
+		60F06E0F10951996E05DB982 /* calcs.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = FD533E90A84734F2A9707BA7 /* calcs.cpp */; settings = {ATTRIBUTES = (); }; };
+		611A146A91B56AF058B744B0 /* main.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 813B6929DD5F56AF4CF32C13 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		61546E1BB94BA46D07AE3475 /* QtOpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = DFD35361A7A9D5E2FE728CCB /* QtOpenGL.framework */; };
+		6187B407AE50C7AFEB1484B0 /* welcome.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 2FC81A8C6B4D42FEA0A3F16F /* welcome.cpp */; settings = {ATTRIBUTES = (); }; };
+		6194DD6C50F1374B151F618A /* moc_UpdaterWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 1D46953056A5DF5BA3587DAF /* moc_UpdaterWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		621C3B5A4661C9D2054A9DE5 /* progressdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 879B87032C26590481D2374F /* progressdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		6224815B6DCF4E5AF22D1747 /* gLineOverlay.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = B46008277CF4A24735E1D58A /* gLineOverlay.cpp */; settings = {ATTRIBUTES = (); }; };
+		667199809B87358A68845927 /* zeo_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 850BE5F939295549FEB9279C /* zeo_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		66C07C52909B4090E6CA9A30 /* moc_preferencesdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 82637E87F9A2F91FB527FD0C /* moc_preferencesdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		674ADAA4FC56D7038C5E2A32 /* zip.c in Compile Sources */ = {isa = PBXBuildFile; fileRef = 91B145E1EE6C1C85A6005959 /* zip.c */; settings = {ATTRIBUTES = (); }; };
+		68C54258A56C7803DFA0288B /* gGraph.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8CFE13D6731055A210F92331 /* gGraph.cpp */; settings = {ATTRIBUTES = (); }; };
+		69C9AE74641648C3C674D6DC /* intellipap_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8736DC0DE539F892DD4FFB9E /* intellipap_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		7006C7776547C5B7E7D4BED7 /* md300w1_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = BAE65ADDBCA5B04547C28780 /* md300w1_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		719C2BF084CF1F77447683CE /* QtWebKitWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 18677CDA49AE5DB31CFCB1A5 /* QtWebKitWidgets.framework */; };
+		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
+		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
+		827E3695923AD831B3468159 /* moc_gGraphView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E630B5D35581B9B9E4D14A88 /* moc_gGraphView.cpp */; settings = {ATTRIBUTES = (); }; };
+		84982EE2056BF13D72F3A1D7 /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 630F3D752841AEF9D41F1FCF /* QtCore.framework */; };
+		85AB17C08B789BDEB6F36E1C /* logger.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 054987505B35C3BBD845AE47 /* logger.cpp */; settings = {ATTRIBUTES = (); }; };
+		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
+		88201ACDD745E43F7ED5F32C /* gGraphView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 1104AA4A1300770DC0016E0B /* gGraphView.cpp */; settings = {ATTRIBUTES = (); }; };
+		8C0D1012B63BFC4433F33B3E /* qrc_Resources.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C2BD6773496AB53CEE2EAE26 /* qrc_Resources.cpp */; settings = {ATTRIBUTES = (); }; };
+		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
+		8DA24363FA0F4C16FE3A1DEA /* updateparser.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 965BD64F11B530FBFEF66080 /* updateparser.cpp */; settings = {ATTRIBUTES = (); }; };
+		92D4F54ACDF78008A9458083 /* translation.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C46FF0055C7CCABA11D4B60C /* translation.cpp */; settings = {ATTRIBUTES = (); }; };
+		9A01898E24B7BB039910050F /* moc_oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 96213427012B07B12E0ACFF1 /* moc_oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
+		9D5FADC5002C99FE485B3977 /* somnopose_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 421EB40F08C93E1532238C67 /* somnopose_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		9E65E2780802F5D481A9966F /* moc_statistics.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = B8D1470FEC9C09A6FF5D171A /* moc_statistics.cpp */; settings = {ATTRIBUTES = (); }; };
+		9FD7586E4E459E881B825BA9 /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 022AC20C0A50E09FBB916B21 /* QtGui.framework */; };
+		A7F76DACE180E1D220C63748 /* gdailysummary.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 749BBF223803AD1DD548E66D /* gdailysummary.cpp */; settings = {ATTRIBUTES = (); }; };
+		A91898EF8EF97AD7A68CF3A6 /* gStatsLine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 326890DF12CFFF169103121F /* gStatsLine.cpp */; settings = {ATTRIBUTES = (); }; };
+		A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */; };
+		AB1F49013B1480974793FF8C /* quazip.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = FDA94125396CD87ADE11F3E8 /* quazip.cpp */; settings = {ATTRIBUTES = (); }; };
+		AC36932AE4999F55ADF7C7AE /* profileselect.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = B4F3EAFD9462E0B31DBBC266 /* profileselect.cpp */; settings = {ATTRIBUTES = (); }; };
+		AF5C959E96DA4B4F90C1EB55 /* preferencesdialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C4D0DE11AE3EBB1CE266B344 /* preferencesdialog.cpp */; settings = {ATTRIBUTES = (); }; };
+		B1645B879A41247C3EE192F3 /* moc_exportcsv.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 0EE222D699D044D2367C3A8A /* moc_exportcsv.cpp */; settings = {ATTRIBUTES = (); }; };
+		B796492CD49322633A219B1A /* qioapi.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 5C77B99049E0B6D2BBEE5E1B /* qioapi.cpp */; settings = {ATTRIBUTES = (); }; };
+		B98A3E9D6B963152F335EDCB /* common_gui.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = EE2CFE0DC5ECD1EE99547B61 /* common_gui.cpp */; settings = {ATTRIBUTES = (); }; };
+		BBBB9355330D846152F88594 /* QtPrintSupport.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = AA8B72E75AB6DB9C6D400989 /* QtPrintSupport.framework */; };
+		BE83214D0B0E24E03CFE9D09 /* QtWidgets.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = CC9EF0B9B48C873FD1EE08CA /* QtWidgets.framework */; };
+		BEBFCD82F92BD7576FB1C56C /* newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3869E6C4FD73CCD6BCB3AE65 /* newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
+		BEF1A9993A39D8C8DA633FD6 /* cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 734DF5DDE51955F416A27A54 /* cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		BFF2C831EB6DBB698C59014E /* day.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 640C5EB8771695D463F0237F /* day.cpp */; settings = {ATTRIBUTES = (); }; };
+		C36FF613BA2AFF88EBBA9263 /* sessionbar.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = BE33697F725DE1B7D89A0000 /* sessionbar.cpp */; settings = {ATTRIBUTES = (); }; };
+		C37D026FA553E29380CFFA8E /* exportcsv.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 4623DA409940186F06520C39 /* exportcsv.cpp */; settings = {ATTRIBUTES = (); }; };
+		C4E10E377E1171C860EA57DD /* journal.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9BCD2C79901BDE9EF0798B68 /* journal.cpp */; settings = {ATTRIBUTES = (); }; };
+		C6E9BD4DB5673CF5AB40F9A2 /* gSummaryChart.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E9A5D3403B9D6449E35490F5 /* gSummaryChart.cpp */; settings = {ATTRIBUTES = (); }; };
+		C74EF97780ABFC2587B86354 /* quaadler32.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = BA61D64E4C121C3B25AE73FB /* quaadler32.cpp */; settings = {ATTRIBUTES = (); }; };
+		CA902CE097BA1AE8140235B1 /* mainwindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = C02234850D131BA3453497A2 /* mainwindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		CE4F3C8E4A57F3875CA5E7DE /* machine_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = A9E24022FFAF3EA46A830B91 /* machine_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		D0A53F6F6FA8F203A3AD3B64 /* layer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8EEF5074888EE436C8A9A16A /* layer.cpp */; settings = {ATTRIBUTES = (); }; };
+		D258F4F58E63499A607F1DC6 /* weinmann_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 174B95587FBA5625FBA33CF7 /* weinmann_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		DC9C955E37C887936A011FFB /* quazipfileinfo.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */; settings = {ATTRIBUTES = (); }; };
+		DD2FDE64384B58EEFAC652A0 /* reports.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = B5F579883B184FB1FF25AF77 /* reports.cpp */; settings = {ATTRIBUTES = (); }; };
+		DE2499C1F887F7C0FFAD6D42 /* daily.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3BDE952DEB8EF7C2B3246321 /* daily.cpp */; settings = {ATTRIBUTES = (); }; };
+		DF4EF487F75A4DD3C3595D71 /* moc_md300w1_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CD1F77237C3F225D013F847E /* moc_md300w1_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		E0E1481CBED9B0704D45A4F5 /* gspacer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 77B678C5412B5FD3182D8695 /* gspacer.cpp */; settings = {ATTRIBUTES = (); }; };
+		E2D99CFCAC2DA3A62B74AFE7 /* moc_quazipfile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = FC29AEBEA653B1F7E2206A73 /* moc_quazipfile.cpp */; settings = {ATTRIBUTES = (); }; };
+		E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */; };
+		EB6A2DE1622C3683F14CA227 /* gFooBar.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = DBE15002CF3F43FD3EC90F96 /* gFooBar.cpp */; settings = {ATTRIBUTES = (); }; };
+		EB93423512446BFA5C65D83E /* UpdaterWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8A8E7708EB992D7952369D44 /* UpdaterWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		EC1C94F5437BAECCC1BBE8BD /* unzip.c in Compile Sources */ = {isa = PBXBuildFile; fileRef = 26254F18A2B41EB03AC4E612 /* unzip.c */; settings = {ATTRIBUTES = (); }; };
+		EFFCFDE3A13A7372D6370F45 /* overview.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 71E3A9BEC41B557F057BE8DF /* overview.cpp */; settings = {ATTRIBUTES = (); }; };
+		F1BA4590E18DEB46836F9168 /* preferences.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 78A33C8122C21D50EFA7232D /* preferences.cpp */; settings = {ATTRIBUTES = (); }; };
+		F256DA1D2782D4BAC51BE12A /* gSessionTimesChart.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 3A9B7C182C1243AED0B7F675 /* gSessionTimesChart.cpp */; settings = {ATTRIBUTES = (); }; };
+		F5B82FFFA2B6ED5A531CD06B /* moc_gGraph.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 8019B792F01BBC96DD2841CF /* moc_gGraph.cpp */; settings = {ATTRIBUTES = (); }; };
+		F8734D37C8CD2D056028A2C7 /* session.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E64038545C5C7F3AF41373B8 /* session.cpp */; settings = {ATTRIBUTES = (); }; };
+		F8DEB1EB63B64A5FC05DF482 /* gYAxis.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 11E942E98D9622E326135A28 /* gYAxis.cpp */; settings = {ATTRIBUTES = (); }; };
+		FAB0A4350FE90488802C9E49 /* resmed_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = D758896B3EE905FC25747964 /* resmed_loader.cpp */; settings = {ATTRIBUTES = (); }; };
+		FCDFF05556EC2BD55F0F7AC5 /* moc_logger.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 87340350091AF1B10EED66EB /* moc_logger.cpp */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73A73E481F69EA4D003FDB57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DB9C3763D02B1415CD9D565 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E4832B99F5727B78BFBFA2E;
+			remoteInfo = "Qt Preprocess";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99FAB9EC34236738DF754C0C /* Copy 'TransFiles' Files to Bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Resources/Translations;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			name = "Copy 'TransFiles' Files to Bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		01144CBD51ECF99B6D6867F4 /* cms50_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = cms50_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50_loader.cpp"; sourceTree = "<absolute>"; };
+		022AC20C0A50E09FBB916B21 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		03BE7B4AC3C1B1FA666F7D15 /* ui_daily.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_daily.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_daily.h"; sourceTree = "<absolute>"; };
+		054987505B35C3BBD845AE47 /* logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = logger.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/logger.cpp"; sourceTree = "<absolute>"; };
+		088405B6FD63016272C6FCC1 /* moc_profileselect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_profileselect.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_profileselect.cpp"; sourceTree = "<absolute>"; };
+		08EC17B50969B83ECEF0606F /* preferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = preferences.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/preferences.h"; sourceTree = "<absolute>"; };
+		0E17C144240C0B4FED7483BF /* profiles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = profiles.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/profiles.cpp"; sourceTree = "<absolute>"; };
+		0EE222D699D044D2367C3A8A /* moc_exportcsv.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_exportcsv.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_exportcsv.cpp"; sourceTree = "<absolute>"; };
+		1104AA4A1300770DC0016E0B /* gGraphView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gGraphView.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gGraphView.cpp"; sourceTree = "<absolute>"; };
+		1169FAEC23232E80F16FC622 /* ui_overview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_overview.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_overview.h"; sourceTree = "<absolute>"; };
+		11E942E98D9622E326135A28 /* gYAxis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gYAxis.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gYAxis.cpp"; sourceTree = "<absolute>"; };
+		12436CEFF9464E5A97182640 /* JlCompress.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = JlCompress.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/JlCompress.cpp"; sourceTree = "<absolute>"; };
+		126424EF0E7CB363F9A32D63 /* machine_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = machine_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine_loader.h"; sourceTree = "<absolute>"; };
+		1353579313582118A4DA2CFA /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; name = .qmake.stash; path = "/GitHub/sleepyhead-code/.qmake.stash"; sourceTree = "<absolute>"; };
+		1567BA841009C06E19060FC0 /* gSummaryChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gSummaryChart.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSummaryChart.h"; sourceTree = "<absolute>"; };
+		174B95587FBA5625FBA33CF7 /* weinmann_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = weinmann_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/weinmann_loader.cpp"; sourceTree = "<absolute>"; };
+		18677CDA49AE5DB31CFCB1A5 /* QtWebKitWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWebKitWidgets.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtWebKitWidgets.framework; sourceTree = "<absolute>"; };
+		192F65B9D73B1E574B3D66E7 /* moc_serialoximeter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_serialoximeter.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_serialoximeter.cpp"; sourceTree = "<absolute>"; };
+		1A0CDCECC27F51555C07447A /* moc_daily.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_daily.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_daily.cpp"; sourceTree = "<absolute>"; };
+		1A68EBF7F04724D07EAEC170 /* gSegmentChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gSegmentChart.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSegmentChart.h"; sourceTree = "<absolute>"; };
+		1D46953056A5DF5BA3587DAF /* moc_UpdaterWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_UpdaterWindow.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_UpdaterWindow.cpp"; sourceTree = "<absolute>"; };
+		1E89A4F1A991C8B429A955AF /* prs1_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = prs1_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/prs1_loader.cpp"; sourceTree = "<absolute>"; };
+		2030761DC1804DACFEE72B7C /* quacrc32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quacrc32.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quacrc32.h"; sourceTree = "<absolute>"; };
+		214615BFC0D83143AD0E2D20 /* ui_report.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_report.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_report.h"; sourceTree = "<absolute>"; };
+		23725B5FCC745BB264E9E925 /* machine_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = machine_common.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine_common.h"; sourceTree = "<absolute>"; };
+		26254F18A2B41EB03AC4E612 /* unzip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/unzip.c"; sourceTree = "<absolute>"; };
+		26C7BBE3A5CA1303E8B52550 /* overview.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = overview.ui; path = "/GitHub/sleepyhead-code/sleepyhead/overview.ui"; sourceTree = "<absolute>"; };
+		27C8871950A66AA8C2BF8666 /* ui_UpdaterWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_UpdaterWindow.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_UpdaterWindow.h"; sourceTree = "<absolute>"; };
+		2B4B8C82D84D4AA842124652 /* glcommon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = glcommon.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/glcommon.cpp"; sourceTree = "<absolute>"; };
+		2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiskArbitration.framework; path = /System/Library/Frameworks/DiskArbitration.framework; sourceTree = "<absolute>"; };
+		2FB1DD725B36BBDB44F231DB /* SleepyHead.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepyHead.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC81A8C6B4D42FEA0A3F16F /* welcome.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = welcome.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/welcome.cpp"; sourceTree = "<absolute>"; };
+		326588E735B3BC43071BA42C /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = common.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/common.h"; sourceTree = "<absolute>"; };
+		326890DF12CFFF169103121F /* gStatsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gStatsLine.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gStatsLine.cpp"; sourceTree = "<absolute>"; };
+		3697BC6229D64FFC919A41FE /* glcommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = glcommon.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/glcommon.h"; sourceTree = "<absolute>"; };
+		372AFFABF802BE1532C4D239 /* weinmann_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = weinmann_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/weinmann_loader.h"; sourceTree = "<absolute>"; };
+		3869E6C4FD73CCD6BCB3AE65 /* newprofile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = newprofile.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/newprofile.cpp"; sourceTree = "<absolute>"; };
+		393EF47C29DAE073D41EF269 /* newprofile.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = newprofile.ui; path = "/GitHub/sleepyhead-code/sleepyhead/newprofile.ui"; sourceTree = "<absolute>"; };
+		39D52D3B72E5F0066405B314 /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = event.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/event.cpp"; sourceTree = "<absolute>"; };
+		3A8AC9BC4C6BF19D5BBFD0D4 /* unzip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/unzip.h"; sourceTree = "<absolute>"; };
+		3A9B7C182C1243AED0B7F675 /* gSessionTimesChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gSessionTimesChart.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSessionTimesChart.cpp"; sourceTree = "<absolute>"; };
+		3BDE952DEB8EF7C2B3246321 /* daily.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = daily.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/daily.cpp"; sourceTree = "<absolute>"; };
+		3FB7DDD1405331F89A0BE285 /* schema.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = schema.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/schema.cpp"; sourceTree = "<absolute>"; };
+		412EAD5136E6562E0A80E86B /* progressdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = progressdialog.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/progressdialog.h"; sourceTree = "<absolute>"; };
+		421EB40F08C93E1532238C67 /* somnopose_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = somnopose_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/somnopose_loader.cpp"; sourceTree = "<absolute>"; };
+		437139A726A56E52DB4A4D3C /* daily.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = daily.ui; path = "/GitHub/sleepyhead-code/sleepyhead/daily.ui"; sourceTree = "<absolute>"; };
+		4623DA409940186F06520C39 /* exportcsv.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = exportcsv.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.cpp"; sourceTree = "<absolute>"; };
+		476A4A16FADFB320770180AE /* zip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zip.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/zip.h"; sourceTree = "<absolute>"; };
+		48432D6898FEE91369A03468 /* mseries_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mseries_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/mseries_loader.cpp"; sourceTree = "<absolute>"; };
+		4977B2A1B016DABF10FBEE93 /* newprofile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = newprofile.h; path = "/GitHub/sleepyhead-code/sleepyhead/newprofile.h"; sourceTree = "<absolute>"; };
+		499EA5E4C8F7984FBB8BEF1D /* mainwindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = mainwindow.ui; path = "/GitHub/sleepyhead-code/sleepyhead/mainwindow.ui"; sourceTree = "<absolute>"; };
+		49EC0FB332239743C9C0789B /* ioapi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/ioapi.h"; sourceTree = "<absolute>"; };
+		4A9A3194B46043FD8F63B9E2 /* QtNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtNetwork.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtNetwork.framework; sourceTree = "<absolute>"; };
+		4AF8C9E0BEAB11A0F6993FDA /* gStatsLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gStatsLine.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gStatsLine.h"; sourceTree = "<absolute>"; };
+		4C0305A9062281846E09F14D /* gGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gGraph.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gGraph.h"; sourceTree = "<absolute>"; };
+		4C12844A3379978DA6D83A65 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = event.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/event.h"; sourceTree = "<absolute>"; };
+		4C8C7CAEEDAB7569C8C19AB1 /* quazipnewinfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quazipnewinfo.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipnewinfo.cpp"; sourceTree = "<absolute>"; };
+		4DC9F39A72B048DF82E3E7EA /* icon_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = icon_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/icon_loader.cpp"; sourceTree = "<absolute>"; };
+		4EFDB1BF00CDE12DF7D13469 /* daily.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = daily.h; path = "/GitHub/sleepyhead-code/sleepyhead/daily.h"; sourceTree = "<absolute>"; };
+		4FB5FB649C23EB46344B9082 /* zeo_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = zeo_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/zeo_loader.h"; sourceTree = "<absolute>"; };
+		55B5C61EBFEBEC681088E42C /* mainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mainwindow.h; path = "/GitHub/sleepyhead-code/sleepyhead/mainwindow.h"; sourceTree = "<absolute>"; };
+		58235930DBC64B5A454FFB46 /* quacrc32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quacrc32.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quacrc32.cpp"; sourceTree = "<absolute>"; };
+		582B05718A212A1FD663E36E /* MinutesAtPressure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MinutesAtPressure.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/MinutesAtPressure.cpp"; sourceTree = "<absolute>"; };
+		58C7C1A7E2063E48C4DFDEF3 /* moc_cms50_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_cms50_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_cms50_loader.cpp"; sourceTree = "<absolute>"; };
+		59F9796204F7EC905CBEDD5A /* UpdaterWindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = UpdaterWindow.ui; path = "/GitHub/sleepyhead-code/sleepyhead/UpdaterWindow.ui"; sourceTree = "<absolute>"; };
+		5C6C5BB93B239B1E2DFF8DCC /* sessionbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sessionbar.h; path = "/GitHub/sleepyhead-code/sleepyhead/sessionbar.h"; sourceTree = "<absolute>"; };
+		5C77B99049E0B6D2BBEE5E1B /* qioapi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qioapi.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/qioapi.cpp"; sourceTree = "<absolute>"; };
+		5FC87836A35FA3F5AC8DAA1A /* moc_sessionbar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_sessionbar.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_sessionbar.cpp"; sourceTree = "<absolute>"; };
+		5FD3B0FCB545C3368C4A9F97 /* statistics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = statistics.h; path = "/GitHub/sleepyhead-code/sleepyhead/statistics.h"; sourceTree = "<absolute>"; };
+		630F3D752841AEF9D41F1FCF /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		640C5EB8771695D463F0237F /* day.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = day.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/day.cpp"; sourceTree = "<absolute>"; };
+		670EBC36233A7FFE71977E17 /* statistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = statistics.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/statistics.cpp"; sourceTree = "<absolute>"; };
+		688DBCF603DE5BF2B3471CEC /* quazipfile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quazipfile.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipfile.cpp"; sourceTree = "<absolute>"; };
+		69C2B2CAFB88A46F5E2483AF /* ui_newprofile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_newprofile.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_newprofile.h"; sourceTree = "<absolute>"; };
+		69D3A37C3E9E9C5893FEF79E /* intellipap_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = intellipap_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/intellipap_loader.h"; sourceTree = "<absolute>"; };
+		6D3DC7844E955EE9DFBBACFA /* gFlagsLine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gFlagsLine.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gFlagsLine.cpp"; sourceTree = "<absolute>"; };
+		6D5422AD022EBE8D0D931A5C /* QtSerialPort.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtSerialPort.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtSerialPort.framework; sourceTree = "<absolute>"; };
+		70158E3B8D6CEC3D8546147D /* sleepyhead.pro */ = {isa = PBXFileReference; lastKnownFileType = text; name = sleepyhead.pro; path = "/GitHub/sleepyhead-code/sleepyhead/sleepyhead.pro"; sourceTree = "<absolute>"; };
+		71E3A9BEC41B557F057BE8DF /* overview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = overview.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/overview.cpp"; sourceTree = "<absolute>"; };
+		734DF5DDE51955F416A27A54 /* cms50f37_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = cms50f37_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.cpp"; sourceTree = "<absolute>"; };
+		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
+		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
+		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
+		76E667EB1A6C5E4D2C5BD4CA /* MinutesAtPressure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MinutesAtPressure.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/MinutesAtPressure.h"; sourceTree = "<absolute>"; };
+		77717D8AF007D8173D0C38FC /* exportcsv.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = exportcsv.ui; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.ui"; sourceTree = "<absolute>"; };
+		77B678C5412B5FD3182D8695 /* gspacer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gspacer.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gspacer.cpp"; sourceTree = "<absolute>"; };
+		7816B3CD29F128E14F981B87 /* md300w1_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = md300w1_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/md300w1_loader.h"; sourceTree = "<absolute>"; };
+		78A33C8122C21D50EFA7232D /* preferences.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = preferences.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/preferences.cpp"; sourceTree = "<absolute>"; };
+		798F14F3B36019D607707856 /* day.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = day.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/day.h"; sourceTree = "<absolute>"; };
+		79FD6F0E71E2CE5DA4CD7E75 /* machine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = machine.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine.h"; sourceTree = "<absolute>"; };
+		7A984CFDC93EF89A5C8CC321 /* gspacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gspacer.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gspacer.h"; sourceTree = "<absolute>"; };
+		7BD96A1C674A786131A70850 /* gLineChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gLineChart.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gLineChart.h"; sourceTree = "<absolute>"; };
+		7FE2263ECE865D7BE862C670 /* quachecksum32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quachecksum32.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quachecksum32.h"; sourceTree = "<absolute>"; };
+		8019B792F01BBC96DD2841CF /* moc_gGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_gGraph.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_gGraph.cpp"; sourceTree = "<absolute>"; };
+		801C479191240E923A0E17B1 /* moc_newprofile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_newprofile.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_newprofile.cpp"; sourceTree = "<absolute>"; };
+		80AD968BB2F636005C597639 /* preferencesdialog.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = preferencesdialog.ui; path = "/GitHub/sleepyhead-code/sleepyhead/preferencesdialog.ui"; sourceTree = "<absolute>"; };
+		813B6929DD5F56AF4CF32C13 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/main.cpp"; sourceTree = "<absolute>"; };
+		82528564A950C09CC820E48C /* overview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = overview.h; path = "/GitHub/sleepyhead-code/sleepyhead/overview.h"; sourceTree = "<absolute>"; };
+		82637E87F9A2F91FB527FD0C /* moc_preferencesdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_preferencesdialog.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_preferencesdialog.cpp"; sourceTree = "<absolute>"; };
+		82B2C5318EF73A87E896E697 /* oximetry.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = oximetry.ui; path = "/GitHub/sleepyhead-code/sleepyhead/oximetry.ui"; sourceTree = "<absolute>"; };
+		84154A1ED6F7CF60854FC1F7 /* serialoximeter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = serialoximeter.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/serialoximeter.cpp"; sourceTree = "<absolute>"; };
+		84DBE24AD67BC700C248F167 /* somnopose_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = somnopose_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/somnopose_loader.h"; sourceTree = "<absolute>"; };
+		850BE5F939295549FEB9279C /* zeo_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = zeo_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/zeo_loader.cpp"; sourceTree = "<absolute>"; };
+		87340350091AF1B10EED66EB /* moc_logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_logger.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_logger.cpp"; sourceTree = "<absolute>"; };
+		8736DC0DE539F892DD4FFB9E /* intellipap_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = intellipap_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/intellipap_loader.cpp"; sourceTree = "<absolute>"; };
+		879B87032C26590481D2374F /* progressdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = progressdialog.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/progressdialog.cpp"; sourceTree = "<absolute>"; };
+		89A98A5BE327294B73CE8023 /* ui_oximetry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_oximetry.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_oximetry.h"; sourceTree = "<absolute>"; };
+		8A6CA339D5E5E176C16236EE /* calcs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = calcs.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/calcs.h"; sourceTree = "<absolute>"; };
+		8A8E7708EB992D7952369D44 /* UpdaterWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = UpdaterWindow.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/UpdaterWindow.cpp"; sourceTree = "<absolute>"; };
+		8CBC494A30546823579FA3BA /* gXAxis.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gXAxis.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gXAxis.cpp"; sourceTree = "<absolute>"; };
+		8CFE13D6731055A210F92331 /* gGraph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gGraph.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gGraph.cpp"; sourceTree = "<absolute>"; };
+		8D57CEBFD71DBB745C5861C2 /* reports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = reports.h; path = "/GitHub/sleepyhead-code/sleepyhead/reports.h"; sourceTree = "<absolute>"; };
+		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
+		8EEF5074888EE436C8A9A16A /* layer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = layer.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/layer.cpp"; sourceTree = "<absolute>"; };
+		8FB215A108AA1DC558F0F517 /* ui_exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_exportcsv.h"; sourceTree = "<absolute>"; };
+		91B145E1EE6C1C85A6005959 /* zip.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = zip.c; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/zip.c"; sourceTree = "<absolute>"; };
+		93092DAC891CB41A82616792 /* machine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = machine.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine.cpp"; sourceTree = "<absolute>"; };
+		93263CF1DF66A637C1405715 /* quazipfileinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quazipfileinfo.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipfileinfo.h"; sourceTree = "<absolute>"; };
+		938D53B54A41D939C197E6CF /* ui_mainwindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_mainwindow.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_mainwindow.h"; sourceTree = "<absolute>"; };
+		9494FEBB8D14ABC6AB58223E /* common_gui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = common_gui.h; path = "/GitHub/sleepyhead-code/sleepyhead/common_gui.h"; sourceTree = "<absolute>"; };
+		9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_cms50f37_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_cms50f37_loader.cpp"; sourceTree = "<absolute>"; };
+		95DF0E485830C86E6BD33705 /* profileselect.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = profileselect.ui; path = "/GitHub/sleepyhead-code/sleepyhead/profileselect.ui"; sourceTree = "<absolute>"; };
+		96213427012B07B12E0ACFF1 /* moc_oximeterimport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_oximeterimport.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_oximeterimport.cpp"; sourceTree = "<absolute>"; };
+		965BD64F11B530FBFEF66080 /* updateparser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = updateparser.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/updateparser.cpp"; sourceTree = "<absolute>"; };
+		969F9F8E85D2D8E9F8C441F4 /* ui_profileselect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_profileselect.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_profileselect.h"; sourceTree = "<absolute>"; };
+		9A41649EE150A69E9674DDB6 /* crypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/crypt.h"; sourceTree = "<absolute>"; };
+		9AC09FAAD17980FE9928FB32 /* QtXml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtXml.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtXml.framework; sourceTree = "<absolute>"; };
+		9BCD2C79901BDE9EF0798B68 /* journal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = journal.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/journal.cpp"; sourceTree = "<absolute>"; };
+		A1A67BEAA744704B29168D39 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		A5724F4DCC821F88F82FFF35 /* gLineOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gLineOverlay.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gLineOverlay.h"; sourceTree = "<absolute>"; };
+		A9E24022FFAF3EA46A830B91 /* machine_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = machine_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine_loader.cpp"; sourceTree = "<absolute>"; };
+		AA8B72E75AB6DB9C6D400989 /* QtPrintSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtPrintSupport.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtPrintSupport.framework; sourceTree = "<absolute>"; };
+		AB929F45C6B1EEB9E240B65B /* serialoximeter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = serialoximeter.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/serialoximeter.h"; sourceTree = "<absolute>"; };
+		AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = oximeterimport.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/oximeterimport.cpp"; sourceTree = "<absolute>"; };
+		AE025E49BBA311ADD7536E0A /* quaadler32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quaadler32.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quaadler32.h"; sourceTree = "<absolute>"; };
+		AE5E264AE35C944FC3C8EA35 /* iconfile.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = iconfile.icns; path = "/GitHub/sleepyhead-code/sleepyhead/icons/iconfile.icns"; sourceTree = "<absolute>"; };
+		B0ADBF158D728DF6C24D937E /* build_number.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = build_number.h; path = "/GitHub/sleepyhead-code/sleepyhead/build_number.h"; sourceTree = "<absolute>"; };
+		B1DDA201295985C069D1619E /* ui_oximeterimport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_oximeterimport.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_oximeterimport.h"; sourceTree = "<absolute>"; };
+		B46008277CF4A24735E1D58A /* gLineOverlay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gLineOverlay.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gLineOverlay.cpp"; sourceTree = "<absolute>"; };
+		B4F3EAFD9462E0B31DBBC266 /* profileselect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = profileselect.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/profileselect.cpp"; sourceTree = "<absolute>"; };
+		B5B609584C84B1A1AE2B33A7 /* gFlagsLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gFlagsLine.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gFlagsLine.h"; sourceTree = "<absolute>"; };
+		B5F579883B184FB1FF25AF77 /* reports.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = reports.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/reports.cpp"; sourceTree = "<absolute>"; };
+		B7B82FE5E991B6AB31DCE146 /* Resources.qrc */ = {isa = PBXFileReference; lastKnownFileType = text; name = Resources.qrc; path = "/GitHub/sleepyhead-code/sleepyhead/Resources.qrc"; sourceTree = "<absolute>"; };
+		B8781AE65A296B381C29406E /* cms50_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50_loader.h"; sourceTree = "<absolute>"; };
+		B89838445FBAF6306C7305E8 /* schema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = schema.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/schema.h"; sourceTree = "<absolute>"; };
+		B8D1470FEC9C09A6FF5D171A /* moc_statistics.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_statistics.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_statistics.cpp"; sourceTree = "<absolute>"; };
+		BA61D64E4C121C3B25AE73FB /* quaadler32.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quaadler32.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quaadler32.cpp"; sourceTree = "<absolute>"; };
+		BAE65ADDBCA5B04547C28780 /* md300w1_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = md300w1_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/md300w1_loader.cpp"; sourceTree = "<absolute>"; };
+		BB3C9355B6C641665A3E3BB9 /* gYAxis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gYAxis.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gYAxis.h"; sourceTree = "<absolute>"; };
+		BB49047483EE1D032972F398 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = version.h; path = "/GitHub/sleepyhead-code/sleepyhead/version.h"; sourceTree = "<absolute>"; };
+		BBE4FD273B4960B93CB9582F /* JlCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JlCompress.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/JlCompress.h"; sourceTree = "<absolute>"; };
+		BC7F3EDDBDA48554168623D3 /* journal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = journal.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/journal.h"; sourceTree = "<absolute>"; };
+		BE33697F725DE1B7D89A0000 /* sessionbar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = sessionbar.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/sessionbar.cpp"; sourceTree = "<absolute>"; };
+		BFBEB16527A5175F86415024 /* translation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = translation.h; path = "/GitHub/sleepyhead-code/sleepyhead/translation.h"; sourceTree = "<absolute>"; };
+		C02234850D131BA3453497A2 /* mainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mainwindow.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/mainwindow.cpp"; sourceTree = "<absolute>"; };
+		C0E0057ED1FD8BDA4CE3CE7E /* preferencesdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = preferencesdialog.h; path = "/GitHub/sleepyhead-code/sleepyhead/preferencesdialog.h"; sourceTree = "<absolute>"; };
+		C179BAB47D1E23FBF649CF1D /* report.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = report.ui; path = "/GitHub/sleepyhead-code/sleepyhead/report.ui"; sourceTree = "<absolute>"; };
+		C2BD6773496AB53CEE2EAE26 /* qrc_Resources.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = qrc_Resources.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/qrc_Resources.cpp"; sourceTree = "<absolute>"; };
+		C2D9A933AB7368DC9CD3654E /* oximeterimport.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = oximeterimport.ui; path = "/GitHub/sleepyhead-code/sleepyhead/oximeterimport.ui"; sourceTree = "<absolute>"; };
+		C36E997D0637A57101A9AABE /* logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = logger.h; path = "/GitHub/sleepyhead-code/sleepyhead/logger.h"; sourceTree = "<absolute>"; };
+		C46FF0055C7CCABA11D4B60C /* translation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = translation.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/translation.cpp"; sourceTree = "<absolute>"; };
+		C4D0DE11AE3EBB1CE266B344 /* preferencesdialog.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = preferencesdialog.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/preferencesdialog.cpp"; sourceTree = "<absolute>"; };
+		C59B3BDD913A1983E5D48D10 /* quazip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quazip.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazip.h"; sourceTree = "<absolute>"; };
+		C5AED8DEC1013AC9F21B9855 /* moc_overview.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_overview.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_overview.cpp"; sourceTree = "<absolute>"; };
+		C6133BF324694BDE54EC1C55 /* oximeterimport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = oximeterimport.h; path = "/GitHub/sleepyhead-code/sleepyhead/oximeterimport.h"; sourceTree = "<absolute>"; };
+		C7768CA0EC1EE30D926B4985 /* gSessionTimesChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gSessionTimesChart.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSessionTimesChart.h"; sourceTree = "<absolute>"; };
+		C9CA42D7D6D75AF86482D60A /* quazip.pri */ = {isa = PBXFileReference; lastKnownFileType = text; name = quazip.pri; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazip.pri"; sourceTree = "<absolute>"; };
+		CBA3886A80C9FC48CABECFE7 /* icon_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = icon_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/icon_loader.h"; sourceTree = "<absolute>"; };
+		CC9EF0B9B48C873FD1EE08CA /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtWidgets.framework; sourceTree = "<absolute>"; };
+		CD1F77237C3F225D013F847E /* moc_md300w1_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_md300w1_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_md300w1_loader.cpp"; sourceTree = "<absolute>"; };
+		D1E4D3DD0477F3E01E29044A /* session.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = session.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/session.h"; sourceTree = "<absolute>"; };
+		D2C234258F8893A40D05D860 /* UpdaterWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UpdaterWindow.h; path = "/GitHub/sleepyhead-code/sleepyhead/UpdaterWindow.h"; sourceTree = "<absolute>"; };
+		D2FE968CCDB735C4EF80CC15 /* gLineChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gLineChart.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gLineChart.cpp"; sourceTree = "<absolute>"; };
+		D4008F051104F18EF6F383E8 /* gFooBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gFooBar.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gFooBar.h"; sourceTree = "<absolute>"; };
+		D4B32C2222F82AC56BADEB21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		D731083E1D76D151A1C77FD9 /* machine_common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = machine_common.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/machine_common.cpp"; sourceTree = "<absolute>"; };
+		D758896B3EE905FC25747964 /* resmed_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = resmed_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/resmed_loader.cpp"; sourceTree = "<absolute>"; };
+		DA31A4FBB8583EC056FD651B /* ui_preferencesdialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ui_preferencesdialog.h; path = "/GitHub/sleepyhead-code/sleepyhead/ui_preferencesdialog.h"; sourceTree = "<absolute>"; };
+		DBE15002CF3F43FD3EC90F96 /* gFooBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gFooBar.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gFooBar.cpp"; sourceTree = "<absolute>"; };
+		DD03D7EC3C3B62576F49D6B1 /* common.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = common.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/common.cpp"; sourceTree = "<absolute>"; };
+		DE4309116AAC96B091247608 /* layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = layer.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/layer.h"; sourceTree = "<absolute>"; };
+		DEFCF706F7C72DF94CAC3C71 /* QtWebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWebKit.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtWebKit.framework; sourceTree = "<absolute>"; };
+		DFD35361A7A9D5E2FE728CCB /* QtOpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtOpenGL.framework; path = /Users/danie/Qt/5.5/clang_64/lib/QtOpenGL.framework; sourceTree = "<absolute>"; };
+		E630B5D35581B9B9E4D14A88 /* moc_gGraphView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_gGraphView.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_gGraphView.cpp"; sourceTree = "<absolute>"; };
+		E64038545C5C7F3AF41373B8 /* session.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = session.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/session.cpp"; sourceTree = "<absolute>"; };
+		E9A5D3403B9D6449E35490F5 /* gSummaryChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gSummaryChart.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSummaryChart.cpp"; sourceTree = "<absolute>"; };
+		E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quazipfileinfo.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipfileinfo.cpp"; sourceTree = "<absolute>"; };
+		EC58C4D9E9CA7323EA7A9593 /* gdailysummary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gdailysummary.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.h"; sourceTree = "<absolute>"; };
+		ED0799FB003F8066AB15A1F6 /* moc_mainwindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_mainwindow.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_mainwindow.cpp"; sourceTree = "<absolute>"; };
+		ED806139FDDBF08BEFBEC1EF /* resmed_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = resmed_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/resmed_loader.h"; sourceTree = "<absolute>"; };
+		EDA01D3D23273551F6B1C40A /* moc_machine_loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_machine_loader.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_machine_loader.cpp"; sourceTree = "<absolute>"; };
+		EE2CFE0DC5ECD1EE99547B61 /* common_gui.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 2; name = common_gui.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/common_gui.cpp"; sourceTree = "<absolute>"; usesTabs = 0; };
+		F0AE5E094CA943687614D7A1 /* gXAxis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gXAxis.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gXAxis.h"; sourceTree = "<absolute>"; };
+		F0E53C677D7E1063A8F7E6EC /* profileselect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = profileselect.h; path = "/GitHub/sleepyhead-code/sleepyhead/profileselect.h"; sourceTree = "<absolute>"; };
+		F13EA63D1D4E8E2AF6FC0DDD /* gGraphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gGraphView.h; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gGraphView.h"; sourceTree = "<absolute>"; };
+		F55E8FF392827DACB1AEED07 /* profiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = profiles.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/profiles.h"; sourceTree = "<absolute>"; };
+		F581EB9F251ABCCF6E9A94C6 /* moc_machine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_machine.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_machine.cpp"; sourceTree = "<absolute>"; };
+		F7858D87195136C0615E83A7 /* quazipfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quazipfile.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipfile.h"; sourceTree = "<absolute>"; };
+		F95C8D039EC4B7287E39D342 /* mseries_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mseries_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/mseries_loader.h"; sourceTree = "<absolute>"; };
+		FA372EE46A0B265F7AF9D4A0 /* gSegmentChart.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gSegmentChart.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gSegmentChart.cpp"; sourceTree = "<absolute>"; };
+		FC29AEBEA653B1F7E2206A73 /* moc_quazipfile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = moc_quazipfile.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/moc_quazipfile.cpp"; sourceTree = "<absolute>"; };
+		FD533E90A84734F2A9707BA7 /* calcs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = calcs.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/calcs.cpp"; sourceTree = "<absolute>"; };
+		FDA94125396CD87ADE11F3E8 /* quazip.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = quazip.cpp; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazip.cpp"; sourceTree = "<absolute>"; };
+		FF1BF64226E01A8FE31EA909 /* quazipnewinfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = quazipnewinfo.h; path = "/GitHub/sleepyhead-code/3rdparty/quazip/quazip/quazipnewinfo.h"; sourceTree = "<absolute>"; };
+		FF571E081C2B9B9DCF01BDDA /* updateparser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = updateparser.h; path = "/GitHub/sleepyhead-code/sleepyhead/updateparser.h"; sourceTree = "<absolute>"; };
+		FFAC4FA707EBA998CE6DD124 /* prs1_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = prs1_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/prs1_loader.h"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1C883685E82D5676953459A /* Link Binary With Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBBB9355330D846152F88594 /* QtPrintSupport.framework in Link Binary With Libraries */,
+				BE83214D0B0E24E03CFE9D09 /* QtWidgets.framework in Link Binary With Libraries */,
+				9FD7586E4E459E881B825BA9 /* QtGui.framework in Link Binary With Libraries */,
+				84982EE2056BF13D72F3A1D7 /* QtCore.framework in Link Binary With Libraries */,
+				A99B2AA0F9CBBDD12BA126A4 /* DiskArbitration.framework in Link Binary With Libraries */,
+				8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */,
+				719C2BF084CF1F77447683CE /* QtWebKitWidgets.framework in Link Binary With Libraries */,
+				3947416ACBD39183D77AD458 /* QtWebKit.framework in Link Binary With Libraries */,
+				234B8E9117A26806B6C9C66D /* QtNetwork.framework in Link Binary With Libraries */,
+				61546E1BB94BA46D07AE3475 /* QtOpenGL.framework in Link Binary With Libraries */,
+				486185D286DCB21BA185FCEE /* QtXml.framework in Link Binary With Libraries */,
+				26EE0DF308AEE5C224F57CE4 /* QtSerialPort.framework in Link Binary With Libraries */,
+				8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */,
+				E45E51A644D5FC9F942ECE55 /* AGL.framework in Link Binary With Libraries */,
+			);
+			name = "Link Binary With Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03D5F9FCFD670A1BEDF219A2 /* SleepLib */ = {
+			isa = PBXGroup;
+			children = (
+				FD533E90A84734F2A9707BA7 /* calcs.cpp */,
+				DD03D7EC3C3B62576F49D6B1 /* common.cpp */,
+				640C5EB8771695D463F0237F /* day.cpp */,
+				39D52D3B72E5F0066405B314 /* event.cpp */,
+				93092DAC891CB41A82616792 /* machine.cpp */,
+				A9E24022FFAF3EA46A830B91 /* machine_loader.cpp */,
+				78A33C8122C21D50EFA7232D /* preferences.cpp */,
+				0E17C144240C0B4FED7483BF /* profiles.cpp */,
+				3FB7DDD1405331F89A0BE285 /* schema.cpp */,
+				E64038545C5C7F3AF41373B8 /* session.cpp */,
+				FADA9900C848E71C66A6EE64 /* loader_plugins */,
+				84154A1ED6F7CF60854FC1F7 /* serialoximeter.cpp */,
+				D731083E1D76D151A1C77FD9 /* machine_common.cpp */,
+				9BCD2C79901BDE9EF0798B68 /* journal.cpp */,
+				879B87032C26590481D2374F /* progressdialog.cpp */,
+				8A6CA339D5E5E176C16236EE /* calcs.h */,
+				326588E735B3BC43071BA42C /* common.h */,
+				798F14F3B36019D607707856 /* day.h */,
+				4C12844A3379978DA6D83A65 /* event.h */,
+				79FD6F0E71E2CE5DA4CD7E75 /* machine.h */,
+				23725B5FCC745BB264E9E925 /* machine_common.h */,
+				126424EF0E7CB363F9A32D63 /* machine_loader.h */,
+				08EC17B50969B83ECEF0606F /* preferences.h */,
+				F55E8FF392827DACB1AEED07 /* profiles.h */,
+				B89838445FBAF6306C7305E8 /* schema.h */,
+				D1E4D3DD0477F3E01E29044A /* session.h */,
+				AB929F45C6B1EEB9E240B65B /* serialoximeter.h */,
+				BC7F3EDDBDA48554168623D3 /* journal.h */,
+				412EAD5136E6562E0A80E86B /* progressdialog.h */,
+			);
+			name = SleepLib;
+			sourceTree = "<Group>";
+		};
+		12E908B8A1C3C07C115504F5 /* Sources [uic] */ = {
+			isa = PBXGroup;
+			children = (
+				437139A726A56E52DB4A4D3C /* daily.ui */,
+				26C7BBE3A5CA1303E8B52550 /* overview.ui */,
+				499EA5E4C8F7984FBB8BEF1D /* mainwindow.ui */,
+				82B2C5318EF73A87E896E697 /* oximetry.ui */,
+				80AD968BB2F636005C597639 /* preferencesdialog.ui */,
+				C179BAB47D1E23FBF649CF1D /* report.ui */,
+				95DF0E485830C86E6BD33705 /* profileselect.ui */,
+				393EF47C29DAE073D41EF269 /* newprofile.ui */,
+				77717D8AF007D8173D0C38FC /* exportcsv.ui */,
+				59F9796204F7EC905CBEDD5A /* UpdaterWindow.ui */,
+				C2D9A933AB7368DC9CD3654E /* oximeterimport.ui */,
+			);
+			name = "Sources [uic]";
+			sourceTree = "<Group>";
+		};
+		24667CC5DEC02203B5590245 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				6D3DC7844E955EE9DFBBACFA /* gFlagsLine.cpp */,
+				DBE15002CF3F43FD3EC90F96 /* gFooBar.cpp */,
+				8CFE13D6731055A210F92331 /* gGraph.cpp */,
+				1104AA4A1300770DC0016E0B /* gGraphView.cpp */,
+				2B4B8C82D84D4AA842124652 /* glcommon.cpp */,
+				D2FE968CCDB735C4EF80CC15 /* gLineChart.cpp */,
+				B46008277CF4A24735E1D58A /* gLineOverlay.cpp */,
+				FA372EE46A0B265F7AF9D4A0 /* gSegmentChart.cpp */,
+				77B678C5412B5FD3182D8695 /* gspacer.cpp */,
+				326890DF12CFFF169103121F /* gStatsLine.cpp */,
+				E9A5D3403B9D6449E35490F5 /* gSummaryChart.cpp */,
+				8CBC494A30546823579FA3BA /* gXAxis.cpp */,
+				11E942E98D9622E326135A28 /* gYAxis.cpp */,
+				8EEF5074888EE436C8A9A16A /* layer.cpp */,
+				3A9B7C182C1243AED0B7F675 /* gSessionTimesChart.cpp */,
+				749BBF223803AD1DD548E66D /* gdailysummary.cpp */,
+				582B05718A212A1FD663E36E /* MinutesAtPressure.cpp */,
+				B5B609584C84B1A1AE2B33A7 /* gFlagsLine.h */,
+				D4008F051104F18EF6F383E8 /* gFooBar.h */,
+				4C0305A9062281846E09F14D /* gGraph.h */,
+				F13EA63D1D4E8E2AF6FC0DDD /* gGraphView.h */,
+				3697BC6229D64FFC919A41FE /* glcommon.h */,
+				7BD96A1C674A786131A70850 /* gLineChart.h */,
+				A5724F4DCC821F88F82FFF35 /* gLineOverlay.h */,
+				1A68EBF7F04724D07EAEC170 /* gSegmentChart.h */,
+				7A984CFDC93EF89A5C8CC321 /* gspacer.h */,
+				4AF8C9E0BEAB11A0F6993FDA /* gStatsLine.h */,
+				1567BA841009C06E19060FC0 /* gSummaryChart.h */,
+				F0AE5E094CA943687614D7A1 /* gXAxis.h */,
+				BB3C9355B6C641665A3E3BB9 /* gYAxis.h */,
+				DE4309116AAC96B091247608 /* layer.h */,
+				C7768CA0EC1EE30D926B4985 /* gSessionTimesChart.h */,
+				EC58C4D9E9CA7323EA7A9593 /* gdailysummary.h */,
+				76E667EB1A6C5E4D2C5BD4CA /* MinutesAtPressure.h */,
+			);
+			name = Graphs;
+			sourceTree = "<Group>";
+		};
+		25B08E2869634E9BCBA333A2 /* Generated Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C2BD6773496AB53CEE2EAE26 /* qrc_Resources.cpp */,
+				1A0CDCECC27F51555C07447A /* moc_daily.cpp */,
+				0EE222D699D044D2367C3A8A /* moc_exportcsv.cpp */,
+				ED0799FB003F8066AB15A1F6 /* moc_mainwindow.cpp */,
+				801C479191240E923A0E17B1 /* moc_newprofile.cpp */,
+				C5AED8DEC1013AC9F21B9855 /* moc_overview.cpp */,
+				82637E87F9A2F91FB527FD0C /* moc_preferencesdialog.cpp */,
+				088405B6FD63016272C6FCC1 /* moc_profileselect.cpp */,
+				5FC87836A35FA3F5AC8DAA1A /* moc_sessionbar.cpp */,
+				1D46953056A5DF5BA3587DAF /* moc_UpdaterWindow.cpp */,
+				8019B792F01BBC96DD2841CF /* moc_gGraph.cpp */,
+				E630B5D35581B9B9E4D14A88 /* moc_gGraphView.cpp */,
+				F581EB9F251ABCCF6E9A94C6 /* moc_machine.cpp */,
+				EDA01D3D23273551F6B1C40A /* moc_machine_loader.cpp */,
+				58C7C1A7E2063E48C4DFDEF3 /* moc_cms50_loader.cpp */,
+				B8D1470FEC9C09A6FF5D171A /* moc_statistics.cpp */,
+				96213427012B07B12E0ACFF1 /* moc_oximeterimport.cpp */,
+				192F65B9D73B1E574B3D66E7 /* moc_serialoximeter.cpp */,
+				CD1F77237C3F225D013F847E /* moc_md300w1_loader.cpp */,
+				87340350091AF1B10EED66EB /* moc_logger.cpp */,
+				9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */,
+				FC29AEBEA653B1F7E2206A73 /* moc_quazipfile.cpp */,
+				03BE7B4AC3C1B1FA666F7D15 /* ui_daily.h */,
+				1169FAEC23232E80F16FC622 /* ui_overview.h */,
+				938D53B54A41D939C197E6CF /* ui_mainwindow.h */,
+				89A98A5BE327294B73CE8023 /* ui_oximetry.h */,
+				DA31A4FBB8583EC056FD651B /* ui_preferencesdialog.h */,
+				214615BFC0D83143AD0E2D20 /* ui_report.h */,
+				969F9F8E85D2D8E9F8C441F4 /* ui_profileselect.h */,
+				69C2B2CAFB88A46F5E2483AF /* ui_newprofile.h */,
+				8FB215A108AA1DC558F0F517 /* ui_exportcsv.h */,
+				27C8871950A66AA8C2BF8666 /* ui_UpdaterWindow.h */,
+				B1DDA201295985C069D1619E /* ui_oximeterimport.h */,
+			);
+			name = "Generated Sources";
+			sourceTree = "<Group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EE2CFE0DC5ECD1EE99547B61 /* common_gui.cpp */,
+				3BDE952DEB8EF7C2B3246321 /* daily.cpp */,
+				4623DA409940186F06520C39 /* exportcsv.cpp */,
+				813B6929DD5F56AF4CF32C13 /* main.cpp */,
+				C02234850D131BA3453497A2 /* mainwindow.cpp */,
+				3869E6C4FD73CCD6BCB3AE65 /* newprofile.cpp */,
+				71E3A9BEC41B557F057BE8DF /* overview.cpp */,
+				C4D0DE11AE3EBB1CE266B344 /* preferencesdialog.cpp */,
+				B4F3EAFD9462E0B31DBBC266 /* profileselect.cpp */,
+				B5F579883B184FB1FF25AF77 /* reports.cpp */,
+				BE33697F725DE1B7D89A0000 /* sessionbar.cpp */,
+				965BD64F11B530FBFEF66080 /* updateparser.cpp */,
+				8A8E7708EB992D7952369D44 /* UpdaterWindow.cpp */,
+				24667CC5DEC02203B5590245 /* Graphs */,
+				03D5F9FCFD670A1BEDF219A2 /* SleepLib */,
+				C46FF0055C7CCABA11D4B60C /* translation.cpp */,
+				670EBC36233A7FFE71977E17 /* statistics.cpp */,
+				AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */,
+				054987505B35C3BBD845AE47 /* logger.cpp */,
+				2FC81A8C6B4D42FEA0A3F16F /* welcome.cpp */,
+				5C77B99049E0B6D2BBEE5E1B /* qioapi.cpp */,
+				12436CEFF9464E5A97182640 /* JlCompress.cpp */,
+				BA61D64E4C121C3B25AE73FB /* quaadler32.cpp */,
+				58235930DBC64B5A454FFB46 /* quacrc32.cpp */,
+				FDA94125396CD87ADE11F3E8 /* quazip.cpp */,
+				688DBCF603DE5BF2B3471CEC /* quazipfile.cpp */,
+				4C8C7CAEEDAB7569C8C19AB1 /* quazipnewinfo.cpp */,
+				E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */,
+				26254F18A2B41EB03AC4E612 /* unzip.c */,
+				91B145E1EE6C1C85A6005959 /* zip.c */,
+				7D05007EEFA2F8952020A574 /* icons */,
+				9494FEBB8D14ABC6AB58223E /* common_gui.h */,
+				4EFDB1BF00CDE12DF7D13469 /* daily.h */,
+				76DFB1B3B79A816023BCD214 /* exportcsv.h */,
+				55B5C61EBFEBEC681088E42C /* mainwindow.h */,
+				4977B2A1B016DABF10FBEE93 /* newprofile.h */,
+				82528564A950C09CC820E48C /* overview.h */,
+				C0E0057ED1FD8BDA4CE3CE7E /* preferencesdialog.h */,
+				F0E53C677D7E1063A8F7E6EC /* profileselect.h */,
+				8D57CEBFD71DBB745C5861C2 /* reports.h */,
+				5C6C5BB93B239B1E2DFF8DCC /* sessionbar.h */,
+				FF571E081C2B9B9DCF01BDDA /* updateparser.h */,
+				D2C234258F8893A40D05D860 /* UpdaterWindow.h */,
+				BB49047483EE1D032972F398 /* version.h */,
+				BFBEB16527A5175F86415024 /* translation.h */,
+				5FD3B0FCB545C3368C4A9F97 /* statistics.h */,
+				C6133BF324694BDE54EC1C55 /* oximeterimport.h */,
+				C36E997D0637A57101A9AABE /* logger.h */,
+				B0ADBF158D728DF6C24D937E /* build_number.h */,
+				9A41649EE150A69E9674DDB6 /* crypt.h */,
+				49EC0FB332239743C9C0789B /* ioapi.h */,
+				BBE4FD273B4960B93CB9582F /* JlCompress.h */,
+				AE025E49BBA311ADD7536E0A /* quaadler32.h */,
+				7FE2263ECE865D7BE862C670 /* quachecksum32.h */,
+				2030761DC1804DACFEE72B7C /* quacrc32.h */,
+				C59B3BDD913A1983E5D48D10 /* quazip.h */,
+				F7858D87195136C0615E83A7 /* quazipfile.h */,
+				93263CF1DF66A637C1405715 /* quazipfileinfo.h */,
+				FF1BF64226E01A8FE31EA909 /* quazipnewinfo.h */,
+				3A8AC9BC4C6BF19D5BBFD0D4 /* unzip.h */,
+				476A4A16FADFB320770180AE /* zip.h */,
+			);
+			name = Sources;
+			sourceTree = "<Group>";
+		};
+		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				70158E3B8D6CEC3D8546147D /* sleepyhead.pro */,
+				1353579313582118A4DA2CFA /* .qmake.stash */,
+				C9CA42D7D6D75AF86482D60A /* quazip.pri */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<Group>";
+		};
+		7D05007EEFA2F8952020A574 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				AE5E264AE35C944FC3C8EA35 /* iconfile.icns */,
+			);
+			name = icons;
+			sourceTree = "<Group>";
+		};
+		858FCAB0EB1F29CF8B07677C /* Bundle Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Bundle Data";
+			sourceTree = "<Group>";
+		};
+		87DF60DE337FB58864343E39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7B82FE5E991B6AB31DCE146 /* Resources.qrc */,
+			);
+			name = Resources;
+			sourceTree = "<Group>";
+		};
+		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B72E75AB6DB9C6D400989 /* QtPrintSupport.framework */,
+				CC9EF0B9B48C873FD1EE08CA /* QtWidgets.framework */,
+				022AC20C0A50E09FBB916B21 /* QtGui.framework */,
+				630F3D752841AEF9D41F1FCF /* QtCore.framework */,
+				2B774D8E4178765CE52EAAF5 /* DiskArbitration.framework */,
+				A1A67BEAA744704B29168D39 /* IOKit.framework */,
+				18677CDA49AE5DB31CFCB1A5 /* QtWebKitWidgets.framework */,
+				DEFCF706F7C72DF94CAC3C71 /* QtWebKit.framework */,
+				4A9A3194B46043FD8F63B9E2 /* QtNetwork.framework */,
+				DFD35361A7A9D5E2FE728CCB /* QtOpenGL.framework */,
+				9AC09FAAD17980FE9928FB32 /* QtXml.framework */,
+				6D5422AD022EBE8D0D931A5C /* QtSerialPort.framework */,
+				D4B32C2222F82AC56BADEB21 /* OpenGL.framework */,
+				8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<Group>";
+		};
+		E8C543AB96796ECAA2E65C57 /* SleepyHead */ = {
+			isa = PBXGroup;
+			children = (
+				2EB56BE3C2D93CDAB0C52E67 /* Sources */,
+				25B08E2869634E9BCBA333A2 /* Generated Sources */,
+				74B182DB50CB5611B5C1C297 /* Supporting Files */,
+				87DF60DE337FB58864343E39 /* Resources */,
+				12E908B8A1C3C07C115504F5 /* Sources [uic] */,
+				AF39DD055C3EF8226FBE929D /* Frameworks */,
+				858FCAB0EB1F29CF8B07677C /* Bundle Data */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			name = SleepyHead;
+			sourceTree = "<Group>";
+			usesTabs = 1;
+		};
+		FADA9900C848E71C66A6EE64 /* loader_plugins */ = {
+			isa = PBXGroup;
+			children = (
+				01144CBD51ECF99B6D6867F4 /* cms50_loader.cpp */,
+				4DC9F39A72B048DF82E3E7EA /* icon_loader.cpp */,
+				8736DC0DE539F892DD4FFB9E /* intellipap_loader.cpp */,
+				48432D6898FEE91369A03468 /* mseries_loader.cpp */,
+				1E89A4F1A991C8B429A955AF /* prs1_loader.cpp */,
+				D758896B3EE905FC25747964 /* resmed_loader.cpp */,
+				421EB40F08C93E1532238C67 /* somnopose_loader.cpp */,
+				850BE5F939295549FEB9279C /* zeo_loader.cpp */,
+				BAE65ADDBCA5B04547C28780 /* md300w1_loader.cpp */,
+				174B95587FBA5625FBA33CF7 /* weinmann_loader.cpp */,
+				734DF5DDE51955F416A27A54 /* cms50f37_loader.cpp */,
+				B8781AE65A296B381C29406E /* cms50_loader.h */,
+				CBA3886A80C9FC48CABECFE7 /* icon_loader.h */,
+				69D3A37C3E9E9C5893FEF79E /* intellipap_loader.h */,
+				F95C8D039EC4B7287E39D342 /* mseries_loader.h */,
+				FFAC4FA707EBA998CE6DD124 /* prs1_loader.h */,
+				ED806139FDDBF08BEFBEC1EF /* resmed_loader.h */,
+				84DBE24AD67BC700C248F167 /* somnopose_loader.h */,
+				4FB5FB649C23EB46344B9082 /* zeo_loader.h */,
+				7816B3CD29F128E14F981B87 /* md300w1_loader.h */,
+				372AFFABF802BE1532C4D239 /* weinmann_loader.h */,
+				74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */,
+			);
+			name = loader_plugins;
+			sourceTree = "<Group>";
+		};
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FB1DD725B36BBDB44F231DB /* SleepyHead.app */,
+			);
+			name = Products;
+			sourceTree = "<Group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C5D033C23693B6E42ABB350 /* SleepyHead */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SleepyHead" */;
+			buildPhases = (
+				F7E50F631C51CD5B5DC0BC43 /* Compile Sources */,
+				D1C883685E82D5676953459A /* Link Binary With Libraries */,
+				99FAB9EC34236738DF754C0C /* Copy 'TransFiles' Files to Bundle */,
+				30414803F31797EB689AE508 /* Copy Bundle Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B9DB7D2F3A707C592989522 /* PBXTargetDependency */,
+			);
+			name = SleepyHead;
+			productName = SleepyHead;
+			productReference = 2FB1DD725B36BBDB44F231DB /* SleepyHead.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DB9C3763D02B1415CD9D565 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+			};
+			buildConfigurationList = DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "SleepyHead" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8C543AB96796ECAA2E65C57 /* SleepyHead */;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C5D033C23693B6E42ABB350 /* SleepyHead */,
+				8E4832B99F5727B78BFBFA2E /* Qt Preprocess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30414803F31797EB689AE508 /* Copy Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Copy Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E618435888B9D49F8540165 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /GitHub/sleepyhead-code/sleepyhead/ -f SleepyHead.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = 0;
+		};
+		7EF0942E79C014DCEC8976BC /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /GitHub/sleepyhead-code/sleepyhead/ -f SleepyHead.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7E50F631C51CD5B5DC0BC43 /* Compile Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98A3E9D6B963152F335EDCB /* common_gui.cpp in Compile Sources */,
+				DE2499C1F887F7C0FFAD6D42 /* daily.cpp in Compile Sources */,
+				C37D026FA553E29380CFFA8E /* exportcsv.cpp in Compile Sources */,
+				611A146A91B56AF058B744B0 /* main.cpp in Compile Sources */,
+				CA902CE097BA1AE8140235B1 /* mainwindow.cpp in Compile Sources */,
+				BEBFCD82F92BD7576FB1C56C /* newprofile.cpp in Compile Sources */,
+				EFFCFDE3A13A7372D6370F45 /* overview.cpp in Compile Sources */,
+				AF5C959E96DA4B4F90C1EB55 /* preferencesdialog.cpp in Compile Sources */,
+				AC36932AE4999F55ADF7C7AE /* profileselect.cpp in Compile Sources */,
+				DD2FDE64384B58EEFAC652A0 /* reports.cpp in Compile Sources */,
+				C36FF613BA2AFF88EBBA9263 /* sessionbar.cpp in Compile Sources */,
+				8DA24363FA0F4C16FE3A1DEA /* updateparser.cpp in Compile Sources */,
+				EB93423512446BFA5C65D83E /* UpdaterWindow.cpp in Compile Sources */,
+				4451816DE092658D6DF1E0AF /* gFlagsLine.cpp in Compile Sources */,
+				EB6A2DE1622C3683F14CA227 /* gFooBar.cpp in Compile Sources */,
+				68C54258A56C7803DFA0288B /* gGraph.cpp in Compile Sources */,
+				88201ACDD745E43F7ED5F32C /* gGraphView.cpp in Compile Sources */,
+				5F0DC61F0036AF2368BEEA20 /* glcommon.cpp in Compile Sources */,
+				3D6DE77B8F77D0AD83CCA852 /* gLineChart.cpp in Compile Sources */,
+				6224815B6DCF4E5AF22D1747 /* gLineOverlay.cpp in Compile Sources */,
+				024AD60809AE532FE98874E1 /* gSegmentChart.cpp in Compile Sources */,
+				E0E1481CBED9B0704D45A4F5 /* gspacer.cpp in Compile Sources */,
+				A91898EF8EF97AD7A68CF3A6 /* gStatsLine.cpp in Compile Sources */,
+				C6E9BD4DB5673CF5AB40F9A2 /* gSummaryChart.cpp in Compile Sources */,
+				46F828D2F572D4C71A269320 /* gXAxis.cpp in Compile Sources */,
+				F8DEB1EB63B64A5FC05DF482 /* gYAxis.cpp in Compile Sources */,
+				D0A53F6F6FA8F203A3AD3B64 /* layer.cpp in Compile Sources */,
+				60F06E0F10951996E05DB982 /* calcs.cpp in Compile Sources */,
+				4FC37F047F03B757C239AB3F /* common.cpp in Compile Sources */,
+				BFF2C831EB6DBB698C59014E /* day.cpp in Compile Sources */,
+				413D59823B030CF95EAA6CFC /* event.cpp in Compile Sources */,
+				45A5CE7B1BB0BD29C3CA43E4 /* machine.cpp in Compile Sources */,
+				CE4F3C8E4A57F3875CA5E7DE /* machine_loader.cpp in Compile Sources */,
+				F1BA4590E18DEB46836F9168 /* preferences.cpp in Compile Sources */,
+				18EBCF2276A07D9922CE1221 /* profiles.cpp in Compile Sources */,
+				4675E3DF0097D6F84FF923D8 /* schema.cpp in Compile Sources */,
+				F8734D37C8CD2D056028A2C7 /* session.cpp in Compile Sources */,
+				007E4181C073F09BA0FB3DF9 /* cms50_loader.cpp in Compile Sources */,
+				5A04DD12D078D700F95F87BB /* icon_loader.cpp in Compile Sources */,
+				69C9AE74641648C3C674D6DC /* intellipap_loader.cpp in Compile Sources */,
+				560B8684A95A3924DEA3F1A9 /* mseries_loader.cpp in Compile Sources */,
+				34D06BFAED0FB7288331AD2C /* prs1_loader.cpp in Compile Sources */,
+				FAB0A4350FE90488802C9E49 /* resmed_loader.cpp in Compile Sources */,
+				9D5FADC5002C99FE485B3977 /* somnopose_loader.cpp in Compile Sources */,
+				667199809B87358A68845927 /* zeo_loader.cpp in Compile Sources */,
+				92D4F54ACDF78008A9458083 /* translation.cpp in Compile Sources */,
+				3D536E6F8D6E4AB63DA34722 /* statistics.cpp in Compile Sources */,
+				76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */,
+				263BFBB0A6AE9AB0BBAD7D00 /* serialoximeter.cpp in Compile Sources */,
+				7006C7776547C5B7E7D4BED7 /* md300w1_loader.cpp in Compile Sources */,
+				F256DA1D2782D4BAC51BE12A /* gSessionTimesChart.cpp in Compile Sources */,
+				85AB17C08B789BDEB6F36E1C /* logger.cpp in Compile Sources */,
+				6187B407AE50C7AFEB1484B0 /* welcome.cpp in Compile Sources */,
+				0E7964EE59C580C635259D65 /* machine_common.cpp in Compile Sources */,
+				D258F4F58E63499A607F1DC6 /* weinmann_loader.cpp in Compile Sources */,
+				A7F76DACE180E1D220C63748 /* gdailysummary.cpp in Compile Sources */,
+				1792449FA8349D1ED590B08B /* MinutesAtPressure.cpp in Compile Sources */,
+				C4E10E377E1171C860EA57DD /* journal.cpp in Compile Sources */,
+				621C3B5A4661C9D2054A9DE5 /* progressdialog.cpp in Compile Sources */,
+				BEF1A9993A39D8C8DA633FD6 /* cms50f37_loader.cpp in Compile Sources */,
+				B796492CD49322633A219B1A /* qioapi.cpp in Compile Sources */,
+				0BD99D0A8093BC061DC06B2A /* JlCompress.cpp in Compile Sources */,
+				C74EF97780ABFC2587B86354 /* quaadler32.cpp in Compile Sources */,
+				5E043D2B382CC36F2E037D88 /* quacrc32.cpp in Compile Sources */,
+				AB1F49013B1480974793FF8C /* quazip.cpp in Compile Sources */,
+				5CFE4FB51EA2D0952D77869C /* quazipfile.cpp in Compile Sources */,
+				104535FCDE3BE69433D99066 /* quazipnewinfo.cpp in Compile Sources */,
+				DC9C955E37C887936A011FFB /* quazipfileinfo.cpp in Compile Sources */,
+				EC1C94F5437BAECCC1BBE8BD /* unzip.c in Compile Sources */,
+				674ADAA4FC56D7038C5E2A32 /* zip.c in Compile Sources */,
+				8C0D1012B63BFC4433F33B3E /* qrc_Resources.cpp in Compile Sources */,
+				4BF03C405EE360D70E836DD8 /* moc_daily.cpp in Compile Sources */,
+				B1645B879A41247C3EE192F3 /* moc_exportcsv.cpp in Compile Sources */,
+				264C96D9E769D5E8D2DEA90A /* moc_mainwindow.cpp in Compile Sources */,
+				8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */,
+				4F1B436E970767AB0CA7498C /* moc_overview.cpp in Compile Sources */,
+				66C07C52909B4090E6CA9A30 /* moc_preferencesdialog.cpp in Compile Sources */,
+				14958B44632EBCCAA8573794 /* moc_profileselect.cpp in Compile Sources */,
+				0C9AC1EAEB345C16C8929527 /* moc_sessionbar.cpp in Compile Sources */,
+				6194DD6C50F1374B151F618A /* moc_UpdaterWindow.cpp in Compile Sources */,
+				F5B82FFFA2B6ED5A531CD06B /* moc_gGraph.cpp in Compile Sources */,
+				827E3695923AD831B3468159 /* moc_gGraphView.cpp in Compile Sources */,
+				2C38313A78AB1F5B2826D064 /* moc_machine.cpp in Compile Sources */,
+				0A5E39050CD46E1D16F32CE4 /* moc_machine_loader.cpp in Compile Sources */,
+				0F2159D3B501024FF674EA1F /* moc_cms50_loader.cpp in Compile Sources */,
+				9E65E2780802F5D481A9966F /* moc_statistics.cpp in Compile Sources */,
+				9A01898E24B7BB039910050F /* moc_oximeterimport.cpp in Compile Sources */,
+				3881476AEDD0247856B05D71 /* moc_serialoximeter.cpp in Compile Sources */,
+				DF4EF487F75A4DD3C3595D71 /* moc_md300w1_loader.cpp in Compile Sources */,
+				FCDFF05556EC2BD55F0F7AC5 /* moc_logger.cpp in Compile Sources */,
+				73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */,
+				E2D99CFCAC2DA3A62B74AFE7 /* moc_quazipfile.cpp in Compile Sources */,
+			);
+			name = "Compile Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B9DB7D2F3A707C592989522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E4832B99F5727B78BFBFA2E /* Qt Preprocess */;
+			targetProxy = 73A73E481F69EA4D003FDB57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		339EE1B2CC4FC24589A0EA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/danie/Qt/5.5/clang_64/lib,
+					/Users/danie/Qt/5.5/clang_64/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../3rdparty/quazip/quazip,
+					../3rdparty/quazip,
+					/Users/danie/Qt/5.5/clang_64/lib/QtPrintSupport.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWebKitWidgets.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtOpenGL.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWebKit.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtGui.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtNetwork.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtXml.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtSerialPort.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					.,
+					"/Users/danie/Qt/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/danie/Qt/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DLOCK_RESMED_SESSIONS",
+					"-DGIT_BRANCH=\\\"master\\\"",
+					"-DGIT_REVISION=\\\"$(shell",
+					git,
+					"-C",
+					"\"/GitHub/sleepyhead-code/sleepyhead\"",
+					"rev-parse",
+					"--short",
+					"HEAD)\\\"",
+					"-DBETA_BUILD",
+					"-DQUAZIP_STATIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_PRINTSUPPORT_LIB",
+					"-DQT_WEBKITWIDGETS_LIB",
+					"-DQT_OPENGL_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_WEBKIT_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_XML_LIB",
+					"-DQT_SERIALPORT_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DLOCK_RESMED_SESSIONS",
+					"-DGIT_BRANCH=\\\"master\\\"",
+					"-DGIT_REVISION=\\\"$(shell",
+					git,
+					"-C",
+					"\"/GitHub/sleepyhead-code/sleepyhead\"",
+					"rev-parse",
+					"--short",
+					"HEAD)\\\"",
+					"-DBETA_BUILD",
+					"-DQUAZIP_STATIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_PRINTSUPPORT_LIB",
+					"-DQT_WEBKITWIDGETS_LIB",
+					"-DQT_OPENGL_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_WEBKIT_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_XML_LIB",
+					"-DQT_SERIALPORT_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,/Users/danie/Qt/5.5/clang_64/lib",
+					"-F/Users/danie/Qt/5.5/clang_64/lib",
+					"-lz",
+				);
+				PRODUCT_NAME = SleepyHead;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+				SYMROOT = "/GitHub/sleepyhead-code/sleepyhead/";
+				"shell git -C \"/GitHub/sleepyhead-code/sleepyhead\" rev-parse --short HEAD" = "";
+			};
+			name = Release;
+		};
+		3AA6C32AC930069E80220CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CC = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.0;
+				DYLIB_CURRENT_VERSION = 1.0.0;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/danie/Qt/5.5/clang_64/lib,
+					/Users/danie/Qt/5.5/clang_64/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					.,
+					../3rdparty/quazip/quazip,
+					../3rdparty/quazip,
+					/Users/danie/Qt/5.5/clang_64/lib/QtPrintSupport.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWebKitWidgets.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtOpenGL.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWidgets.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtWebKit.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtGui.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtNetwork.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtXml.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtSerialPort.framework/Headers,
+					/Users/danie/Qt/5.5/clang_64/lib/QtCore.framework/Headers,
+					.,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,
+					/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/AGL.framework/Headers,
+					.,
+					"/Users/danie/Qt/5.5/clang_64/mkspecs/macx-clang",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				LIBRARY_SEARCH_PATHS = (
+					/Users/danie/Qt/5.5/clang_64/lib,
+					/System/Library/Frameworks/,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DLOCK_RESMED_SESSIONS",
+					"-DGIT_BRANCH=\\\"master\\\"",
+					"-DGIT_REVISION=\\\"$(shell",
+					git,
+					"-C",
+					"\"/GitHub/sleepyhead-code/sleepyhead\"",
+					"rev-parse",
+					"--short",
+					"HEAD)\\\"",
+					"-DBETA_BUILD",
+					"-DQUAZIP_STATIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_PRINTSUPPORT_LIB",
+					"-DQT_WEBKITWIDGETS_LIB",
+					"-DQT_OPENGL_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_WEBKIT_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_XML_LIB",
+					"-DQT_SERIALPORT_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-fPIC",
+					"-DLOCK_RESMED_SESSIONS",
+					"-DGIT_BRANCH=\\\"master\\\"",
+					"-DGIT_REVISION=\\\"$(shell",
+					git,
+					"-C",
+					"\"/GitHub/sleepyhead-code/sleepyhead\"",
+					"rev-parse",
+					"--short",
+					"HEAD)\\\"",
+					"-DBETA_BUILD",
+					"-DQUAZIP_STATIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_PRINTSUPPORT_LIB",
+					"-DQT_WEBKITWIDGETS_LIB",
+					"-DQT_OPENGL_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_WEBKIT_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_XML_LIB",
+					"-DQT_SERIALPORT_LIB",
+					"-DQT_CORE_LIB",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-Wl,-rpath,/Users/danie/Qt/5.5/clang_64/lib",
+					"-F/Users/danie/Qt/5.5/clang_64/lib",
+					"-lz",
+				);
+				PRODUCT_NAME = SleepyHead;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+				SYMROOT = "/GitHub/sleepyhead-code/sleepyhead/";
+			};
+			name = Debug;
+		};
+		6666AA5E688052234F6758D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = SleepyHead;
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77418F46922677BB04ED38DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = SleepyHead;
+				QT_LIBRARY_SUFFIX = _debug;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CC3B5D2136C7CD6A5CF5A59 /* Build configuration list for PBXNativeTarget "SleepyHead" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77418F46922677BB04ED38DD /* Debug */,
+				6666AA5E688052234F6758D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 /* Build configuration list for PBXProject "SleepyHead" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA6C32AC930069E80220CF1 /* Debug */,
+				339EE1B2CC4FC24589A0EA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DB9C3763D02B1415CD9D565 /* Project object */;
+}

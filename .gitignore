@@ -39,3 +39,4 @@ Makefile*
 /sleepyhead/SleepyHead.build
 /sleepyhead/debug
 /sleepyhead/release
+*.xcuserstate

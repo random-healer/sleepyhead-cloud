@@ -1,0 +1,89 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		8D63862B674DBB1E651B6E6D = {
+			isa = PBXFileReference;
+			lastKnownFileType = "wrapper.pb-project";
+			name = "SleepyHead.xcodeproj";
+			path = "/GitHub/sleepyhead-code/sleepyhead/SleepyHead.xcodeproj";
+			sourceTree = "<absolute>";
+		};
+		063E04164352F575BE028791 = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.application";
+			path = "SleepyHead.app";
+			remoteRef = "C2D53524E55DACEBF15C1E13";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C2D53524E55DACEBF15C1E13 = {
+			containerPortal = "8D63862B674DBB1E651B6E6D";
+			isa = PBXContainerItemProxy;
+			proxyType = "2";
+			remoteGlobalIDString = "985C49C5A5F3E576888F2CAF";
+			remoteInfo = "SleepyHead";
+		};
+		81E551A5BB71C5755E247CC8 = {
+			children = (
+				);
+			isa = PBXGroup;
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		6AFAD9F342BFF283533830BC = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = "NO";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+			};
+			name = "Debug";
+		};
+		CD18C1A9AC3165542B82731B = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = "YES";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = "NO";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+			};
+			name = "Release";
+		};
+		941B8F306527EED6BAEE6854 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"6AFAD9F342BFF283533830BC",
+				"CD18C1A9AC3165542B82731B");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4AD538A3D0084C90CD57CDE = {
+			children = (
+				"8D63862B674DBB1E651B6E6D");
+			isa = PBXGroup;
+			sourceTree = "<group>";
+		};
+		7D83457ADECB0CF2CAADA435 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				);
+			isa = PBXProject;
+			mainGroup = "C4AD538A3D0084C90CD57CDE";
+			projectDirPath = "";
+			buildConfigurationList = "941B8F306527EED6BAEE6854";
+			projectReferences = (
+				{
+					ProductGroup = "81E551A5BB71C5755E247CC8";
+					ProjectRef = "8D63862B674DBB1E651B6E6D";
+				},
+			);
+			targets = (
+				);
+		};
+	};
+	rootObject = "7D83457ADECB0CF2CAADA435";
+}
