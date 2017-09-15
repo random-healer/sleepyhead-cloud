@@ -9,7 +9,7 @@
 #ifndef GLCOMMON_H
 #define GLCOMMON_H
 
-#include "CommonColors.h"
+#include "Common/CommonColors.h"
 
 #include <QColor>
 

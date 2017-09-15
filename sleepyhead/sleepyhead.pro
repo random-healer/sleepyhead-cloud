@@ -75,7 +75,7 @@ unix:!macx:!haiku {
 }
 
 macx {
-  QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.6
+  QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.9
 
   LIBS             += -lz
   ICON              = icons/iconfile.icns
@@ -104,7 +104,6 @@ win32 {
 }
 
 SOURCES += \
-    common_gui.cpp \
     daily.cpp \
     exportcsv.cpp \
     main.cpp \
@@ -163,10 +162,15 @@ SOURCES += \
     Graphs/MinutesAtPressure.cpp \
     SleepLib/journal.cpp \
     SleepLib/progressdialog.cpp \
-    SleepLib/loader_plugins/cms50f37_loader.cpp
+    SleepLib/loader_plugins/cms50f37_loader.cpp \
+    Common/ChartColors.cpp \
+    Common/CommonColors.cpp \
+    Common/DateTimeUtils.cpp \
+    Common/FlagColors.cpp \
+    Common/GraphicsEngine.cpp \
+    Common/GraphName.cpp
 
 HEADERS  += \
-    common_gui.h \
     daily.h \
     exportcsv.h \
     mainwindow.h \
@@ -225,7 +229,13 @@ HEADERS  += \
     SleepLib/journal.h \
     SleepLib/progressdialog.h \
     SleepLib/loader_plugins/cms50f37_loader.h \
-    build_number.h
+    build_number.h \
+    Common/ChartColors.h \
+    Common/CommonColors.h \
+    Common/DateTimeUtils.h \
+    Common/FlagColors.h \
+    Common/GraphicsEngine.h \
+    Common/GraphName.h
 
 FORMS += \
     daily.ui \
