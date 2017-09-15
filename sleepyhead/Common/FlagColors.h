@@ -2,23 +2,34 @@
 
 #include <QColor>
 
-// Flag Colors
-extern QColor COLOR_Hypopnea;
-extern QColor COLOR_Obstructive;
-extern QColor COLOR_Apnea;
-extern QColor COLOR_CSR;
-extern QColor COLOR_LargeLeak;
-extern QColor COLOR_Ramp;
-extern QColor COLOR_ClearAirway;
-extern QColor COLOR_RERA;
-extern QColor COLOR_VibratorySnore;
-extern QColor COLOR_FlowLimit;
-extern QColor COLOR_SensAwake;
-extern QColor COLOR_LeakFlag;
-extern QColor COLOR_NRI;
-extern QColor COLOR_ExP;
-extern QColor COLOR_PressurePulse;
-extern QColor COLOR_PulseChange;
-extern QColor COLOR_SPO2Drop;
-extern QColor COLOR_UserFlag1;
-extern QColor COLOR_UserFlag2;
+#include "CommonColors.h"
+
+namespace SleepyHead
+{
+	namespace Common
+	{
+		class FlagColors
+		{
+		public:
+			static QColor COLOR_Hypopnea;
+			static QColor COLOR_Obstructive;
+			static QColor COLOR_Apnea;
+			static QColor COLOR_CSR;
+			static QColor COLOR_LargeLeak;
+			static QColor COLOR_Ramp;
+			static QColor COLOR_ClearAirway;
+			static QColor COLOR_RERA;
+			static QColor COLOR_VibratorySnore;
+			static QColor COLOR_FlowLimit;
+			static QColor COLOR_SensAwake;
+			static QColor COLOR_LeakFlag;
+			static QColor COLOR_NRI;
+			static QColor COLOR_ExP;
+			static QColor COLOR_PressurePulse;
+			static QColor COLOR_PulseChange;
+			static QColor COLOR_SPO2Drop;
+			static QColor COLOR_UserFlag1;
+			static QColor COLOR_UserFlag2;
+		};
+	}
+}
