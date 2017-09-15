@@ -17,10 +17,6 @@
 //! \brief Gets the first day of week from the system locale, to show in the calendars.
 Qt::DayOfWeek firstDayOfWeekFromLocale();
 
-const QString CSTR_GFX_ANGLE = "ANGLE";
-const QString CSTR_GFX_OpenGL = "OpenGL";
-const QString CSTR_GFX_BrokenGL = "BrokenGL";
-
 const QString STR_GRAPH_EventBreakdown = "EventBreakdown";
 const QString STR_GRAPH_SleepFlags = "SF";
 const QString STR_GRAPH_Weight = "Weight";

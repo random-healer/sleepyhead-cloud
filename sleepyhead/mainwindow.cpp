@@ -32,9 +32,10 @@
 #include <QPushButton>
 #include <QCalendarWidget>
 
+#include "Common/GraphicsEngine.h"
+
 #include "common_gui.h"
 #include "version.h"
-
 
 #include <cmath>
 
@@ -62,6 +63,8 @@
 #include "statistics.h"
 
 #include <QOpenGLFunctions>
+
+using namespace SleepyHead::Common;
 
 QProgressBar *qprogress;
 QLabel *qstatus;
@@ -110,13 +113,13 @@ QString getGraphicsEngine()
 {
     QString gfxEngine = QString();
 #ifdef BROKEN_OPENGL_BUILD
-    gfxEngine = CSTR_GFX_BrokenGL;
+    gfxEngine =  GraphicsEngine::CSTR_GFX_BrokenGL;
 #else
     QString glversion = getOpenGLVersionString();
-    if (glversion.contains(CSTR_GFX_ANGLE)) {
-        gfxEngine = CSTR_GFX_ANGLE;
+    if (glversion.contains(GraphicsEngine::CSTR_GFX_ANGLE)) {
+        gfxEngine = GraphicsEngine::CSTR_GFX_ANGLE;
     } else {
-        gfxEngine = CSTR_GFX_OpenGL;
+        gfxEngine = GraphicsEngine::CSTR_GFX_OpenGL;
     }
 #endif
     return gfxEngine;

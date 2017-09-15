@@ -74,6 +74,7 @@
 		735C3FC91F6B71C6002FFC3B /* FlagColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FC71F6B71C6002FFC3B /* FlagColors.cpp */; };
 		735C3FCC1F6B8EBD002FFC3B /* CommonColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FCA1F6B8EBD002FFC3B /* CommonColors.cpp */; };
 		735C3FCF1F6C6947002FFC3B /* ChartColors.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */; };
+		735C3FD21F6C6B65002FFC3B /* GraphicsEngine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD01F6C6B65002FFC3B /* GraphicsEngine.cpp */; };
 		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
 		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
 		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -243,6 +244,8 @@
 		735C3FCB1F6B8EBD002FFC3B /* CommonColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonColors.h; path = Common/CommonColors.h; sourceTree = SOURCE_ROOT; };
 		735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ChartColors.cpp; path = Common/ChartColors.cpp; sourceTree = SOURCE_ROOT; };
 		735C3FCE1F6C6947002FFC3B /* ChartColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChartColors.h; path = Common/ChartColors.h; sourceTree = SOURCE_ROOT; };
+		735C3FD01F6C6B65002FFC3B /* GraphicsEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsEngine.cpp; path = Common/GraphicsEngine.cpp; sourceTree = SOURCE_ROOT; };
+		735C3FD11F6C6B65002FFC3B /* GraphicsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicsEngine.h; path = Common/GraphicsEngine.h; sourceTree = SOURCE_ROOT; };
 		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
 		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
 		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
@@ -610,6 +613,8 @@
 				735C3FCB1F6B8EBD002FFC3B /* CommonColors.h */,
 				735C3FCD1F6C6947002FFC3B /* ChartColors.cpp */,
 				735C3FCE1F6C6947002FFC3B /* ChartColors.h */,
+				735C3FD01F6C6B65002FFC3B /* GraphicsEngine.cpp */,
+				735C3FD11F6C6B65002FFC3B /* GraphicsEngine.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				007E4181C073F09BA0FB3DF9 /* cms50_loader.cpp in Compile Sources */,
 				5A04DD12D078D700F95F87BB /* icon_loader.cpp in Compile Sources */,
 				69C9AE74641648C3C674D6DC /* intellipap_loader.cpp in Compile Sources */,
+				735C3FD21F6C6B65002FFC3B /* GraphicsEngine.cpp in Compile Sources */,
 				560B8684A95A3924DEA3F1A9 /* mseries_loader.cpp in Compile Sources */,
 				34D06BFAED0FB7288331AD2C /* prs1_loader.cpp in Compile Sources */,
 				FAB0A4350FE90488802C9E49 /* resmed_loader.cpp in Compile Sources */,
