@@ -28,9 +28,4 @@ const QString STR_GRAPH_Usage = "Usage";
 const QString STR_GRAPH_AHI = "AHI";
 const QString STR_GRAPH_PeakAHI = "PeakAHI";
 
-//! \brief Returns a text string naming the current graphics engine
-QString getGraphicsEngine();
-QString getOpenGLVersionString();
-float getOpenGLVersion();
-
 #endif // COMMON_GUI_H

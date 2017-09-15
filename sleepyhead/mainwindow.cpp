@@ -72,59 +72,6 @@ QStatusBar *qstatusbar;
 
 extern Profile *profile;
 
-
-QString getOpenGLVersionString()
-{
-    static QString glversion;
-
-    if (glversion.isEmpty()) {
-        QGLWidget w;
-        w.makeCurrent();
-
-        QOpenGLFunctions f;
-        f.initializeOpenGLFunctions();
-        glversion = QString(QLatin1String(reinterpret_cast<const char*>(f.glGetString(GL_VERSION))));
-
-		qDebug() << "OpenGL Version:" << glversion;
-    }
-    return glversion;
-}
-
-float getOpenGLVersion()
-{
-    QString glversion = getOpenGLVersionString();
-    glversion = glversion.section(" ",0,0);
-    bool ok;
-    float v = glversion.toFloat(&ok);
-
-    if (!ok) {
-        QString tmp = glversion.section(".",0,1);
-        v = tmp.toFloat(&ok);
-        if (!ok) {
-            // just look at major, we are only interested in whether we have OpenGL 2.0 anyway
-            tmp = glversion.section(".",0,0);
-            v = tmp.toFloat(&ok);
-        }
-    }
-    return v;
-}
-
-QString getGraphicsEngine()
-{
-    QString gfxEngine = QString();
-#ifdef BROKEN_OPENGL_BUILD
-    gfxEngine =  GraphicsEngine::CSTR_GFX_BrokenGL;
-#else
-    QString glversion = getOpenGLVersionString();
-    if (glversion.contains(GraphicsEngine::CSTR_GFX_ANGLE)) {
-        gfxEngine = GraphicsEngine::CSTR_GFX_ANGLE;
-    } else {
-        gfxEngine = GraphicsEngine::CSTR_GFX_OpenGL;
-    }
-#endif
-    return gfxEngine;
-}
-
 void MainWindow::logMessage(QString msg)
 {
     ui->logText->appendPlainText(msg);
@@ -156,7 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     version += QString(GIT_REVISION) +" ";
 #endif
-    version += getGraphicsEngine()+"]";
+	version += GraphicsEngine::getGraphicsEngine()+"]";
 
     this->setWindowTitle(STR_TR_SleepyHead + QString(" %1 (" + tr("Profile") + ": %2)").arg(version).arg(PREF[STR_GEN_Profile].toString()));
 
@@ -1410,7 +1357,7 @@ void MainWindow::on_action_About_triggered()
                 QString(" %1</h1></p><font color=black><p>").arg(STR_TR_AppVersion) +
                 tr("Build Date: %1 %2").arg(__DATE__).arg(__TIME__) +
                 QString("<br/>%1<br/>").arg(gitrev) +
-                tr("Graphics Engine: %1").arg(getGraphicsEngine())+
+						  tr("Graphics Engine: %1").arg(GraphicsEngine::getGraphicsEngine())+
                 "<br/>" +
                 (tr("Data Folder Location: <a href=\"file://%1\">%2</a>").arg(GetAppRoot()).arg(QDir::toNativeSeparators(GetAppRoot())) +
                 "<hr/>"+tr("Copyright") + " &copy;2011-2016 Mark Watkins (jedimark) <br/> \n" +

@@ -24,6 +24,8 @@
 #include <QSysInfo>
 #include <QXmlSimpleReader>
 
+#include "Common/GraphicsEngine.h"
+
 #include "version.h"
 #include "logger.h"
 #include "SleepLib/schema.h"
@@ -52,6 +54,8 @@
 #ifdef Q_WS_X11
 #include <X11/Xlib.h>
 #endif
+
+using namespace SleepyHead::Common;
 
 MainWindow *mainwin = nullptr;
 
@@ -234,18 +238,18 @@ int main(int argc, char *argv[])
     ////////////////////////////////////////////////////////////////////////////////////////////
     float glversion = 0.0;
 #ifndef NO_OPENGL_BUILD
-    glversion = getOpenGLVersion();
+    glversion = GraphicsEngine::getOpenGLVersion();
 #endif
 
     bool opengl2supported = glversion >= 2.0;
     bool bad_graphics = !opengl2supported;
     bool intel_graphics = false;
 #ifndef NO_OPENGL_BUILD
-    getOpenGLVersionString().contains("INTEL", Qt::CaseInsensitive);
+    GraphicsEngine::getOpenGLVersionString().contains("INTEL", Qt::CaseInsensitive);
 #endif
 
 //#if defined(Q_OS_WIN)
-//    bool angle_supported = getGraphicsEngine().contains(CSTR_GFX_ANGLE, Qt::CaseInsensitive) && (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA);
+//    bool angle_supported = GraphicsEngine::getGraphicsEngine().contains(CSTR_GFX_ANGLE, Qt::CaseInsensitive) && (QSysInfo::windowsVersion() >= QSysInfo::WV_VISTA);
 //    if (bad_graphics) {
 //        bad_graphics = !angle_supported;
 //    }
