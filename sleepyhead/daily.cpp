@@ -42,6 +42,8 @@
 #include "Graphs/gdailysummary.h"
 #include "Graphs/MinutesAtPressure.h"
 
+using namespace SleepyHead::Common;
+
 //extern QProgressBar *qprogress;
 extern MainWindow * mainwin;
 
@@ -367,7 +369,7 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
     layout->layout();
 
     QTextCharFormat format = ui->calendar->weekdayTextFormat(Qt::Saturday);
-    format.setForeground(QBrush(COLOR_Black, Qt::SolidPattern));
+    format.setForeground(QBrush(CommonColors::COLOR_Black, Qt::SolidPattern));
     ui->calendar->setWeekdayTextFormat(Qt::Saturday, format);
     ui->calendar->setWeekdayTextFormat(Qt::Sunday, format);
 
@@ -719,19 +721,19 @@ void Daily::UpdateCalendarDay(QDate date)
     QTextCharFormat jourday;
     QTextCharFormat stageday;
 
-    cpaponly.setForeground(QBrush(COLOR_Blue, Qt::SolidPattern));
+    cpaponly.setForeground(QBrush(CommonColors::COLOR_Blue, Qt::SolidPattern));
     cpaponly.setFontWeight(QFont::Normal);
-    cpapjour.setForeground(QBrush(COLOR_Blue, Qt::SolidPattern));
+    cpapjour.setForeground(QBrush(CommonColors::COLOR_Blue, Qt::SolidPattern));
     cpapjour.setFontWeight(QFont::Bold);
-    oxiday.setForeground(QBrush(COLOR_Red, Qt::SolidPattern));
+    oxiday.setForeground(QBrush(CommonColors::COLOR_Red, Qt::SolidPattern));
     oxiday.setFontWeight(QFont::Normal);
-    oxicpap.setForeground(QBrush(COLOR_Red, Qt::SolidPattern));
+    oxicpap.setForeground(QBrush(CommonColors::COLOR_Red, Qt::SolidPattern));
     oxicpap.setFontWeight(QFont::Bold);
-    stageday.setForeground(QBrush(COLOR_Magenta, Qt::SolidPattern));
+    stageday.setForeground(QBrush(CommonColors::COLOR_Magenta, Qt::SolidPattern));
     stageday.setFontWeight(QFont::Bold);
-    jourday.setForeground(QBrush(COLOR_DarkYellow, Qt::SolidPattern));
+    jourday.setForeground(QBrush(CommonColors::COLOR_DarkYellow, Qt::SolidPattern));
     jourday.setFontWeight(QFont::Bold);
-    nodata.setForeground(QBrush(COLOR_Black, Qt::SolidPattern));
+    nodata.setForeground(QBrush(CommonColors::COLOR_Black, Qt::SolidPattern));
     nodata.setFontWeight(QFont::Normal);
 
     bool hascpap = p_profile->FindDay(date, MT_CPAP)!=nullptr;
@@ -1658,7 +1660,7 @@ void Daily::Load(QDate date)
     html+="</body></html>";
 
     QColor cols[]={
-        COLOR_Gold,
+        CommonColors::COLOR_Gold,
         QColor("light blue"),
     };
     const int maxcolors=sizeof(cols)/sizeof(QColor);
@@ -1922,7 +1924,7 @@ void Daily::on_JournalNotesFontsize_activated(int index)
 
 void Daily::on_JournalNotesColour_clicked()
 {
-    QColor col=QColorDialog::getColor(COLOR_Black,this,tr("Pick a Colour")); //,QColorDialog::NoButtons);
+    QColor col=QColorDialog::getColor(CommonColors::COLOR_Black,this,tr("Pick a Colour")); //,QColorDialog::NoButtons);
     if (!col.isValid()) return;
 
     QTextCursor cursor = ui->JournalNotes->textCursor();

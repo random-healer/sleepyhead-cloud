@@ -16,6 +16,8 @@
 
 #include "gYAxis.h"
 
+using namespace SleepyHead::Common;
+
 extern MainWindow * mainwin;
 
 short SummaryCalcItem::midcalc;
@@ -354,7 +356,7 @@ void gSummaryChart::populate(Day * day, int idx)
         case ST_HOURS:
             value = hours;
             name = QObject::tr("Hours");
-            color = COLOR_LightBlue;
+            color = CommonColors::COLOR_LightBlue;
             slices.append(SummaryChartSlice(&item, hours, hours, name, color));
             break;
         case ST_MIN:

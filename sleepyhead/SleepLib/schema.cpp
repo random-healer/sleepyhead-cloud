@@ -20,6 +20,8 @@
 
 #include "SleepLib/profiles.h"
 
+using namespace SleepyHead::Common;
+
 QColor adjustcolor(QColor color, float ar=1.0, float ag=1.0, float ab=1.0)
 {
     int r = color.red();
@@ -224,7 +226,7 @@ void init()
     schema::channel.add(GRP_CPAP, new Channel(CPAP_RERA          = 0x1006, FLAG,    MT_CPAP, SESSION, "RERA",
                         QObject::tr("RERA"),
                         QObject::tr("Respiratory Effort Related Arousal: An restriction in breathing that causes an either an awakening or sleep disturbance."),
-                        QObject::tr("RE"),       STR_UNIT_EventsPerHour,    DEFAULT,    COLOR_Gold));
+                        QObject::tr("RE"),       STR_UNIT_EventsPerHour,    DEFAULT,    CommonColors::COLOR_Gold));
 
     schema::channel.add(GRP_CPAP, new Channel(CPAP_VSnore        = 0x1007, FLAG,    MT_CPAP, SESSION, "VSnore",
                         QObject::tr("Vibratory Snore"),                       QObject::tr("A vibratory snore"),
@@ -260,7 +262,7 @@ void init()
     schema::channel.add(GRP_CPAP, new Channel(CPAP_SensAwake     = 0x100d, FLAG,    MT_CPAP, SESSION,
                         "SensAwake",      QObject::tr("SensAwake"),
                         QObject::tr("SensAwake feature will reduce pressure when waking is detected."),
-                        QObject::tr("SA"),       STR_UNIT_EventsPerHour,    DEFAULT,    COLOR_Gold));
+                        QObject::tr("SA"),       STR_UNIT_EventsPerHour,    DEFAULT,    CommonColors::COLOR_Gold));
 
     schema::channel.add(GRP_CPAP, new Channel(CPAP_UserFlag1     = 0x101e, FLAG,    MT_CPAP, SESSION,
                         "UserFlag1",      QObject::tr("User Flag #1"),

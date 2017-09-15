@@ -1,32 +1,39 @@
-#ifndef CommonColors_h
-#define CommonColors_h
+#pragma once
 
 #include <QColor>
 
-const QColor COLOR_Black = Qt::black;
-const QColor COLOR_LightGreen = QColor("light green");
-const QColor COLOR_DarkGreen = Qt::darkGreen;
-const QColor COLOR_Purple = QColor("purple");
-const QColor COLOR_Aqua = QColor("#40c0ff");
-const QColor COLOR_Magenta = Qt::magenta;
-const QColor COLOR_Blue = Qt::blue;
-const QColor COLOR_LightBlue = QColor("light blue");
-const QColor COLOR_Gray = Qt::gray;
-const QColor COLOR_LightGray = Qt::lightGray;
-const QColor COLOR_DarkGray = Qt::darkGray;
-const QColor COLOR_Cyan = Qt::cyan;
-const QColor COLOR_DarkCyan = Qt::darkCyan;
-const QColor COLOR_DarkBlue = Qt::darkBlue;
-const QColor COLOR_DarkMagenta = Qt::darkMagenta;
-const QColor COLOR_Gold = QColor("gold");
-const QColor COLOR_White = Qt::white;
-const QColor COLOR_Red = Qt::red;
-const QColor COLOR_Pink = QColor("pink");
-const QColor COLOR_DarkRed = Qt::darkRed;
-const QColor COLOR_Yellow = Qt::yellow;
-const QColor COLOR_DarkYellow = Qt::darkYellow;
-const QColor COLOR_Orange = QColor("orange");
-const QColor COLOR_Green = Qt::green;
-const QColor COLOR_Brown = QColor("brown");
-
-#endif /* CommonColors_h */
+namespace SleepyHead
+{
+	namespace Common
+	{
+		class CommonColors
+		{
+		public:		
+			static QColor COLOR_Black;
+			static QColor COLOR_LightGreen;
+			static QColor COLOR_DarkGreen;
+			static QColor COLOR_Purple;
+			static QColor COLOR_Aqua;
+			static QColor COLOR_Magenta;
+			static QColor COLOR_Blue;
+			static QColor COLOR_LightBlue;
+			static QColor COLOR_Gray;
+			static QColor COLOR_LightGray;
+			static QColor COLOR_DarkGray;
+			static QColor COLOR_Cyan;
+			static QColor COLOR_DarkCyan;
+			static QColor COLOR_DarkBlue;
+			static QColor COLOR_DarkMagenta;
+			static QColor COLOR_Gold;
+			static QColor COLOR_White;
+			static QColor COLOR_Red;
+			static QColor COLOR_Pink;
+			static QColor COLOR_DarkRed;
+			static QColor COLOR_Yellow;
+			static QColor COLOR_DarkYellow;
+			static QColor COLOR_Orange;
+			static QColor COLOR_Green;
+			static QColor COLOR_Brown;
+		};
+	}
+}

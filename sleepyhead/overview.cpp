@@ -28,6 +28,8 @@
 extern MainWindow *mainwin;
 //extern QProgressBar * qprogress;
 
+using namespace SleepyHead::Common;
+
 Overview::Overview(QWidget *parent, gGraphView *shared) :
     QWidget(parent),
     ui(new Ui::Overview),
@@ -54,7 +56,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
 
     // Stop both calendar drop downs highlighting weekends in red
     QTextCharFormat format = ui->dateStart->calendarWidget()->weekdayTextFormat(Qt::Saturday);
-    format.setForeground(QBrush(COLOR_Black, Qt::SolidPattern));
+    format.setForeground(QBrush(CommonColors::COLOR_Black, Qt::SolidPattern));
     ui->dateStart->calendarWidget()->setWeekdayTextFormat(Qt::Saturday, format);
     ui->dateStart->calendarWidget()->setWeekdayTextFormat(Qt::Sunday, format);
     ui->dateEnd->calendarWidget()->setWeekdayTextFormat(Qt::Saturday, format);

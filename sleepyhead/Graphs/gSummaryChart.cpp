@@ -12,6 +12,8 @@
 #include "gYAxis.h"
 #include "gSummaryChart.h"
 
+using namespace SleepyHead::Common;
+
 SummaryChart::SummaryChart(QString label, GraphType type)
     : Layer(NoChannel), m_label(label), m_graphtype(type)
 {
@@ -624,7 +626,7 @@ void SummaryChart::paint(QPainter &painter, gGraph &w, const QRegion &region)
                     col = summaryColor;
                 }
                 if (zd == hl_day) {
-                    col = COLOR_Gold;
+                    col = CommonColors::COLOR_Gold;
                 }
 
                 QColor col1 = col;
@@ -722,7 +724,7 @@ void SummaryChart::paint(QPainter &painter, gGraph &w, const QRegion &region)
                     }
 
                     if (zd == hl_day) {
-                        col = COLOR_Gold;
+                        col = CommonColors::COLOR_Gold;
                     }
 
                     //if (!tmp) continue;
