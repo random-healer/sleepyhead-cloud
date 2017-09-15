@@ -34,7 +34,6 @@
 #include "profileselect.h"
 #include "newprofile.h"
 #include "translation.h"
-#include "common_gui.h"
 #include "SleepLib/machine_loader.h"
 
 

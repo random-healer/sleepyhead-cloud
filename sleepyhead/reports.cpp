@@ -16,7 +16,6 @@
 
 #include "reports.h"
 #include "mainwindow.h"
-#include "common_gui.h"
 
 extern QProgressBar *qprogress;
 extern MainWindow *mainwin;

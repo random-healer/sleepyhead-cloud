@@ -35,7 +35,6 @@
 #include "Common/DateTimeUtils.h"
 #include "Common/GraphicsEngine.h"
 
-#include "common_gui.h"
 #include "version.h"
 
 #include <cmath>

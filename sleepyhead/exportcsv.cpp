@@ -13,7 +13,6 @@
 #include <QTextCharFormat>
 #include "SleepLib/profiles.h"
 #include "SleepLib/day.h"
-#include "common_gui.h"
 #include "exportcsv.h"
 #include "ui_exportcsv.h"
 #include "mainwindow.h"

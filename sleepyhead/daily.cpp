@@ -31,7 +31,6 @@
 #include "daily.h"
 #include "ui_daily.h"
 
-#include "common_gui.h"
 #include "SleepLib/profiles.h"
 #include "SleepLib/session.h"
 #include "Graphs/graphdata_custom.h"

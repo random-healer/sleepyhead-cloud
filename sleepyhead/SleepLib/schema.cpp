@@ -18,7 +18,6 @@
 
 #include "common.h"
 #include "schema.h"
-#include "common_gui.h"
 
 #include "SleepLib/profiles.h"
 

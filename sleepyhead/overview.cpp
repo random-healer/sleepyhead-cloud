@@ -22,7 +22,6 @@
 #include "SleepLib/profiles.h"
 #include "overview.h"
 #include "ui_overview.h"
-#include "common_gui.h"
 #include "Graphs/gXAxis.h"
 #include "Graphs/gLineChart.h"
 #include "Graphs/gYAxis.h"
