@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SleepyHead", "/GitHub/sleepyhead-code/sleepyhead/SleepyHead.vcxproj", "{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Debug|Win32.Build.0 = Debug|Win32
+		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Release|Win32.ActiveCfg = Release|Win32
+		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

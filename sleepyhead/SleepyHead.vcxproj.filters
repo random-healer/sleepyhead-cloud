@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="../3rdparty/quazip/quazip/JlCompress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/MinutesAtPressure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdaterWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/calcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/cms50_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/cms50f37_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common_gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="daily.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/day.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/event.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exportcsv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gFlagsLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gFooBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gGraphView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gLineChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gLineOverlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gSegmentChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gSessionTimesChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gStatsLine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gSummaryChart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gXAxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gYAxis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gdailysummary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/glcommon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/gspacer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/icon_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/intellipap_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/journal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphs/layer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/machine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/machine_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/machine_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/md300w1_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/mseries_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="newprofile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="overview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oximeterimport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferencesdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/profiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="profileselect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/progressdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/prs1_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/qioapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quaadler32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quacrc32.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quazip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quazipfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quazipfileinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/quazipnewinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reports.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/resmed_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/schema.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/serialoximeter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/session.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sessionbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/somnopose_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="translation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/unzip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="updateparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/weinmann_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="welcome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SleepLib/loader_plugins/zeo_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="../3rdparty/quazip/quazip/zip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="../3rdparty/quazip/quazip/JlCompress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/MinutesAtPressure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="UpdaterWindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="build_number.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/calcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="SleepLib/loader_plugins/cms50_loader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SleepLib/loader_plugins/cms50f37_loader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common_gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/crypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="daily.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/day.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="exportcsv.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="Graphs/gFlagsLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gFooBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="Graphs/gGraph.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Graphs/gGraphView.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="Graphs/gLineChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gLineOverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gSegmentChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gSessionTimesChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gStatsLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gSummaryChart.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gXAxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gYAxis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gdailysummary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/glcommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/gspacer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/icon_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/intellipap_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/ioapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/journal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphs/layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="logger.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SleepLib/machine.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/machine_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="SleepLib/machine_loader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="SleepLib/loader_plugins/md300w1_loader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/loader_plugins/mseries_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="newprofile.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="overview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="oximeterimport.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/preferences.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="preferencesdialog.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/profiles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="profileselect.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/progressdialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/prs1_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/quaadler32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/quachecksum32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/quacrc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/quazip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="../3rdparty/quazip/quazip/quazipfile.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="../3rdparty/quazip/quazip/quazipfileinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/quazipnewinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reports.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/resmed_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/schema.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="SleepLib/serialoximeter.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="sessionbar.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="SleepLib/loader_plugins/somnopose_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="statistics.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="translation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/unzip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="updateparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/weinmann_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SleepLib/loader_plugins/zeo_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="../3rdparty/quazip/quazip/zip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug/moc_UpdaterWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_UpdaterWindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_cms50_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_cms50_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_cms50f37_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_cms50f37_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_daily.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_daily.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_exportcsv.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_exportcsv.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_gGraph.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_gGraph.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_gGraphView.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_gGraphView.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_logger.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_logger.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_machine.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_machine.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_machine_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_machine_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_mainwindow.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_md300w1_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_md300w1_loader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_newprofile.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_newprofile.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_overview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_overview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_oximeterimport.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_oximeterimport.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_preferencesdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_preferencesdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_profileselect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_profileselect.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_quazipfile.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_quazipfile.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_serialoximeter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_serialoximeter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_sessionbar.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_sessionbar.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/moc_statistics.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/moc_statistics.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug/qrc_Resources.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="release/qrc_Resources.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClInclude Include="ui_UpdaterWindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_daily.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_exportcsv.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_newprofile.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_overview.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_oximeterimport.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_oximetry.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_preferencesdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_profileselect.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_report.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="UpdaterWindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="daily.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="exportcsv.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="newprofile.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="overview.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="oximeterimport.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="oximetry.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="preferencesdialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="profileselect.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="report.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs/0.0.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="COPYING">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fonts/FreeSans.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/Jedimark.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="Resources.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="icons/aircurve.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/airsense10.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/arrow-end.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/arrow-left.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/arrow-right.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/back.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/bob-v3.0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/bookmark.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/channels.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/cms50f.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/countries.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/cubeoximeter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/dreamstation.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/edit-find.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/eye.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/forward.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/go-home.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/help.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/intellipap.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/last.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/mask.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/moon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/overview.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/oximeter.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/preferences.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/prs1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/prs1_60s.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/prs1_960.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/pushpin.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/refresh.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/release_notes.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/rms9.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/sadface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/save.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/schema.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/script.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/sdcard-lock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/sdcard.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/session-off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/session-on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/sheep.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/smileyface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/statistics.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/tooltips.css">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="icons/trophy.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/tz.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="docs/usage.html">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../README">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win_icon.rc" />
+  </ItemGroup>
+</Project>
