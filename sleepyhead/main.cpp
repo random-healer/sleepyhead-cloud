@@ -182,10 +182,6 @@ int main(int argc, char *argv[])
     XInitThreads();
 #endif
 
-#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
-    QGL::setPreferredPaintEngine(QPaintEngine::OpenGL);
-#endif
-
     bool force_login_screen = false;
     bool force_data_dir = false;
     bool changing_language = false;

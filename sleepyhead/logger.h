@@ -10,11 +10,7 @@
 void initializeLogger();
 void shutdownLogger();
 
-#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
-void MyOutputHandler(QtMsgType type, const char *msgtxt);
-#else
 void MyOutputHandler(QtMsgType type, const QMessageLogContext &context, const QString &msgtxt);
-#endif
 
 class LogThread:public QObject, public QRunnable
 {

@@ -844,16 +844,11 @@ jumpnext:
     }
     painter.setClipping(false);
 
-//#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
 //    quads->scissor(left * dpr, w.flipY(top + height + 2)*dpr, (width)*dpr, (height + 1)*dpr);
 //    lines->scissor(left * dpr, w.flipY(top + height + 2)*dpr, (width + 1)*dpr, (height + 1)*dpr);
 //    outlines->scissor(left * dpr, w.flipY(top + height + 2)*dpr, (width)*dpr, (height + 1)*dpr);
-//#else
-//    lines->scissor(left, w.flipY(top + height + 2), width + 1, height + 2);
-//    outlines->scissor(left, w.flipY(top + height + 2), width, height + 2);
-//    quads->scissor(left, w.flipY(top + height + 2), width, height + 2);
-//#endif
-    // Draw Ledgend
+
+	// Draw Ledgend
     px = left + width - 3;
     py = top - 5;
     int legendx = px;

@@ -17,13 +17,10 @@
 #include <QWidgetAction>
 #include <QGridLayout>
 
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
-# include <QWindow>
-#endif
+#include <QWindow>
 
 #ifdef DEBUG_EFFICIENCY
-// Only works in 4.8
-# include <QElapsedTimer>
+#include <QElapsedTimer>
 #endif
 
 #include <cmath>
@@ -291,8 +288,6 @@ gGraph *gGraphView::popGraph()
 gGraphView::gGraphView(QWidget *parent, gGraphView *shared)
 #ifdef BROKEN_OPENGL_BUILD
     : QWidget(parent),
-#elif QT_VERSION < QT_VERSION_CHECK(5,4,0)
-    : QGLWidget(QGLFormat(QGL::DoubleBuffer | QGL::DirectRendering | QGL::HasOverlay | QGL::Rgba),parent,shared),
 #else
     :QOpenGLWidget(parent),
 #endif
@@ -360,17 +355,11 @@ gGraphView::gGraphView(QWidget *parent, gGraphView *shared)
     pin_graph = nullptr;
    // pixmapcache.setCacheLimit(10240*2);
 
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
     m_dpr = devicePixelRatio();
     m_dpr = 1;
-#endif
 
 #ifndef BROKEN_OPENGL_BUILD
     setAutoFillBackground(false);
-#if QT_VERSION < QT_VERSION_CHECK(5,4,0)
-    // happens no matter what in 5.4+
-    setAutoBufferSwap(false);
-#endif
 #endif
 
     context_menu = new QMenu(this);
@@ -448,8 +437,6 @@ void gGraphView::closeEvent(QCloseEvent * event)
     }
 #ifdef BROKEN_OPENGL_BUILD
     QWidget::closeEvent(event);
-#elif QT_VERSION < QT_VERSION_CHECK(5,4,0)
-    QGLWidget::closeEvent(event);
 #else
     QOpenGLWidget::closeEvent(event);
 #endif
@@ -1011,8 +998,8 @@ void gGraphView::updateScale()
 
 void gGraphView::resizeEvent(QResizeEvent *e)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5,4,0) && !defined(BROKEN_OPENGL_BUILD)
-    // This ques a needed redraw event..
+#if !defined(BROKEN_OPENGL_BUILD)
+    // This queues a needed redraw event..
     QOpenGLWidget::resizeEvent(e);
 #endif
 
@@ -1031,11 +1018,7 @@ void gGraphView::scrollbarValueChanged(int val)
     //qDebug() << "Scrollbar Changed" << val;
     if (m_offsetY != val) {
         m_offsetY = val;
-#if QT_VERSION >= QT_VERSION_CHECK(5,4,0)
         update();
-#else
-        timedRedraw(); // do this on a timer?
-#endif
     }
 }
 
@@ -1482,11 +1465,6 @@ void gGraphView::paintGL()
 
     painter.end();
 
-#ifndef BROKEN_OPENGL_BUILD
-#if QT_VERSION < QT_VERSION_CHECK(5,4,0)
-    swapBuffers();
-#endif
-#endif
     if (this->isVisible() && !graphs_drawn && render_cube) { // keep the cube spinning
         redrawtimer->setInterval(1000.0 / 50); // 50 FPS
         redrawtimer->setSingleShot(true);
@@ -2789,8 +2767,6 @@ void gGraphView::keyReleaseEvent(QKeyEvent *event)
     }
 #ifdef BROKEN_OPENGL_BUILD
         QWidget::keyReleaseEvent(event);
-#elif QT_VERSION < QT_VERSION_CHECK(5,4,0)
-        QGLWidget::keyReleaseEvent(event);
 #else
         QOpenGLWidget::keyReleaseEvent(event);
 #endif

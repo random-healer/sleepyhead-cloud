@@ -393,13 +393,7 @@ void OximeterImport::doUpdateProgress(int v, int t)
 
 void OximeterImport::on_fileImportButton_clicked()
 {
-
-#if QT_VERSION  < QT_VERSION_CHECK(5,0,0)
-        const QString documentsFolder = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
-#else
-        const QString documentsFolder = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
-#endif
-
+	const QString documentsFolder = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
 
     QString filename = QFileDialog::getOpenFileName(nullptr , tr("Select a valid oximetry data file"), documentsFolder, tr("Oximetry Files (*.spo *.spor *.spo2 *.dat)"));
 

@@ -13,11 +13,7 @@
 #include <QColor>
 #include <QObject>
 
-#if QT_VERSION >= QT_VERSION_CHECK(4,8,0)
-
 #define DEBUG_EFFICIENCY 1
-
-#endif
 
 QByteArray gCompress(const QByteArray& data);
 QByteArray gUncompress(const QByteArray &data);

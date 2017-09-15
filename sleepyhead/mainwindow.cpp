@@ -61,9 +61,7 @@
 #include "reports.h"
 #include "statistics.h"
 
-#if QT_VERSION >= QT_VERSION_CHECK(5,4,0)
 #include <QOpenGLFunctions>
-#endif
 
 QProgressBar *qprogress;
 QLabel *qstatus;
@@ -80,14 +78,11 @@ QString getOpenGLVersionString()
         QGLWidget w;
         w.makeCurrent();
 
-#if QT_VERSION < QT_VERSION_CHECK(5,4,0)
-        glversion = QString(QLatin1String(reinterpret_cast<const char*>(glGetString(GL_VERSION))));
-#else
         QOpenGLFunctions f;
         f.initializeOpenGLFunctions();
         glversion = QString(QLatin1String(reinterpret_cast<const char*>(f.glGetString(GL_VERSION))));
-#endif
-        qDebug() << "OpenGL Version:" << glversion;
+
+		qDebug() << "OpenGL Version:" << glversion;
     }
     return glversion;
 }
@@ -171,14 +166,9 @@ MainWindow::MainWindow(QWidget *parent) :
     //ui->tabWidget->setCurrentIndex(1);
 
 #ifdef Q_OS_MAC
-
     ui->action_About->setMenuRole(QAction::ApplicationSpecificRole);
     ui->action_Preferences->setMenuRole(QAction::ApplicationSpecificRole);
     ui->action_Exit->setMenuRole(QAction::ApplicationSpecificRole);
-#if(QT_VERSION<QT_VERSION_CHECK(5,0,0))
-    // Disable Screenshot on Mac Platform,as it doesn't work in Qt4, and the system provides this functionality anyway.
-    ui->action_Screenshot->setEnabled(false);
-#endif
 #endif
 
 //#ifdef LOCK_RESMED_SESSIONS
@@ -1032,11 +1022,7 @@ void MainWindow::on_action_Import_Data_triggered()
         if (p_profile->contains(STR_PREF_LastCPAPPath)) {
             folder = (*p_profile)[STR_PREF_LastCPAPPath].toString();
         } else {
-#if QT_VERSION  < QT_VERSION_CHECK(5,0,0)
-            folder = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
-#else
             folder = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
-#endif
         }
 
         w.setDirectory(folder);
@@ -1046,13 +1032,7 @@ void MainWindow::on_action_Import_Data_triggered()
         // This doesn't work on WinXP
 
 #if defined(Q_OS_MAC)
-#if (QT_VERSION < QT_VERSION_CHECK(4,8,0))
-        // Fix for tetragon, 10.6 barfs up Qt's custom dialog
-        w.setOption(QFileDialog::DontUseNativeDialog, true);
-#else
         w.setOption(QFileDialog::DontUseNativeDialog,false);
-#endif // version check
-
 #elif defined(Q_OS_UNIX)
         w.setOption(QFileDialog::DontUseNativeDialog,false);
 #elif defined(Q_OS_WIN)
@@ -1613,11 +1593,9 @@ void MainWindow::DelayedScreenshot()
     int h = height();
 
     // Scale for high resolution displays (like Retina)
-#if(QT_VERSION>=QT_VERSION_CHECK(5,0,0))
-    qreal pr = devicePixelRatio();
+	qreal pr = devicePixelRatio();
     w /= pr;
     h /= pr;
-#endif
 
 #if defined(Q_OS_WIN32) || defined(Q_OS_LINUX) || defined(Q_OS_HAIKU)
      //QRect rec = QApplication::desktop()->screenGeometry();
@@ -1663,14 +1641,6 @@ void MainWindow::updatestatusBarMessage(const QString &text)
 
 void MainWindow::on_actionPrint_Report_triggered()
 {
-#ifdef Q_WS_MAC
-#if ((QT_VERSION <= QT_VERSION_CHECK(4, 8, 4)))
-    QMessageBox::information(this, tr("Printing Disabled"),
-                             tr("Please rebuild SleepyHead with Qt 4.8.5 or greater, as printing causes a crash with this version of Qt"),
-                             QMessageBox::Ok);
-    return;
-#endif
-#endif
     Report report;
 
     if (ui->tabWidget->currentWidget() == overview) {
@@ -2754,11 +2724,7 @@ void MainWindow::on_actionDaily_Calendar_toggled(bool visible)
 void MainWindow::on_actionExport_Journal_triggered()
 {
     QString folder;
-#if QT_VERSION  < QT_VERSION_CHECK(5,0,0)
-    folder = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
-#else
     folder = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
-#endif
     folder += QDir::separator() + tr("%1's Journal").arg(p_profile->user->userName()) + ".xml";
 
     QString filename = QFileDialog::getSaveFileName(this, tr("Choose where to save journal"), folder, tr("XML Files (*.xml)"));

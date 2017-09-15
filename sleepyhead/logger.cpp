@@ -10,22 +10,12 @@
 
 QThreadPool * otherThreadPool = NULL;
 
-#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
-void MyOutputHandler(QtMsgType type, const char *msgtxt)
-{
-
-#else
 void MyOutputHandler(QtMsgType type, const QMessageLogContext &context, const QString &msgtxt)
 {
     Q_UNUSED(context)
-#endif
 
     if (!logger) {
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
         fprintf(stderr, "Pre/Post: %s\n", msgtxt.toLocal8Bit().constData());
-#else
-        fprintf(stderr, "Pre/Post: %s\n", msgtxt);
-#endif
         return;
     }
 
@@ -49,12 +39,8 @@ void MyOutputHandler(QtMsgType type, const QMessageLogContext &context, const QS
         break;
     }
 
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
     msg = typestr +
           msgtxt; //+QString(" (%1:%2, %3)").arg(context.file).arg(context.line).arg(context.function);
-#else
-    msg = typestr + msgtxt;
-#endif
 
     if (logger && logger->isRunning()) {
         logger->append(msg);
@@ -73,11 +59,7 @@ void initializeLogger()
     logger = new LogThread();
     otherThreadPool = new QThreadPool();
     bool b = otherThreadPool->tryStart(logger);
-#if QT_VERSION >= QT_VERSION_CHECK(5,0,0)
     qInstallMessageHandler(MyOutputHandler);
-#else
-    qInstallMsgHandler(MyOutputHandler);
-#endif
     if (b) {
         qWarning() << "Started logging thread";
     } else {

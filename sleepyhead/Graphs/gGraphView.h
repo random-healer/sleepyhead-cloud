@@ -28,11 +28,7 @@
 #include <QPinchGesture>
 
 #ifndef BROKEN_OPENGL_BUILD
-#if QT_VERSION < QT_VERSION_CHECK(5,4,0)
-#include <QGLWidget>
-#else
 #include <QOpenGLWidget>
-#endif
 #endif
 
 #include <Graphs/gGraph.h>
@@ -292,8 +288,6 @@ struct SelectionHistoryItem {
 class gGraphView
 #ifdef BROKEN_OPENGL_BUILD
         :public QWidget
-#elif QT_VERSION < QT_VERSION_CHECK(5,4,0)
-        :public QGLWidget
 #else
         :public QOpenGLWidget
 #endif
