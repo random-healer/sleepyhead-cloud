@@ -40,3 +40,4 @@ Makefile*
 /sleepyhead/debug
 /sleepyhead/release
 *.xcuserstate
+*.xcbkptlist
