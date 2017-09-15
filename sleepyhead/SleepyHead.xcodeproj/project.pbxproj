@@ -541,6 +541,9 @@
 		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				03D5F9FCFD670A1BEDF219A2 /* SleepLib */,
+				24667CC5DEC02203B5590245 /* Graphs */,
+				7D05007EEFA2F8952020A574 /* icons */,
 				735C3FC31F6B6491002FFC3B /* Common */,
 				3BDE952DEB8EF7C2B3246321 /* daily.cpp */,
 				4623DA409940186F06520C39 /* exportcsv.cpp */,
@@ -554,8 +557,6 @@
 				BE33697F725DE1B7D89A0000 /* sessionbar.cpp */,
 				965BD64F11B530FBFEF66080 /* updateparser.cpp */,
 				8A8E7708EB992D7952369D44 /* UpdaterWindow.cpp */,
-				24667CC5DEC02203B5590245 /* Graphs */,
-				03D5F9FCFD670A1BEDF219A2 /* SleepLib */,
 				C46FF0055C7CCABA11D4B60C /* translation.cpp */,
 				670EBC36233A7FFE71977E17 /* statistics.cpp */,
 				AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */,
@@ -571,7 +572,6 @@
 				E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */,
 				26254F18A2B41EB03AC4E612 /* unzip.c */,
 				91B145E1EE6C1C85A6005959 /* zip.c */,
-				7D05007EEFA2F8952020A574 /* icons */,
 				4EFDB1BF00CDE12DF7D13469 /* daily.h */,
 				76DFB1B3B79A816023BCD214 /* exportcsv.h */,
 				55B5C61EBFEBEC681088E42C /* mainwindow.h */,
