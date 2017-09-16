@@ -1,14 +1,4 @@
-/* Daily GUI Headers
- *
- * Copyright (c) 2011-2016 Mark Watkins <jedimark@users.sourceforge.net>
- *
- * This file is subject to the terms and conditions of the GNU General Public
- * License. See the file COPYING in the main directory of the Linux
- * distribution for more details. */
-
-#ifndef DAILY_H
-#define DAILY_H
-
+#pragma once
 
 #include <QMenu>
 #include <QAction>
@@ -260,9 +250,6 @@ private slots:
 
     void updateGraphCombo();
 
-
-    //void on_sessionWidget_itemSelectionChanged();
-
     void on_splitter_2_splitterMoved(int pos, int index);
 
 protected:
@@ -313,26 +300,13 @@ private:
 
     QHash<QString, gGraph *> graphlist;
 
-//    QList<Layer *> OXIData;
-//    QList<Layer *> CPAPData;
-//    QList<Layer *> STAGEData;
-//    QList<Layer *> POSData;
     QHash<QString,QPushButton *> GraphToggles;
     QVector<QAction *> GraphAction;
     QGLContext *offscreen_context;
 
     QList<int> splitter_sizes;
-//    Layer * AddCPAP(Layer *d) { CPAPData.push_back(d); return d; }
-//    Layer * AddSTAGE(Layer *d) { STAGEData.push_back(d); return d; }
-//    Layer * AddPOS(Layer *d) { POSData.push_back(d); return d; }
-//    Layer * AddOXI(Layer *d) { OXIData.push_back(d); return d; }
 
-//    void UpdateCPAPGraphs(Day *day);
-//    void UpdateOXIGraphs(Day *day);
-//    void UpdateSTAGEGraphs(Day *day);
-//    void UpdatePOSGraphs(Day *day);
-
-    Ui::Daily *ui;
+	Ui::Daily *ui;
     QDate previous_date;
     QMenu *show_graph_menu;
 
@@ -354,5 +328,3 @@ private:
     bool ZombieMeterMoved;
     bool BookmarksChanged;
 };
-
-#endif // DAILY_H

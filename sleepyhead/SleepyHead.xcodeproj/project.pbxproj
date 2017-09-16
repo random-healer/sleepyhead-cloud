@@ -552,7 +552,6 @@
 				24667CC5DEC02203B5590245 /* Graphs */,
 				7D05007EEFA2F8952020A574 /* icons */,
 				735C3FC31F6B6491002FFC3B /* Common */,
-				3BDE952DEB8EF7C2B3246321 /* daily.cpp */,
 				4623DA409940186F06520C39 /* exportcsv.cpp */,
 				813B6929DD5F56AF4CF32C13 /* main.cpp */,
 				C02234850D131BA3453497A2 /* mainwindow.cpp */,
@@ -579,7 +578,6 @@
 				E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */,
 				26254F18A2B41EB03AC4E612 /* unzip.c */,
 				91B145E1EE6C1C85A6005959 /* zip.c */,
-				4EFDB1BF00CDE12DF7D13469 /* daily.h */,
 				76DFB1B3B79A816023BCD214 /* exportcsv.h */,
 				55B5C61EBFEBEC681088E42C /* mainwindow.h */,
 				4977B2A1B016DABF10FBEE93 /* newprofile.h */,
@@ -634,6 +632,8 @@
 		735C3FD91F6CA158002FFC3B /* Ui */ = {
 			isa = PBXGroup;
 			children = (
+				3BDE952DEB8EF7C2B3246321 /* daily.cpp */,
+				4EFDB1BF00CDE12DF7D13469 /* daily.h */,
 				735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */,
 				735C3FDB1F6CA1DC002FFC3B /* MyWebPage.h */,
 				735C3FDD1F6CA7E0002FFC3B /* MyWebView.cpp */,
