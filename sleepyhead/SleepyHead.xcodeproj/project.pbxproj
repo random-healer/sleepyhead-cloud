@@ -78,6 +78,7 @@
 		735C3FD51F6C8336002FFC3B /* GraphName.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD31F6C8336002FFC3B /* GraphName.cpp */; };
 		735C3FD81F6C871B002FFC3B /* DateTimeUtils.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD61F6C871B002FFC3B /* DateTimeUtils.cpp */; };
 		735C3FDC1F6CA1DC002FFC3B /* MyWebPage.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */; };
+		735C3FDF1F6CA7E0002FFC3B /* MyWebView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FDD1F6CA7E0002FFC3B /* MyWebView.cpp */; };
 		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
 		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
 		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -254,6 +255,8 @@
 		735C3FD71F6C871B002FFC3B /* DateTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTimeUtils.h; path = Common/DateTimeUtils.h; sourceTree = SOURCE_ROOT; };
 		735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyWebPage.cpp; path = Ui/MyWebPage.cpp; sourceTree = SOURCE_ROOT; };
 		735C3FDB1F6CA1DC002FFC3B /* MyWebPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWebPage.h; path = Ui/MyWebPage.h; sourceTree = SOURCE_ROOT; };
+		735C3FDD1F6CA7E0002FFC3B /* MyWebView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyWebView.cpp; path = Ui/MyWebView.cpp; sourceTree = SOURCE_ROOT; };
+		735C3FDE1F6CA7E0002FFC3B /* MyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWebView.h; path = Ui/MyWebView.h; sourceTree = SOURCE_ROOT; };
 		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
 		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
 		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
@@ -633,6 +636,8 @@
 			children = (
 				735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */,
 				735C3FDB1F6CA1DC002FFC3B /* MyWebPage.h */,
+				735C3FDD1F6CA7E0002FFC3B /* MyWebView.cpp */,
+				735C3FDE1F6CA7E0002FFC3B /* MyWebView.h */,
 			);
 			name = Ui;
 			sourceTree = "<group>";
@@ -878,6 +883,7 @@
 				5A04DD12D078D700F95F87BB /* icon_loader.cpp in Compile Sources */,
 				69C9AE74641648C3C674D6DC /* intellipap_loader.cpp in Compile Sources */,
 				735C3FD21F6C6B65002FFC3B /* GraphicsEngine.cpp in Compile Sources */,
+				735C3FDF1F6CA7E0002FFC3B /* MyWebView.cpp in Compile Sources */,
 				560B8684A95A3924DEA3F1A9 /* mseries_loader.cpp in Compile Sources */,
 				34D06BFAED0FB7288331AD2C /* prs1_loader.cpp in Compile Sources */,
 				FAB0A4350FE90488802C9E49 /* resmed_loader.cpp in Compile Sources */,

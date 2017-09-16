@@ -31,22 +31,11 @@
 #include "Graphs/gLineChart.h"
 #include "sessionbar.h"
 
-#include "Ui/MyWebPage.h"
+#include "Ui/MyWebView.h"
 
 namespace Ui {
     class Daily;
 }
-
-class MyWebView:public QWebView
-{
-   Q_OBJECT
-   private:
-      MyWebPage m_page;
-   public:
-      MyWebView(QWidget *parent = 0);
-};
-
-
 
 class MainWindow;
 

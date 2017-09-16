@@ -27,6 +27,7 @@
 
 #include "Common/DateTimeUtils.h"
 #include "Common/GraphName.h"
+#include "Ui/MyWebView.h"
 
 #include "daily.h"
 #include "ui_daily.h"
@@ -837,17 +838,6 @@ void Daily::graphtogglebutton_toggled(bool b)
     GraphView->updateScale();
     GraphView->redraw();
 }
-
-MyWebView::MyWebView(QWidget *parent):
-   QWebView(parent),
-   m_page(this)
-{
-   // Set the page of our own PageView class, MyPageView,
-   // because only objects of this class will handle
-   // object-tags correctly.
-   setPage(&m_page);
-}
-
 
 QString Daily::getSessionInformation(Day * day)
 {

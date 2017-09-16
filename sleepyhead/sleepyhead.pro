@@ -168,7 +168,9 @@ SOURCES += \
     Common/DateTimeUtils.cpp \
     Common/FlagColors.cpp \
     Common/GraphicsEngine.cpp \
-    Common/GraphName.cpp
+    Common/GraphName.cpp \
+    Ui/MyWebPage.cpp \
+    Ui/MyWebView.cpp
 
 HEADERS  += \
     daily.h \
@@ -235,7 +237,9 @@ HEADERS  += \
     Common/DateTimeUtils.h \
     Common/FlagColors.h \
     Common/GraphicsEngine.h \
-    Common/GraphName.h
+    Common/GraphName.h \
+    Ui/MyWebPage.h \
+    Ui/MyWebView.h
 
 FORMS += \
     daily.ui \

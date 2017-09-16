@@ -2,7 +2,7 @@
 
 #include <QtCore>
 
-#include "MainWindow.h"
+#include "mainwindow.h"
 
 extern MainWindow * mainwin;
 
