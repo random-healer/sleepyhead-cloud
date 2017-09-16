@@ -547,6 +547,7 @@
 		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				735C3FE01F6CC948002FFC3B /* Compression */,
 				735C3FD91F6CA158002FFC3B /* Ui */,
 				03D5F9FCFD670A1BEDF219A2 /* SleepLib */,
 				24667CC5DEC02203B5590245 /* Graphs */,
@@ -568,16 +569,6 @@
 				AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */,
 				054987505B35C3BBD845AE47 /* logger.cpp */,
 				2FC81A8C6B4D42FEA0A3F16F /* welcome.cpp */,
-				5C77B99049E0B6D2BBEE5E1B /* qioapi.cpp */,
-				12436CEFF9464E5A97182640 /* JlCompress.cpp */,
-				BA61D64E4C121C3B25AE73FB /* quaadler32.cpp */,
-				58235930DBC64B5A454FFB46 /* quacrc32.cpp */,
-				FDA94125396CD87ADE11F3E8 /* quazip.cpp */,
-				688DBCF603DE5BF2B3471CEC /* quazipfile.cpp */,
-				4C8C7CAEEDAB7569C8C19AB1 /* quazipnewinfo.cpp */,
-				E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */,
-				26254F18A2B41EB03AC4E612 /* unzip.c */,
-				91B145E1EE6C1C85A6005959 /* zip.c */,
 				76DFB1B3B79A816023BCD214 /* exportcsv.h */,
 				55B5C61EBFEBEC681088E42C /* mainwindow.h */,
 				4977B2A1B016DABF10FBEE93 /* newprofile.h */,
@@ -595,17 +586,6 @@
 				C36E997D0637A57101A9AABE /* logger.h */,
 				B0ADBF158D728DF6C24D937E /* build_number.h */,
 				9A41649EE150A69E9674DDB6 /* crypt.h */,
-				49EC0FB332239743C9C0789B /* ioapi.h */,
-				BBE4FD273B4960B93CB9582F /* JlCompress.h */,
-				AE025E49BBA311ADD7536E0A /* quaadler32.h */,
-				7FE2263ECE865D7BE862C670 /* quachecksum32.h */,
-				2030761DC1804DACFEE72B7C /* quacrc32.h */,
-				C59B3BDD913A1983E5D48D10 /* quazip.h */,
-				F7858D87195136C0615E83A7 /* quazipfile.h */,
-				93263CF1DF66A637C1405715 /* quazipfileinfo.h */,
-				FF1BF64226E01A8FE31EA909 /* quazipnewinfo.h */,
-				3A8AC9BC4C6BF19D5BBFD0D4 /* unzip.h */,
-				476A4A16FADFB320770180AE /* zip.h */,
 			);
 			name = Sources;
 			sourceTree = "<Group>";
@@ -640,6 +620,34 @@
 				735C3FDE1F6CA7E0002FFC3B /* MyWebView.h */,
 			);
 			name = Ui;
+			sourceTree = "<group>";
+		};
+		735C3FE01F6CC948002FFC3B /* Compression */ = {
+			isa = PBXGroup;
+			children = (
+				12436CEFF9464E5A97182640 /* JlCompress.cpp */,
+				BBE4FD273B4960B93CB9582F /* JlCompress.h */,
+				91B145E1EE6C1C85A6005959 /* zip.c */,
+				476A4A16FADFB320770180AE /* zip.h */,
+				26254F18A2B41EB03AC4E612 /* unzip.c */,
+				3A8AC9BC4C6BF19D5BBFD0D4 /* unzip.h */,
+				FDA94125396CD87ADE11F3E8 /* quazip.cpp */,
+				C59B3BDD913A1983E5D48D10 /* quazip.h */,
+				688DBCF603DE5BF2B3471CEC /* quazipfile.cpp */,
+				F7858D87195136C0615E83A7 /* quazipfile.h */,
+				4C8C7CAEEDAB7569C8C19AB1 /* quazipnewinfo.cpp */,
+				93263CF1DF66A637C1405715 /* quazipfileinfo.h */,
+				E9CDD70391CE9B6CD139586B /* quazipfileinfo.cpp */,
+				FF1BF64226E01A8FE31EA909 /* quazipnewinfo.h */,
+				BA61D64E4C121C3B25AE73FB /* quaadler32.cpp */,
+				AE025E49BBA311ADD7536E0A /* quaadler32.h */,
+				58235930DBC64B5A454FFB46 /* quacrc32.cpp */,
+				2030761DC1804DACFEE72B7C /* quacrc32.h */,
+				5C77B99049E0B6D2BBEE5E1B /* qioapi.cpp */,
+				49EC0FB332239743C9C0789B /* ioapi.h */,
+				7FE2263ECE865D7BE862C670 /* quachecksum32.h */,
+			);
+			name = Compression;
 			sourceTree = "<group>";
 		};
 		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
