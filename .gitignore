@@ -41,3 +41,7 @@ Makefile*
 /sleepyhead/release
 *.xcuserstate
 *.xcbkptlist
+*.opensdf
+SleepyHeadQT.sdf
+*.user
+*.suo

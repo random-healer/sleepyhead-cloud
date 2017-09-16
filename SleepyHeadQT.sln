@@ -1,5 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 7.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SleepyHead", "/GitHub/sleepyhead-code/sleepyhead/SleepyHead.vcxproj", "{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SleepyHead", "sleepyhead\SleepyHead.vcxproj", "{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -7,13 +10,15 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Debug|Win32.ActiveCfg = Debug|Win32
-		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Debug|Win32.Build.0 = Debug|Win32
-		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Release|Win32.ActiveCfg = Release|Win32
-		{4914ED91-D72C-3B6B-B3E6-1B3BB2CD42A1}.Release|Win32.Build.0 = Release|Win32
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|Win32.Build.0 = Debug|Win32
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|Win32.ActiveCfg = Release|Win32
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-	EndGlobalSection
-	GlobalSection(ExtensibilityAddIns) = postSolution
+		Qt5Version = Qt 5.5 x86
 	EndGlobalSection
 EndGlobal
