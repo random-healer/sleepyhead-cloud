@@ -31,18 +31,11 @@
 #include "Graphs/gLineChart.h"
 #include "sessionbar.h"
 
+#include "Ui/MyWebPage.h"
+
 namespace Ui {
     class Daily;
 }
-
-class MyWebPage:public QWebPage
-{
-Q_OBJECT
-public:
-    MyWebPage(QObject *parent = 0);
-protected:
-    QObject *createPlugin(const QString & classid, const QUrl & url, const QStringList & paramNames, const QStringList & paramValues);
-};
 
 class MyWebView:public QWebView
 {

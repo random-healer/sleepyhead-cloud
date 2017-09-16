@@ -77,6 +77,7 @@
 		735C3FD21F6C6B65002FFC3B /* GraphicsEngine.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD01F6C6B65002FFC3B /* GraphicsEngine.cpp */; };
 		735C3FD51F6C8336002FFC3B /* GraphName.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD31F6C8336002FFC3B /* GraphName.cpp */; };
 		735C3FD81F6C871B002FFC3B /* DateTimeUtils.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FD61F6C871B002FFC3B /* DateTimeUtils.cpp */; };
+		735C3FDC1F6CA1DC002FFC3B /* MyWebPage.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */; };
 		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
 		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
 		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -251,6 +252,8 @@
 		735C3FD41F6C8336002FFC3B /* GraphName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphName.h; path = Common/GraphName.h; sourceTree = SOURCE_ROOT; };
 		735C3FD61F6C871B002FFC3B /* DateTimeUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DateTimeUtils.cpp; path = Common/DateTimeUtils.cpp; sourceTree = SOURCE_ROOT; };
 		735C3FD71F6C871B002FFC3B /* DateTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTimeUtils.h; path = Common/DateTimeUtils.h; sourceTree = SOURCE_ROOT; };
+		735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyWebPage.cpp; path = Ui/MyWebPage.cpp; sourceTree = SOURCE_ROOT; };
+		735C3FDB1F6CA1DC002FFC3B /* MyWebPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWebPage.h; path = Ui/MyWebPage.h; sourceTree = SOURCE_ROOT; };
 		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
 		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
 		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
@@ -541,6 +544,7 @@
 		2EB56BE3C2D93CDAB0C52E67 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				735C3FD91F6CA158002FFC3B /* Ui */,
 				03D5F9FCFD670A1BEDF219A2 /* SleepLib */,
 				24667CC5DEC02203B5590245 /* Graphs */,
 				7D05007EEFA2F8952020A574 /* icons */,
@@ -622,6 +626,15 @@
 				735C3FD71F6C871B002FFC3B /* DateTimeUtils.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		735C3FD91F6CA158002FFC3B /* Ui */ = {
+			isa = PBXGroup;
+			children = (
+				735C3FDA1F6CA1DC002FFC3B /* MyWebPage.cpp */,
+				735C3FDB1F6CA1DC002FFC3B /* MyWebPage.h */,
+			);
+			name = Ui;
 			sourceTree = "<group>";
 		};
 		74B182DB50CB5611B5C1C297 /* Supporting Files */ = {
@@ -837,6 +850,7 @@
 				735C3FC91F6B71C6002FFC3B /* FlagColors.cpp in Compile Sources */,
 				735C3FD81F6C871B002FFC3B /* DateTimeUtils.cpp in Compile Sources */,
 				EB6A2DE1622C3683F14CA227 /* gFooBar.cpp in Compile Sources */,
+				735C3FDC1F6CA1DC002FFC3B /* MyWebPage.cpp in Compile Sources */,
 				68C54258A56C7803DFA0288B /* gGraph.cpp in Compile Sources */,
 				88201ACDD745E43F7ED5F32C /* gGraphView.cpp in Compile Sources */,
 				5F0DC61F0036AF2368BEEA20 /* glcommon.cpp in Compile Sources */,
