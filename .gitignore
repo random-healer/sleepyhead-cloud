@@ -45,3 +45,5 @@ Makefile*
 SleepyHeadQT.sdf
 *.user
 *.suo
+/sleepyhead/Win32
+/sleepyhead/x64

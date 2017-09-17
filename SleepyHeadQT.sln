@@ -4,21 +4,26 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SleepyHead", "sleepyhead\SleepyHead.vcxproj", "{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC126D10-6D72-43EC-945B-883A89318FC5}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Win32 = Debug|Win32
-		Release|Win32 = Release|Win32
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|Win32.ActiveCfg = Debug|Win32
-		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|Win32.Build.0 = Debug|Win32
-		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|Win32.ActiveCfg = Release|Win32
-		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|Win32.Build.0 = Release|Win32
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|x64.ActiveCfg = Debug|x64
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Debug|x64.Build.0 = Debug|x64
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|x64.ActiveCfg = Release|x64
+		{822C7266-0BD1-32D4-B26E-5EBFCA6F16DD}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		Qt5Version = Qt 5.5 x86
+		Qt5Version = Qt 5.5 x64
 	EndGlobalSection
 EndGlobal
