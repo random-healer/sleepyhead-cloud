@@ -65,29 +65,14 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{94d6245f-4bc3-476e-b0ca-c81d3373b398}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Compression">
+      <UniqueIdentifier>{90cfe036-677c-4c23-aa49-148491cb592f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Common\ChartColors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\CommonColors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\DateTimeUtils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\FlagColors.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GraphName.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\GraphicsEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\JlCompress.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Graphs\MinutesAtPressure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -232,27 +217,6 @@
     <ClCompile Include="SleepLib\loader_plugins\prs1_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\qioapi.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quaadler32.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quacrc32.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quazip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quazipfile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quazipfileinfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\quazipnewinfo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="reports.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -280,9 +244,6 @@
     <ClCompile Include="translation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\unzip.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="updateparser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -293,9 +254,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SleepLib\loader_plugins\zeo_loader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\3rdparty\quazip\quazip\zip.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Debug\moc_UpdaterWindow.cpp">
@@ -427,29 +385,56 @@
     <ClCompile Include="GeneratedFiles\qrc_Resources.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="Common\CommonColors.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\DateTimeUtils.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GraphicsEngine.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GraphName.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ChartColors.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\FlagColors.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\unzip.c">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\zip.c">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\JlCompress.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\qioapi.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quaadler32.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quacrc32.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quazip.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quazipfile.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quazipfileinfo.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdparty\quazip\quazip\quazipnewinfo.cpp">
+      <Filter>Source Files\Compression</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Common\ChartColors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\CommonColors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\DateTimeUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\FlagColors.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GraphName.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\GraphicsEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\JlCompress.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Graphs\MinutesAtPressure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -600,27 +585,6 @@
     <ClInclude Include="SleepLib\loader_plugins\prs1_loader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quaadler32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quachecksum32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quacrc32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quazip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <CustomBuild Include="..\3rdparty\quazip\quazip\quazipfile.h">
-      <Filter>Header Files</Filter>
-    </CustomBuild>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quazipfileinfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\quazipnewinfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="reports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -648,9 +612,6 @@
     <ClInclude Include="translation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\unzip.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="updateparser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -661,9 +622,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SleepLib\loader_plugins\zeo_loader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\3rdparty\quazip\quazip\zip.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_UpdaterWindow.h">
@@ -699,6 +657,51 @@
     <ClInclude Include="GeneratedFiles\ui_report.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
+    <ClInclude Include="Common\ChartColors.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\CommonColors.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DateTimeUtils.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\FlagColors.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GraphicsEngine.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GraphName.h">
+      <Filter>Source Files\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\unzip.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\zip.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quaadler32.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quachecksum32.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quacrc32.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quazip.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quazipfileinfo.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\quazipnewinfo.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdparty\quazip\quazip\JlCompress.h">
+      <Filter>Source Files\Compression</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="UpdaterWindow.ui">
@@ -733,6 +736,9 @@
     </CustomBuild>
     <CustomBuild Include="report.ui">
       <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\3rdparty\quazip\quazip\quazipfile.h">
+      <Filter>Source Files\Compression</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

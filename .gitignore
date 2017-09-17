@@ -47,3 +47,4 @@ SleepyHeadQT.sdf
 *.suo
 /sleepyhead/Win32
 /sleepyhead/x64
+/.vs
