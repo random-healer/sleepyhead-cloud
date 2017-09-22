@@ -1327,7 +1327,7 @@ bool gGraphView::renderGraphs(QPainter &painter)
     return numgraphs > 0;
 }
 
-#include "version.h"
+#include "VersionInfo.h"
 #ifdef BROKEN_OPENGL_BUILD
 void gGraphView::paintEvent(QPaintEvent *)
 #else

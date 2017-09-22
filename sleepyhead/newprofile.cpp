@@ -89,7 +89,7 @@ NewProfile::NewProfile(QWidget *parent) :
 
         f.close();
     }
-    ui->AppTitle->setText("SleepyHead v" + VersionString);
+    ui->AppTitle->setText("SleepyHead v" + VersionInfo::VersionString);
     //ui->releaseStatus->setText(ReleaseStatus);
 
 

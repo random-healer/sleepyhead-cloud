@@ -35,7 +35,7 @@
 #include "Common/DateTimeUtils.h"
 #include "Common/GraphicsEngine.h"
 
-#include "version.h"
+#include "VersionInfo.h"
 
 #include <cmath>
 
@@ -57,7 +57,7 @@
 #include "UpdaterWindow.h"
 #include "SleepLib/calcs.h"
 #include "SleepLib/progressdialog.h"
-#include "version.h"
+#include "VersionInfo.h"
 
 #include "reports.h"
 #include "statistics.h"
@@ -107,7 +107,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setWindowTitle(STR_TR_SleepyHead + QString(" %1 (" + tr("Profile") + ": %2)").arg(version).arg(PREF[STR_GEN_Profile].toString()));
 
-    qDebug() << STR_TR_SleepyHead << VersionString << "built with Qt" << QT_VERSION_STR << "on" << __DATE__ << __TIME__;
+    qDebug() << STR_TR_SleepyHead << VersionInfo::VersionString << "built with Qt" << QT_VERSION_STR << "on" << __DATE__ << __TIME__;
 
 #ifdef BROKEN_OPENGL_BUILD
     qDebug() << "This build has been created especially for computers with older graphics hardware.\n";
@@ -220,7 +220,7 @@ MainWindow::MainWindow(QWidget *parent) :
         systray->show();
         systraymenu = new QMenu(this);
         systray->setContextMenu(systraymenu);
-        QAction *a = systraymenu->addAction(STR_TR_SleepyHead + " v" + VersionString);
+        QAction *a = systraymenu->addAction(STR_TR_SleepyHead + " v" + VersionInfo::VersionString);
         a->setEnabled(false);
         systraymenu->addSeparator();
         systraymenu->addAction(tr("&About"), this, SLOT(on_action_About_triggered()));
@@ -2710,5 +2710,5 @@ void MainWindow::on_actionReport_a_Bug_triggered()
 {
     QSettings settings(getDeveloperName(), getAppName());
     QString language = settings.value(LangSetting).toString();
-    QDesktopServices::openUrl(QUrl(QString("https://www.jedimark.net/tiki-index.php?page=Reporting+SleepyHead+Bugs&lang=%1&version=%2&platform=%3").arg(language).arg(VersionString).arg(PlatformString)));
+    QDesktopServices::openUrl(QUrl(QString("https://www.jedimark.net/tiki-index.php?page=Reporting+SleepyHead+Bugs&lang=%1&version=%2&platform=%3").arg(language).arg(VersionInfo::VersionString).arg(VersionInfo::PlatformString)));
 }

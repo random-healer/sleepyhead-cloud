@@ -16,7 +16,7 @@
 #include <QMainWindow>
 #include <QUrl>
 
-#include "version.h"
+#include "VersionInfo.h"
 #include "updateparser.h"
 
 namespace Ui {

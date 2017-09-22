@@ -26,7 +26,7 @@
 
 #include "Common/GraphicsEngine.h"
 
-#include "version.h"
+#include "VersionInfo.h"
 #include "logger.h"
 #include "SleepLib/schema.h"
 #include "mainwindow.h"
@@ -111,7 +111,7 @@ void release_notes()
 //    html += welcomeMessage;
 
 
-    if (ReleaseStatus != "r") {
+    if (VersionInfo::ReleaseStatus != "r") {
         html += "<p><font color='red' size=+1><b>"+QObject::tr("Important:")+"</b></font> "
         "<font size=+1><i>"+QObject::tr("As this is a pre-release version, it is recommended that you back up your data folder manually before proceding, because attempting to roll back later may break things.")+"</i></font></p>";
     }
@@ -172,7 +172,7 @@ void MigrateSettings()
     }
 
     oldcopy.setValue("Migrated", true);
-    settings.setValue("Version", VersionString);
+    settings.setValue("Version", VersionInfo::VersionString);
 
     qDebug() << keys;
 
@@ -471,7 +471,7 @@ retry_directory:
         }
     }
 
-    PREF[STR_PREF_VersionString] = VersionString;
+    PREF[STR_PREF_VersionString] = VersionInfo::VersionString;
 
     p_profile = Profiles::Get(PREF[STR_GEN_Profile].toString());
 

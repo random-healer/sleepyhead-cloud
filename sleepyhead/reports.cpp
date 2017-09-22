@@ -554,7 +554,7 @@ void Report::PrintReport(gGraphView *gv, QString name, QDate date)
         }
 
         if (first) {
-            QString footer = QObject::tr("SleepyHead v%1 - http://sleepyhead.sourceforge.net").arg(VersionString);
+            QString footer = QObject::tr("SleepyHead v%1 - http://sleepyhead.sourceforge.net").arg(VersionInfo::VersionString);
 
             QRectF bounds = painter.boundingRect(QRectF(0, virt_height, virt_width, normal_height), footer,
                                                  QTextOption(Qt::AlignHCenter));

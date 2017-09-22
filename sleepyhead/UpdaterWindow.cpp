@@ -27,7 +27,7 @@
 #include <quazip/quazipfile.h>
 #include "UpdaterWindow.h"
 #include "ui_UpdaterWindow.h"
-#include "version.h"
+#include "VersionInfo.h"
 #include "mainwindow.h"
 
 extern MainWindow *mainwin;
@@ -349,15 +349,15 @@ int compareVersion(QString version)
     int minor = parts[1].toInt(&ok);
     if (!ok) return -1;
 
-    if (major > major_version) {
+    if (major > VersionInfo::major_version) {
         return 1;
-    } else if (major < major_version) {
+    } else if (major < VersionInfo::major_version) {
         return -1;
     }
 
-    if (minor > minor_version) {
+    if (minor > VersionInfo::minor_version) {
         return 1;
-    } else if (minor < minor_version) {
+    } else if (minor < VersionInfo::minor_version) {
         return -1;
     }
 
@@ -376,9 +376,9 @@ int compareVersion(QString version)
 
     int rev = patchver[0].toInt(&ok);
     if (!ok) return -1;
-    if (rev > revision_number) {
+    if (rev > VersionInfo::revision_number) {
         return 1;
-    } else if (rev < revision_number) {
+    } else if (rev < VersionInfo::revision_number) {
         return -1;
     }
 
@@ -386,7 +386,7 @@ int compareVersion(QString version)
     build = patchver[build_index].toInt(&ok);
     if (!ok) return -1;
 
-    int rstatus = checkVersionStatus(ReleaseStatus);
+    int rstatus = checkVersionStatus(VersionInfo::ReleaseStatus);
 
     if (patchver.size() == 3) {
         // read it if it's actually present.
@@ -462,9 +462,9 @@ void UpdaterWindow::ParseUpdatesXML(QIODevice *dev)
         qDebug() << " XML update structure parsed cleanly";
         QHash<QString, QString> CurrentVersion;
 
-        CurrentVersion[UPDATE_SleepyHead] = VersionString;
+        CurrentVersion[UPDATE_SleepyHead] = VersionInfo::VersionString;
         CurrentVersion[UPDATE_QT] = QT_VERSION_STR;
-        CurrentVersion[UPDATE_Translations] = VersionString;
+        CurrentVersion[UPDATE_Translations] = VersionInfo::VersionString;
 
         QList<PackageUpdate> updateList;
 
@@ -534,7 +534,7 @@ void UpdaterWindow::ParseUpdateXML(QIODevice *dev)
         // Um... not optimal.
         qSort(versions);
 
-        QString platform = PlatformString.toLower();
+        QString platform = VersionInfo::PlatformString.toLower();
         release = nullptr;
 
         // Find the highest version number available for this platform
@@ -544,7 +544,7 @@ void UpdaterWindow::ParseUpdateXML(QIODevice *dev)
 
             if (release->updates.contains(platform)  // Valid Release?
                     && (release->status >= AcceptUpdates)
-                    && (release->version >= VersionString)) {
+                    && (release->version >= VersionInfo::VersionString)) {
                 break;
             } else { release = nullptr; }
         }
@@ -600,7 +600,7 @@ void UpdaterWindow::ParseUpdateXML(QIODevice *dev)
             updates.push_back(upq);
         }
 
-        if (upd && upd->version > VersionString) {
+        if (upd && upd->version > VersionInfo::VersionString) {
             updates.push_back(upd);
         }
 
@@ -616,12 +616,12 @@ void UpdaterWindow::ParseUpdateXML(QIODevice *dev)
             if (compareVersion(release->version)) {
                 ui->Title->setText("<font size=+1>" + tr("A new version of SleepyHead is available!") + "</font>");
                 info = tr("Shiny new <b>v%1</b> is available. You're running old and busted v%2").
-                        arg(latestapp).arg(VersionString);
+                        arg(latestapp).arg(VersionInfo::VersionString);
                 ui->notesTabWidget->setCurrentIndex(0);
             } else {
                 ui->Title->setText("<font size=+1>" + tr("An update for SleepyHead is available.") + "</font>");
                 info = tr("Version <b>%1</b> is available. You're currently running v%1").
-                        arg(latestapp).arg(VersionString);
+                        arg(latestapp).arg(VersionInfo::VersionString);
                 ui->notesTabWidget->setCurrentIndex(1);
             }
 
@@ -632,7 +632,7 @@ void UpdaterWindow::ParseUpdateXML(QIODevice *dev)
             for (int i = 0; i < release->updates[platform].size(); i++) {
                 update = &release->updates[platform][i];
 
-                if ((update->type == "application") && (update->version > VersionString)) {
+                if ((update->type == "application") && (update->version > VersionInfo::VersionString)) {
                     notes += "<b>" + tr("SleepyHead v%1 build notes").arg(update->version) + "</b><br/>" +
                              update->notes.trimmed() + "<br/><br/>";
                 } else if ((update->type == "qtlibs") && (update->version > QT_VERSION_STR)) {
