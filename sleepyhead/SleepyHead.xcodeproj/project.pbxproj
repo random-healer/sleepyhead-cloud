@@ -82,6 +82,7 @@
 		735C3FDF1F6CA7E0002FFC3B /* MyWebView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 735C3FDD1F6CA7E0002FFC3B /* MyWebView.cpp */; };
 		73C8D83DDC9A7BEA92E07C71 /* moc_cms50f37_loader.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 9516A4C8C9BD36428F07AB73 /* moc_cms50f37_loader.cpp */; settings = {ATTRIBUTES = (); }; };
 		73F0E8341F74A3AB0050FEE1 /* VersionInfo.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 73F0E8331F74A3AB0050FEE1 /* VersionInfo.cpp */; };
+		73F0E8371F74AAF90050FEE1 /* HttpHelper.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 73F0E8351F74AAF90050FEE1 /* HttpHelper.cpp */; };
 		76E965A84C01099FD66CB0A8 /* oximeterimport.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = AC7BF7EF27C3F02778936A43 /* oximeterimport.cpp */; settings = {ATTRIBUTES = (); }; };
 		8074BB0AEAD1C8CD47690E1F /* moc_newprofile.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 801C479191240E923A0E17B1 /* moc_newprofile.cpp */; settings = {ATTRIBUTES = (); }; };
 		827E3695923AD831B3468159 /* moc_gGraphView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = E630B5D35581B9B9E4D14A88 /* moc_gGraphView.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -262,6 +263,8 @@
 		735C3FDE1F6CA7E0002FFC3B /* MyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWebView.h; path = Ui/MyWebView.h; sourceTree = SOURCE_ROOT; };
 		73F0E8321F74A3AB0050FEE1 /* VersionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionInfo.h; sourceTree = SOURCE_ROOT; };
 		73F0E8331F74A3AB0050FEE1 /* VersionInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VersionInfo.cpp; sourceTree = SOURCE_ROOT; };
+		73F0E8351F74AAF90050FEE1 /* HttpHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HttpHelper.cpp; sourceTree = SOURCE_ROOT; };
+		73F0E8361F74AAF90050FEE1 /* HttpHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpHelper.h; sourceTree = SOURCE_ROOT; };
 		749BBF223803AD1DD548E66D /* gdailysummary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gdailysummary.cpp; path = "/GitHub/sleepyhead-code/sleepyhead/Graphs/gdailysummary.cpp"; sourceTree = "<absolute>"; };
 		74EB4EFCD1699EAE07DD06D9 /* cms50f37_loader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cms50f37_loader.h; path = "/GitHub/sleepyhead-code/sleepyhead/SleepLib/loader_plugins/cms50f37_loader.h"; sourceTree = "<absolute>"; };
 		76DFB1B3B79A816023BCD214 /* exportcsv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exportcsv.h; path = "/GitHub/sleepyhead-code/sleepyhead/exportcsv.h"; sourceTree = "<absolute>"; };
@@ -594,6 +597,8 @@
 				C36E997D0637A57101A9AABE /* logger.h */,
 				B0ADBF158D728DF6C24D937E /* build_number.h */,
 				9A41649EE150A69E9674DDB6 /* crypt.h */,
+				73F0E8351F74AAF90050FEE1 /* HttpHelper.cpp */,
+				73F0E8361F74AAF90050FEE1 /* HttpHelper.h */,
 			);
 			name = Sources;
 			sourceTree = "<Group>";
@@ -883,6 +888,7 @@
 				A91898EF8EF97AD7A68CF3A6 /* gStatsLine.cpp in Compile Sources */,
 				735C3FCC1F6B8EBD002FFC3B /* CommonColors.cpp in Compile Sources */,
 				C6E9BD4DB5673CF5AB40F9A2 /* gSummaryChart.cpp in Compile Sources */,
+				73F0E8371F74AAF90050FEE1 /* HttpHelper.cpp in Compile Sources */,
 				46F828D2F572D4C71A269320 /* gXAxis.cpp in Compile Sources */,
 				F8DEB1EB63B64A5FC05DF482 /* gYAxis.cpp in Compile Sources */,
 				D0A53F6F6FA8F203A3AD3B64 /* layer.cpp in Compile Sources */,

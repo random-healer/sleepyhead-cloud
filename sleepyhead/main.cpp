@@ -6,6 +6,8 @@
  * License. See the file COPYING in the main directory of the Linux
  * distribution for more details. */
 
+#include "HttpHelper.h"
+
 //#include <QtPlugin>
 #include <QApplication>
 #include <QMessageBox>
@@ -175,9 +177,7 @@ void MigrateSettings()
     settings.setValue("Version", VersionInfo::VersionString);
 
     qDebug() << keys;
-
 }
-
 
 int main(int argc, char *argv[])
 {
@@ -185,6 +185,11 @@ int main(int argc, char *argv[])
     XInitThreads();
 #endif
 
+	MemoryStruct chunk = HttpGet("https://www.google.com");
+	
+	printf("Data: %s\n", chunk.memory);
+
+	
     bool force_login_screen = false;
     bool force_data_dir = false;
     bool changing_language = false;
