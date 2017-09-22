@@ -97,7 +97,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;.;..\..\..\qt\5.5\src\qtbase\src\3rdparty\zlib;..\3rdparty\quazip\quazip;..\3rdparty\quazip;..\..\..\qt\5.5\msvc2013_64\include;..\..\..\qt\5.5\msvc2013_64\include\QtPrintSupport;..\..\..\qt\5.5\msvc2013_64\include\QtWebKitWidgets;..\..\..\qt\5.5\msvc2013_64\include\QtOpenGL;..\..\..\qt\5.5\msvc2013_64\include\QtWidgets;..\..\..\qt\5.5\msvc2013_64\include\QtWebKit;..\..\..\qt\5.5\msvc2013_64\include\QtGui;..\..\..\qt\5.5\msvc2013_64\include\QtANGLE;..\..\..\qt\5.5\msvc2013_64\include\QtNetwork;..\..\..\qt\5.5\msvc2013_64\include\QtXml;..\..\..\qt\5.5\msvc2013_64\include\QtSerialPort;..\..\..\qt\5.5\msvc2013_64\include\QtCore;debug;.;..\..\..\qt\5.5\msvc2013_64\mkspecs\win32-msvc2013;.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\..\..\qt\5.5\src\qtbase\src\3rdparty\zlib;..\3rdparty\quazip\quazip;..\3rdparty\quazip;..\..\..\qt\5.5\msvc2013_64\include;..\..\..\qt\5.5\msvc2013_64\include\QtPrintSupport;..\..\..\qt\5.5\msvc2013_64\include\QtWebKitWidgets;..\..\..\qt\5.5\msvc2013_64\include\QtOpenGL;..\..\..\qt\5.5\msvc2013_64\include\QtWidgets;..\..\..\qt\5.5\msvc2013_64\include\QtWebKit;..\..\..\qt\5.5\msvc2013_64\include\QtGui;..\..\..\qt\5.5\msvc2013_64\include\QtANGLE;..\..\..\qt\5.5\msvc2013_64\include\QtNetwork;..\..\..\qt\5.5\msvc2013_64\include\QtXml;..\..\..\qt\5.5\msvc2013_64\include\QtSerialPort;..\..\..\qt\5.5\msvc2013_64\include\QtCore;debug;..\..\..\qt\5.5\msvc2013_64\mkspecs\win32-msvc2013;.\GeneratedFiles;C:\Projects\curl-7.55.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -115,7 +115,7 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;shell32.lib;C:/qt/5.5/msvc2013_64/lib\Qt5Cored.lib;setupapi.lib;advapi32.lib;$(QTDIR)\lib\Qt5PrintSupportd.lib;$(QTDIR)\lib\Qt5WebKitWidgetsd.lib;$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5WebKitd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(QTDIR)\lib\qtmaind.lib;shell32.lib;C:/qt/5.5/msvc2013_64/lib\Qt5Cored.lib;setupapi.lib;advapi32.lib;$(QTDIR)\lib\Qt5PrintSupportd.lib;$(QTDIR)\lib\Qt5WebKitWidgetsd.lib;$(QTDIR)\lib\Qt5OpenGLd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5WebKitd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Cored.lib;C:\Projects\curl-7.55.1\AMD64\libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;C:/qt/5.5/msvc2013_64/lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -213,6 +213,7 @@
       </PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Graphs\MinutesAtPressure.cpp" />
+    <ClCompile Include="HttpHelper.cpp" />
     <ClCompile Include="Release\moc_cms50f37_loader.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -367,6 +368,7 @@
     <ClInclude Include="GeneratedFiles\ui_report.h" />
     <ClInclude Include="GeneratedFiles\ui_UpdaterWindow.h" />
     <ClInclude Include="Graphs\MinutesAtPressure.h" />
+    <ClInclude Include="HttpHelper.h" />
     <ClInclude Include="Ui\MyWebPage.h" />
     <ClInclude Include="Ui\MyWebView.h" />
     <ClInclude Include="VersionInfo.h" />

@@ -451,6 +451,9 @@
     <ClCompile Include="VersionInfo.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
+    <ClCompile Include="HttpHelper.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_UpdaterWindow.h">
@@ -661,6 +664,9 @@
       <Filter>Source Files\Core</Filter>
     </ClInclude>
     <ClInclude Include="version.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpHelper.h">
       <Filter>Source Files\Core</Filter>
     </ClInclude>
   </ItemGroup>

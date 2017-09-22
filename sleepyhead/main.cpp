@@ -6,8 +6,6 @@
  * License. See the file COPYING in the main directory of the Linux
  * distribution for more details. */
 
-#include "HttpHelper.h"
-
 //#include <QtPlugin>
 #include <QApplication>
 #include <QMessageBox>
@@ -55,6 +53,8 @@
 #ifdef Q_WS_X11
 #include <X11/Xlib.h>
 #endif
+
+#include "HttpHelper.h"
 
 using namespace SleepyHead::Common;
 
@@ -186,9 +186,8 @@ int main(int argc, char *argv[])
 #endif
 
 	MemoryStruct chunk = HttpGet("https://www.google.com");
-	
-	printf("Data: %s\n", chunk.memory);
 
+	qDebug() << "Data: " << chunk.memory;
 	
     bool force_login_screen = false;
     bool force_data_dir = false;

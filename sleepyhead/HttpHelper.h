@@ -2,7 +2,8 @@
 
 #include "curl/curl.h"
 
-#include <QVarLengthArray>
+#include <QDebug>
+#include <QVarLengthArray.h>
 
 struct MemoryStruct
 {
@@ -18,7 +19,7 @@ static size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, voi
 	mem->memory = (char*)realloc(mem->memory, mem->size + realsize + 1);
 	if(mem->memory == NULL) {
 		/* out of memory! */
-		printf("not enough memory (realloc returned NULL)\n");
+		qDebug() << "not enough memory (realloc returned NULL)\n";
 		return 0;
 	}
 	
@@ -63,11 +64,12 @@ static MemoryStruct HttpGet(char* url)
 	res = curl_easy_perform(curl_handle);
 	
 	/* check for errors */
-	if(res != CURLE_OK) {
-		fprintf(stderr, "curl_easy_perform() failed: %s\n",
-				curl_easy_strerror(res));
+	if(res != CURLE_OK)
+	{
+		qDebug() << "curl_easy_perform() failed: " << curl_easy_strerror(res);
 	}
-	else {
+	else
+	{
 		/*
 		 * Now, our chunk.memory points to a memory block that is chunk.size
 		 * bytes big and contains the remote file.
@@ -75,7 +77,7 @@ static MemoryStruct HttpGet(char* url)
 		 * Do something nice with it!
 		 */
 		
-		printf("%lu bytes retrieved\n", (long)chunk.size);
+		qDebug() << (long)chunk.size << " bytes retrieved";
 	}
 	
 	/* cleanup curl stuff */
