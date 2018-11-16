@@ -13,6 +13,8 @@
 
 #include "machine_common.h"
 
+using namespace SleepyHead::Common;
+
 //! \brief EventLists can either be Waveform or Event types
 enum EventListType { EVL_Waveform, EVL_Event };
 

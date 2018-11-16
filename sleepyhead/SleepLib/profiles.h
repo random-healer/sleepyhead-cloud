@@ -19,6 +19,8 @@
 #include "preferences.h"
 #include "common.h"
 
+using namespace SleepyHead::Common;
+
 class Machine;
 
 enum Gender { GenderNotSpecified, Male, Female };

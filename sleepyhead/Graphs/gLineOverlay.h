@@ -12,6 +12,7 @@
 #include "SleepLib/common.h"
 #include "gGraphView.h"
 
+using namespace SleepyHead::Common;
 
 /*! \class gLineOverlayBar
     \brief Shows a flag line, a dot, or a span over the top of a 2D line chart.

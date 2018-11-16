@@ -15,6 +15,8 @@
 #include <QString>
 #include "machine_common.h"
 
+using namespace SleepyHead::Common;
+
 namespace GraphFlags {
 const quint32 Shadow = 1;
 const quint32 Foobar = 2;

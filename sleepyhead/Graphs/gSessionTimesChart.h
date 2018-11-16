@@ -13,6 +13,7 @@
 #include "SleepLib/profiles.h"
 #include "gGraphView.h"
 
+using namespace SleepyHead::Common;
 
 struct TimeSpan
 {

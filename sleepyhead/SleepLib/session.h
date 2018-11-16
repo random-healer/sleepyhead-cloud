@@ -20,7 +20,10 @@
 #include "SleepLib/machine.h"
 #include "SleepLib/schema.h"
 #include "SleepLib/event.h"
-//class EventList;
+
+using namespace SleepyHead::Common;
+
+ //class EventList;
 class Machine;
 
 enum SliceStatus {

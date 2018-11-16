@@ -22,7 +22,15 @@ using namespace std;
 typedef quint32 ChannelID;
 typedef long MachineID;
 typedef long SessionID;
-typedef float EventDataType;
+
+namespace SleepyHead
+{
+	namespace Common
+	{
+		typedef float EventDataType;
+	}
+}
+
 typedef qint16 EventStoreType;
 
 //! \brief Exception class for out of Bounds error.. Unused.

@@ -24,6 +24,8 @@
 #include "common.h"
 #include "preferences.h"
 
+using namespace SleepyHead::Common;
+
 const QString &getUserName()
 {
     static QString userName;
