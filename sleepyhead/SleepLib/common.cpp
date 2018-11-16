@@ -1,18 +1,8 @@
-/* SleepLib Common Functions
- *
- * Copyright (c) 2011-2016 Mark Watkins <jedimark@users.sourceforge.net>
- *
- * This file is subject to the terms and conditions of the GNU General Public
- * License. See the file COPYING in the main directory of the Linux
- * distribution for more details. */
-
 #include <QDateTime>
 #include <QDir>
 #include <zlib.h>
 
 #include "profiles.h"
-
-// Used by internal settings
 
 qint64 timezoneOffset()
 {
@@ -31,7 +21,7 @@ qint64 timezoneOffset()
 
 namespace SleepyHead
 {
-	namespace Common
+	namespace Common	/* SleepLib Common Functions */
 	{
 		const QString getDeveloperName()
 		{
@@ -123,32 +113,31 @@ namespace SleepyHead
 			}
 		}
 
-
-		QString UnitLength::STR_UNIT_CM;
-		QString UnitLength::STR_UNIT_INCH;
-		QString UnitLength::STR_UNIT_FOOT;
+		QString UnitLength::STR_UNIT_CM = [] { return QObject::tr("cm"); }();
+		QString UnitLength::STR_UNIT_INCH = [] { return QObject::tr("\""); }();
+		QString UnitLength::STR_UNIT_FOOT = [] { return QObject::tr("ft"); }();
 		
-		QString UnitWeight::STR_UNIT_POUND;
-		QString UnitWeight::STR_UNIT_OUNCE;
-		QString UnitWeight::STR_UNIT_KG;
+		QString UnitWeight::STR_UNIT_POUND = [] { return QObject::tr("lb"); }();
+		QString UnitWeight::STR_UNIT_OUNCE = [] { return QObject::tr("oz"); }();
+		QString UnitWeight::STR_UNIT_KG = [] { return QObject::tr("Kg"); }();
 
 		QString STR_UNIT_CMH2O;
 
-		QString UnitTime::STR_UNIT_Hours;
-		QString UnitTime::STR_UNIT_Minutes;
-		QString UnitTime::STR_UNIT_Seconds;
-		QString UnitTime::STR_UNIT_h;
-		QString UnitTime::STR_UNIT_m;
-		QString UnitTime::STR_UNIT_s;
-		QString UnitTime::STR_UNIT_ms;
+		QString UnitTime::STR_UNIT_Hours = [] { return QObject::tr("Hours"); }();
+		QString UnitTime::STR_UNIT_Minutes = [] { return QObject::tr("Minutes"); }();
+		QString UnitTime::STR_UNIT_Seconds = [] { return QObject::tr("Seconds"); }();
+		QString UnitTime::STR_UNIT_h = [] { return QObject::tr("h"); }(); // hours shortform
+		QString UnitTime::STR_UNIT_m = [] { return QObject::tr("m"); }(); // minutes shortform
+		QString UnitTime::STR_UNIT_s = [] { return QObject::tr("s"); }(); // seconds shortform
+		QString UnitTime::STR_UNIT_ms = [] { return QObject::tr("ms"); }(); // milliseconds
 
-		QString UnitPerMinute::STR_UNIT_EventsPerHour;
-		QString UnitPerMinute::STR_UNIT_BreathsPerMinute;
-		QString UnitPerMinute::STR_UNIT_BPM;       // Beats per Minute
-		QString UnitPerMinute::STR_UNIT_LPM;       // Litres per Minute
+		QString UnitPerMinute::STR_UNIT_EventsPerHour = [] { return QObject::tr("Events/hr"); }(); // Events per hour
+		QString UnitPerMinute::STR_UNIT_BreathsPerMinute = [] { return QObject::tr("Breaths/min"); }(); // Breaths per minute
+		QString UnitPerMinute::STR_UNIT_BPM = [] { return QObject::tr("bpm"); }();        // Beats per Minute
+		QString UnitPerMinute::STR_UNIT_LPM = [] { return QObject::tr("L/min"); }();      // Litres per Minute
 
-		QString UnitVolume::STR_UNIT_Litres;
-		QString UnitVolume::STR_UNIT_ml;        // MilliLitres
+		QString UnitVolume::STR_UNIT_Litres = [] { return QObject::tr("Litres"); }();
+		QString UnitVolume::STR_UNIT_ml = [] { return QObject::tr("ml"); }();        // millilitres
 
 		QString STR_UNIT_Hz;
 		QString STR_UNIT_Percentage;
@@ -157,12 +146,12 @@ namespace SleepyHead
 		QString STR_UNIT_Severity;
 		QString STR_UNIT_Degrees;
 
-		QString MessageBoxType::STR_MessageBox_Question;
-		QString MessageBoxType::STR_MessageBox_Error;
-		QString MessageBoxType::STR_MessageBox_Warning;
-		QString MessageBoxType::STR_MessageBox_Information;
-		QString MessageBoxType::STR_MessageBox_Busy;
-		QString MessageBoxType::STR_MessageBox_PleaseNote;
+		QString MessageBoxType::STR_MessageBox_Question = [] { return QObject::tr("Question"); }();
+		QString MessageBoxType::STR_MessageBox_Error = [] { return QObject::tr("Error"); }();
+		QString MessageBoxType::STR_MessageBox_Warning = [] { return QObject::tr("Warning"); }();
+		QString MessageBoxType::STR_MessageBox_Information = [] { return QObject::tr("Information"); }();
+		QString MessageBoxType::STR_MessageBox_Busy = [] { return QObject::tr("Busy"); }();
+		QString MessageBoxType::STR_MessageBox_PleaseNote = [] { return QObject::tr("Please Note"); }();
 
 		QString STR_MessageBox_Yes;
 		QString STR_MessageBox_No;
@@ -175,7 +164,6 @@ namespace SleepyHead
 		QString STR_Empty_NoGraphs;
 		QString STR_Empty_SummaryOnly;
 		QString STR_Empty_NoSessions;
-
 
 		QString STR_TR_BMI;         // Short form of Body Mass Index
 		QString STR_TR_Weight;
@@ -194,7 +182,6 @@ namespace SleepyHead
 
 		QString STR_TR_Inclination;
 		QString STR_TR_Orientation;
-
 
 		// Machine type names.
 		QString STR_TR_CPAP;    // Constant Positive Airway Pressure
@@ -235,8 +222,6 @@ namespace SleepyHead
 		QString STR_TR_UF2;     // Short form for User Flag 2
 		QString STR_TR_UF3;     // Short form for User Flag 3
 
-
-
 		QString STR_TR_PS;     // Short form of Pressure Support
 		QString STR_TR_AHI;    // Short form of Apnea Hypopnea Index
 		QString STR_TR_RDI;    // Short form of Respiratory Distress Index
@@ -245,12 +230,10 @@ namespace SleepyHead
 		QString STR_TR_UAI;    // Short form of Uncatagorized Apnea Index
 		QString STR_TR_CAI;    // Short form of Clear Airway Index
 		QString STR_TR_FLI;    // Short form of Flow Limitation Index
-		//QString STR_TR_SAI;    // Short form of SensAwake Index
 		QString STR_TR_REI;    // Short form of RERA Index
 		QString STR_TR_EPI;    // Short form of Expiratory Puff Index
 		QString STR_TR_CSR;    // Short form of Cheyne Stokes Respiration
 		QString STR_TR_PB;     // Short form of Periodic Breathing
-
 
 		// Graph Titles
 		QString STR_TR_IE;              // Inspiratory Expiratory Ratio
@@ -259,7 +242,7 @@ namespace SleepyHead
 		QString STR_TR_RespEvent;       // Respiratory Event
 		QString STR_TR_FlowLimitation;
 		QString STR_TR_FlowLimit;
-		//QString STR_TR_FlowLimitation;
+
 		QString STR_TR_SensAwake;
 		QString STR_TR_PatTrigBreath;   // Patient Triggered Breath
 		QString STR_TR_TgtMinVent;      // Target Minute Ventilation
@@ -331,50 +314,20 @@ namespace SleepyHead
 
 		void initializeStrings()
 		{
-			UnitLength::STR_UNIT_CM = QObject::tr("cm");
-			UnitLength::STR_UNIT_INCH = QObject::tr("\"");
-			UnitLength::STR_UNIT_FOOT = QObject::tr("ft");
-
-			UnitWeight::STR_UNIT_POUND = QObject::tr("lb");
-			UnitWeight::STR_UNIT_OUNCE = QObject::tr("oz");
-			UnitWeight::STR_UNIT_KG = QObject::tr("Kg");
-
 			STR_UNIT_CMH2O = QObject::tr("cmH2O");
 
-			UnitTime::STR_UNIT_Hours = QObject::tr("Hours");
-			UnitTime::STR_UNIT_Minutes = QObject::tr("Minutes");
-			UnitTime::STR_UNIT_Seconds = QObject::tr("Seconds");
-			UnitTime::STR_UNIT_h = QObject::tr("h"); // hours shortform
-			UnitTime::STR_UNIT_m = QObject::tr("m"); // minutes shortform
-			UnitTime::STR_UNIT_s = QObject::tr("s"); // seconds shortform
-			UnitTime::STR_UNIT_ms = QObject::tr("ms"); // milliseconds
-
-			UnitPerMinute::STR_UNIT_EventsPerHour = QObject::tr("Events/hr"); // Events per hour
 			STR_UNIT_Percentage = QObject::tr("%");
 			STR_UNIT_Hz = QObject::tr("Hz");          // Hertz
-			UnitPerMinute::STR_UNIT_BPM = QObject::tr("bpm");        // Beats per Minute
-			UnitPerMinute::STR_UNIT_LPM = QObject::tr("L/min");      // Litres per Minute
-			UnitVolume::STR_UNIT_Litres = QObject::tr("Litres");
-			UnitVolume::STR_UNIT_ml = QObject::tr("ml");        // millilitres
-			UnitPerMinute::STR_UNIT_BreathsPerMinute = QObject::tr("Breaths/min"); // Breaths per minute
 			STR_UNIT_Unknown = QObject::tr("?");
 			STR_UNIT_Ratio = QObject::tr("ratio");
 			STR_UNIT_Severity = QObject::tr("Severity (0-1)");
 			STR_UNIT_Degrees = QObject::tr("Degrees");
-
-			MessageBoxType::STR_MessageBox_Question = QObject::tr("Question");
-			MessageBoxType::STR_MessageBox_Error = QObject::tr("Error");
-			MessageBoxType::STR_MessageBox_Warning = QObject::tr("Warning");
-			MessageBoxType::STR_MessageBox_Information = QObject::tr("Information");
-			MessageBoxType::STR_MessageBox_Busy = QObject::tr("Busy");
-			MessageBoxType::STR_MessageBox_PleaseNote = QObject::tr("Please Note");
 
 			STR_Empty_NoData = QObject::tr("No Data Available");
 			STR_Empty_Brick = QObject::tr("Compliance Only :(");
 			STR_Empty_NoGraphs = QObject::tr("Graphs Switched Off");
 			STR_Empty_SummaryOnly = QObject::tr("Summary Only :(");
 			STR_Empty_NoSessions = QObject::tr("Sessions Switched Off");
-
 
 			// Dialog box options
 			STR_MessageBox_Yes = QObject::tr("&Yes");
@@ -397,7 +350,6 @@ namespace SleepyHead
 
 			STR_TR_Oximeter = QObject::tr("Oximeter");
 			STR_TR_EventFlags = QObject::tr("Event Flags");
-
 
 			STR_TR_Default = QObject::tr("Default");
 
@@ -427,8 +379,7 @@ namespace SleepyHead
 			STR_TR_LE = QObject::tr("LE");    // Short form of Leak Event
 			STR_TR_EP = QObject::tr("EP");    // Short form of Expiratory Puff
 			STR_TR_VS = QObject::tr("VS");    // Short form of Vibratory Snore
-			STR_TR_VS2 =
-				QObject::tr("VS2");  // Short form of Secondary Vibratory Snore (Some Philips Respironics Machines have two sources)
+			STR_TR_VS2 = QObject::tr("VS2");  // Short form of Secondary Vibratory Snore (Some Philips Respironics Machines have two sources)
 			STR_TR_RERA = QObject::tr("RERA"); // Acronym for Respiratory Effort Related Arousal
 			STR_TR_PP = QObject::tr("PP");    // Short form for Pressure Pulse
 			STR_TR_P = QObject::tr("P");      // Short form for Pressure Event
@@ -449,7 +400,6 @@ namespace SleepyHead
 			STR_TR_UAI = QObject::tr("UAI");  // Short form of Uncatagorized Apnea Index
 			STR_TR_CAI = QObject::tr("CAI");  // Short form of Clear Airway Index
 			STR_TR_FLI = QObject::tr("FLI");  // Short form of Flow Limitation Index
-		//    STR_TR_SAI = QObject::tr("SAI");  // Short form of SleepAwake Index
 			STR_TR_REI = QObject::tr("REI");  // Short form of RERA Index
 			STR_TR_EPI = QObject::tr("EPI");  // Short form of Expiratory Puff Index
 			STR_TR_CSR = QObject::tr("ÇSR");  // Short form of Cheyne Stokes Respiration
