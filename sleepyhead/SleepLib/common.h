@@ -57,7 +57,7 @@ namespace SleepyHead
 		const float ounce_convert = 28.3495231F; // grams
 		const float pound_convert = ounce_convert * 16;
 
-		QString weightString(float kg, UnitSystem us = US_Undefined);
+		QString weightString(float kg, UnitSystem us = UnitSystem::US_Undefined);
 
 		//! \brief Mercilessly trash a directory
 		bool removeDir(const QString &path);

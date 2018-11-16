@@ -326,7 +326,7 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
 
     ui->splitter->setVisible(false);
 
-    if (p_profile->general->unitSystem()==US_Archiac) {
+    if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
         ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
         ui->weightSpinBox->setDecimals(0);
         ui->ouncesSpinBox->setVisible(true);
@@ -698,7 +698,7 @@ void Daily::on_ReloadDay()
     ui->calButton->setText(ui->calendar->selectedDate().toString(Qt::TextDate));
     ui->calendar->setFocus(Qt::ActiveWindowFocusReason);
 
-    if (p_profile->general->unitSystem()==US_Archiac) {
+    if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
         ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
         ui->weightSpinBox->setDecimals(0);
         ui->ouncesSpinBox->setVisible(true);
@@ -1481,7 +1481,7 @@ void Daily::Load(QDate date)
         if (journal->settings.contains(Journal_Weight)) {
             double kg=journal->settings[Journal_Weight].toDouble(&ok);
 
-            if (p_profile->general->unitSystem()==US_Metric) {
+            if (p_profile->general->unitSystem()== UnitSystem::US_Metric) {
                 ui->weightSpinBox->setDecimals(3);
                 ui->weightSpinBox->blockSignals(true);
                 ui->weightSpinBox->setValue(kg);
@@ -1557,7 +1557,7 @@ void Daily::Load(QDate date)
 void Daily::UnitsChanged()
 {
     double kg;
-    if (p_profile->general->unitSystem()==US_Archiac) {
+    if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
         kg=ui->weightSpinBox->value();
         float ounces=(kg*1000.0)/ounce_convert;
         int pounds=ounces/16;
@@ -2045,7 +2045,7 @@ void Daily::on_weightSpinBox_valueChanged(double arg1)
 {
     // Update the BMI display
     double kg;
-    if (p_profile->general->unitSystem()==US_Archiac) {
+    if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
          kg=((arg1*pound_convert) + (ui->ouncesSpinBox->value()*ounce_convert)) / 1000.0;
     } else kg=arg1;
     double height=p_profile->user->height()/100.0;
@@ -2067,7 +2067,7 @@ void Daily::on_weightSpinBox_editingFinished()
     }
 
     double kg;
-    if (p_profile->general->unitSystem()==US_Archiac) {
+    if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
             kg=((arg1*pound_convert) + (ui->ouncesSpinBox->value()*ounce_convert)) / 1000.0;
     } else {
             kg=arg1;

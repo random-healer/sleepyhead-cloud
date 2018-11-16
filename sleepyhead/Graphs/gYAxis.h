@@ -166,7 +166,7 @@ class gYAxisWeight: public gYAxis
 {
   public:
     //! \brief Construct a gYAxisWeight object, with QColor col for tickers & weight values
-    gYAxisWeight(UnitSystem us = US_Metric, QColor col = Qt::black) : gYAxis(col), m_unitsystem(us) {}
+    gYAxisWeight(UnitSystem us = UnitSystem::US_Metric, QColor col = Qt::black) : gYAxis(col), m_unitsystem(us) {}
     virtual ~gYAxisWeight() {}
 
     //! \brief Returns the current UnitSystem displayed (eg, US_Metric (the rest of the world), US_Archiac (American) )

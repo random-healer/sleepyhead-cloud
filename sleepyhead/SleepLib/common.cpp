@@ -52,14 +52,14 @@ namespace SleepyHead
 
 		QString weightString(float kg, UnitSystem us)
 		{
-			if (us == US_Undefined) {
+			if (us == UnitSystem::US_Undefined) {
 				us = p_profile->general->unitSystem();
 			}
 
-			if (us == US_Metric) {
+			if (us == UnitSystem::US_Metric) {
 				return QString("%1kg").arg(kg, 0, 'f', 2);
 			}
-			else if (us == US_Archiac) {
+			else if (us == UnitSystem::US_Archiac) {
 				int oz = (kg * 1000.0) / (float)ounce_convert;
 				int lb = oz / 16.0;
 				oz = oz % 16;

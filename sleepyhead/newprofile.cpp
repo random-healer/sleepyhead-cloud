@@ -239,9 +239,9 @@ void NewProfile::on_nextButton_clicked()
             profile->user->setDaylightSaving(ui->DSTcheckbox->isChecked());
             UnitSystem us;
 
-            if (ui->heightCombo->currentIndex() == 0) { us = US_Metric; }
-            else if (ui->heightCombo->currentIndex() == 1) { us = US_Archiac; }
-            else { us = US_Metric; }
+            if (ui->heightCombo->currentIndex() == 0) { us = UnitSystem::US_Metric; }
+            else if (ui->heightCombo->currentIndex() == 1) { us = UnitSystem::US_Archiac; }
+            else { us = UnitSystem::US_Metric; }
 
             if (profile->general->unitSystem() != us) {
                 profile->general->setUnitSystem(us);
@@ -251,7 +251,7 @@ void NewProfile::on_nextButton_clicked()
 
             double v = 0;
 
-            if (us == US_Archiac) {
+            if (us == UnitSystem::US_Archiac) {
                 // convert to metric
                 v = (ui->heightEdit->value() * 30.48);
                 v += ui->heightEdit2->value() * 2.54;
@@ -384,7 +384,7 @@ void NewProfile::edit(const QString name)
 
     double v = profile->user->height();
 
-    if (us == US_Archiac)  { // evil non-metric
+    if (us == UnitSystem::US_Archiac)  { // evil non-metric
         int ti = v / 2.54;
         int feet = ti / 12;
         int inches = ti % 12;
