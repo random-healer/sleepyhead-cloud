@@ -124,39 +124,46 @@ namespace SleepyHead
 		}
 
 
-		QString STR_UNIT_CM;
-		QString STR_UNIT_INCH;
-		QString STR_UNIT_FOOT;
-		QString STR_UNIT_POUND;
-		QString STR_UNIT_OUNCE;
-		QString STR_UNIT_KG;
+		QString UnitLength::STR_UNIT_CM;
+		QString UnitLength::STR_UNIT_INCH;
+		QString UnitLength::STR_UNIT_FOOT;
+		
+		QString UnitWeight::STR_UNIT_POUND;
+		QString UnitWeight::STR_UNIT_OUNCE;
+		QString UnitWeight::STR_UNIT_KG;
+
 		QString STR_UNIT_CMH2O;
-		QString STR_UNIT_Hours;
-		QString STR_UNIT_Minutes;
-		QString STR_UNIT_Seconds;
-		QString STR_UNIT_h;
-		QString STR_UNIT_m;
-		QString STR_UNIT_s;
-		QString STR_UNIT_ms;
-		QString STR_UNIT_BPM;       // Beats per Minute
-		QString STR_UNIT_LPM;       // Litres per Minute
-		QString STR_UNIT_ml;        // MilliLitres
-		QString STR_UNIT_Litres;
+
+		QString UnitTime::STR_UNIT_Hours;
+		QString UnitTime::STR_UNIT_Minutes;
+		QString UnitTime::STR_UNIT_Seconds;
+		QString UnitTime::STR_UNIT_h;
+		QString UnitTime::STR_UNIT_m;
+		QString UnitTime::STR_UNIT_s;
+		QString UnitTime::STR_UNIT_ms;
+
+		QString UnitPerMinute::STR_UNIT_EventsPerHour;
+		QString UnitPerMinute::STR_UNIT_BreathsPerMinute;
+		QString UnitPerMinute::STR_UNIT_BPM;       // Beats per Minute
+		QString UnitPerMinute::STR_UNIT_LPM;       // Litres per Minute
+
+		QString UnitVolume::STR_UNIT_Litres;
+		QString UnitVolume::STR_UNIT_ml;        // MilliLitres
+
 		QString STR_UNIT_Hz;
-		QString STR_UNIT_EventsPerHour;
-		QString STR_UNIT_BreathsPerMinute;
 		QString STR_UNIT_Percentage;
 		QString STR_UNIT_Unknown;
 		QString STR_UNIT_Ratio;
 		QString STR_UNIT_Severity;
 		QString STR_UNIT_Degrees;
 
-		QString STR_MessageBox_Question;
-		QString STR_MessageBox_Error;
-		QString STR_MessageBox_Warning;
-		QString STR_MessageBox_Information;
-		QString STR_MessageBox_Busy;
-		QString STR_MessageBox_PleaseNote;
+		QString MessageBoxType::STR_MessageBox_Question;
+		QString MessageBoxType::STR_MessageBox_Error;
+		QString MessageBoxType::STR_MessageBox_Warning;
+		QString MessageBoxType::STR_MessageBox_Information;
+		QString MessageBoxType::STR_MessageBox_Busy;
+		QString MessageBoxType::STR_MessageBox_PleaseNote;
+
 		QString STR_MessageBox_Yes;
 		QString STR_MessageBox_No;
 		QString STR_MessageBox_Cancel;
@@ -324,39 +331,43 @@ namespace SleepyHead
 
 		void initializeStrings()
 		{
-			STR_UNIT_CM = QObject::tr("cm");
-			STR_UNIT_INCH = QObject::tr("\"");
-			STR_UNIT_FOOT = QObject::tr("ft");
-			STR_UNIT_POUND = QObject::tr("lb");
-			STR_UNIT_OUNCE = QObject::tr("oz");
-			STR_UNIT_KG = QObject::tr("Kg");
+			UnitLength::STR_UNIT_CM = QObject::tr("cm");
+			UnitLength::STR_UNIT_INCH = QObject::tr("\"");
+			UnitLength::STR_UNIT_FOOT = QObject::tr("ft");
+
+			UnitWeight::STR_UNIT_POUND = QObject::tr("lb");
+			UnitWeight::STR_UNIT_OUNCE = QObject::tr("oz");
+			UnitWeight::STR_UNIT_KG = QObject::tr("Kg");
+
 			STR_UNIT_CMH2O = QObject::tr("cmH2O");
-			STR_UNIT_Hours = QObject::tr("Hours");
-			STR_UNIT_Minutes = QObject::tr("Minutes");
-			STR_UNIT_Seconds = QObject::tr("Seconds");
-			STR_UNIT_h = QObject::tr("h"); // hours shortform
-			STR_UNIT_m = QObject::tr("m"); // minutes shortform
-			STR_UNIT_s = QObject::tr("s"); // seconds shortform
-			STR_UNIT_ms = QObject::tr("ms"); // milliseconds
-			STR_UNIT_EventsPerHour = QObject::tr("Events/hr"); // Events per hour
+
+			UnitTime::STR_UNIT_Hours = QObject::tr("Hours");
+			UnitTime::STR_UNIT_Minutes = QObject::tr("Minutes");
+			UnitTime::STR_UNIT_Seconds = QObject::tr("Seconds");
+			UnitTime::STR_UNIT_h = QObject::tr("h"); // hours shortform
+			UnitTime::STR_UNIT_m = QObject::tr("m"); // minutes shortform
+			UnitTime::STR_UNIT_s = QObject::tr("s"); // seconds shortform
+			UnitTime::STR_UNIT_ms = QObject::tr("ms"); // milliseconds
+
+			UnitPerMinute::STR_UNIT_EventsPerHour = QObject::tr("Events/hr"); // Events per hour
 			STR_UNIT_Percentage = QObject::tr("%");
 			STR_UNIT_Hz = QObject::tr("Hz");          // Hertz
-			STR_UNIT_BPM = QObject::tr("bpm");        // Beats per Minute
-			STR_UNIT_LPM = QObject::tr("L/min");      // Litres per Minute
-			STR_UNIT_Litres = QObject::tr("Litres");
-			STR_UNIT_ml = QObject::tr("ml");        // millilitres
-			STR_UNIT_BreathsPerMinute = QObject::tr("Breaths/min"); // Breaths per minute
+			UnitPerMinute::STR_UNIT_BPM = QObject::tr("bpm");        // Beats per Minute
+			UnitPerMinute::STR_UNIT_LPM = QObject::tr("L/min");      // Litres per Minute
+			UnitVolume::STR_UNIT_Litres = QObject::tr("Litres");
+			UnitVolume::STR_UNIT_ml = QObject::tr("ml");        // millilitres
+			UnitPerMinute::STR_UNIT_BreathsPerMinute = QObject::tr("Breaths/min"); // Breaths per minute
 			STR_UNIT_Unknown = QObject::tr("?");
 			STR_UNIT_Ratio = QObject::tr("ratio");
 			STR_UNIT_Severity = QObject::tr("Severity (0-1)");
 			STR_UNIT_Degrees = QObject::tr("Degrees");
 
-			STR_MessageBox_Question = QObject::tr("Question");
-			STR_MessageBox_Error = QObject::tr("Error");
-			STR_MessageBox_Warning = QObject::tr("Warning");
-			STR_MessageBox_Information = QObject::tr("Information");
-			STR_MessageBox_Busy = QObject::tr("Busy");
-			STR_MessageBox_PleaseNote = QObject::tr("Please Note");
+			MessageBoxType::STR_MessageBox_Question = QObject::tr("Question");
+			MessageBoxType::STR_MessageBox_Error = QObject::tr("Error");
+			MessageBoxType::STR_MessageBox_Warning = QObject::tr("Warning");
+			MessageBoxType::STR_MessageBox_Information = QObject::tr("Information");
+			MessageBoxType::STR_MessageBox_Busy = QObject::tr("Busy");
+			MessageBoxType::STR_MessageBox_PleaseNote = QObject::tr("Please Note");
 
 			STR_Empty_NoData = QObject::tr("No Data Available");
 			STR_Empty_Brick = QObject::tr("Compliance Only :(");

@@ -39,7 +39,7 @@ JournalEntry::JournalEntry(QDate date)
             bool ok;
             machid = tmp.toUInt(&ok, 16);
             if (!ok) {
-                QMessageBox::warning(nullptr, STR_MessageBox_Warning,
+                QMessageBox::warning(nullptr, MessageBoxType::STR_MessageBox_Warning,
                     QObject::tr("SleepyHead found an old Journal folder, but it looks like it's been renamed:")+"\n\n"+
                     QString("%1").arg(dirs[0])+
                     QObject::tr("SleepyHead will not touch this folder, and will create a new one instead.")+"\n\n"+
@@ -49,7 +49,7 @@ JournalEntry::JournalEntry(QDate date)
                 machid = 1;
             }
             if (journals > 1) {
-                QMessageBox::warning(nullptr, STR_MessageBox_Warning,
+                QMessageBox::warning(nullptr, MessageBoxType::STR_MessageBox_Warning,
                     QObject::tr("For some reason, sleepyHead couldn't find a journal object record in your profile, but did find multiple Journal data folders.")+"\n\n"+
                     QObject::tr("SleepyHead picked only the first one of these, and will use it in future:")+"\n\n"+
                     QString("%1").arg(dirs[0])+

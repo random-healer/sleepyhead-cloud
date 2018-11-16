@@ -319,7 +319,7 @@ int main(int argc, char *argv[])
     }
 
     if (!havefolder && !force_data_dir) {
-        if (QMessageBox::question(nullptr, STR_MessageBox_Question,
+        if (QMessageBox::question(nullptr, MessageBoxType::STR_MessageBox_Question,
                 QObject::tr("Would you like SleepyHead to use this location for storing its data?")+"\n\n"+
                 QDir::toNativeSeparators(GetAppRoot())+"\n\n"+
                 QObject::tr("If you are upgrading, don't panic, you just need to make sure this is pointed at your old SleepyHead data folder.")+"\n\n"+
@@ -342,7 +342,7 @@ retry_directory:
                                          QObject::tr("As you did not select a data folder, SleepyHead will exit.")+"\n\n"+QObject::tr("Next time you run, you will be asked again."));
                 return 0;
             } else {
-                QMessageBox::information(nullptr, STR_MessageBox_Warning,
+                QMessageBox::information(nullptr, MessageBoxType::STR_MessageBox_Warning,
                                          QObject::tr("You did not select a directory.")+"\n\n"+QObject::tr("SleepyHead will now start with your old one.")+"\n\n"+
                                          QDir::toNativeSeparators(GetAppRoot()), QMessageBox::Ok);
             }
@@ -353,7 +353,7 @@ retry_directory:
             if (!file.exists()) {
                 if (dir.count() > 2) {
                     // Not a new directory.. nag the user.
-                    if (QMessageBox::question(nullptr, STR_MessageBox_Warning,
+                    if (QMessageBox::question(nullptr, MessageBoxType::STR_MessageBox_Warning,
                                               QObject::tr("The folder you chose is not empty, nor does it already contain valid SleepyHead data.")
                                               + "\n\n"+QObject::tr("Are you sure you want to use this folder?")+"\n\n"
                                               + datadir, QMessageBox::Yes, QMessageBox::No) == QMessageBox::No) {
@@ -447,7 +447,7 @@ retry_directory:
 
                 check_updates = false;
             } else if (vc > 0) {
-                if (QMessageBox::warning(nullptr, STR_MessageBox_Error, QObject::tr("The version of SleepyHead you just ran is OLDER than the one used to create this data (%1).").arg(PREF[STR_PREF_VersionString].toString()) +"\n\n"+
+                if (QMessageBox::warning(nullptr, MessageBoxType::STR_MessageBox_Error, QObject::tr("The version of SleepyHead you just ran is OLDER than the one used to create this data (%1).").arg(PREF[STR_PREF_VersionString].toString()) +"\n\n"+
                                          QObject::tr("It is likely that doing this will cause data corruption, are you sure you want to do this?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::No) {
 
                     return 0;

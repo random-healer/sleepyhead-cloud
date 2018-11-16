@@ -888,11 +888,11 @@ void MainWindow::on_action_Import_Data_triggered()
 {
     static bool in_import = false;
     if (m_inRecalculation) {
-        Notify(tr("Access to Import has been blocked while recalculations are in progress."),STR_MessageBox_Busy);
+        Notify(tr("Access to Import has been blocked while recalculations are in progress."), MessageBoxType::STR_MessageBox_Busy);
         return;
     }
     if (in_import) {
-        Notify(tr("Import is already running in the background."),STR_MessageBox_Busy);
+        Notify(tr("Import is already running in the background."), MessageBoxType::STR_MessageBox_Busy);
         return;
     }
     in_import=true;
@@ -2052,7 +2052,7 @@ void MainWindow::on_actionRebuildCPAP(QAction *action)
 
     if (backups) {
         if (QMessageBox::question(this,
-                              STR_MessageBox_Question,
+			MessageBoxType::STR_MessageBox_Question,
                               tr("Are you sure you want to rebuild all CPAP data for the following machine:")+ "\n\n" +
                               mach->brand() + " " + mach->model() + " " +
                               mach->modelnumber() + " (" + mach->serial() + ")" + "\n\n"+
@@ -2063,8 +2063,8 @@ void MainWindow::on_actionRebuildCPAP(QAction *action)
         }
     } else {
         if (QMessageBox::question(this,
-                              STR_MessageBox_Warning,
-                              "<p><b>"+STR_MessageBox_Warning+": </b>"+tr("For some reason, SleepyHead does not have internal backups for the following machine:")+ "</p>" +
+			MessageBoxType::STR_MessageBox_Warning,
+                              "<p><b>"+ MessageBoxType::STR_MessageBox_Warning+": </b>"+tr("For some reason, SleepyHead does not have internal backups for the following machine:")+ "</p>" +
                               "<p>"+mach->brand() + " " + mach->model() + " " +
                               mach->modelnumber() + " (" + mach->serial() + ")" + "</p>"+
                               "<p>"+tr("Provided you have made <i>your <b>own</b> backups for ALL of your CPAP data</i>, you can still complete this operation, but you will have to restore from your backups manually.")+"</p>"
@@ -2080,7 +2080,7 @@ void MainWindow::on_actionRebuildCPAP(QAction *action)
     if (backups) {
         importCPAP(ImportPath(mach->getBackupPath(), lookupLoader(mach)), tr("Please wait, importing from backup folder(s)..."));
     } else {
-        if (QMessageBox::information(this, STR_MessageBox_Warning,
+        if (QMessageBox::information(this, MessageBoxType::STR_MessageBox_Warning,
                                  tr("Because there are no internal backups to rebuild from, you will have to restore from your own.")+"\n\n"+
                                  tr("Would you like to import from your own backups now? (you will have no data visible for this machine until you do)"),
                                  QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes) {
@@ -2114,7 +2114,7 @@ void MainWindow::on_actionPurgeMachine(QAction *action)
     }
     if (!mach) return;
 
-    if (QMessageBox::question(this, STR_MessageBox_Warning, "<p><b>"+STR_MessageBox_Warning+":</b> "+tr("You are about to <font size=+2>obliterate</font> SleepyHead's machine database for the following machine:")+"</p>"+
+    if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning, "<p><b>"+ MessageBoxType::STR_MessageBox_Warning+":</b> "+tr("You are about to <font size=+2>obliterate</font> SleepyHead's machine database for the following machine:")+"</p>"+
                               "<p>"+mach->brand() + " " + mach->model() + " " +
                               mach->modelnumber() + " (" + mach->serial() + ")" + "</p>"+
                               "<p>"+tr("Note as a precaution, the backup folder will be left in place.")+"</p>"+
@@ -2140,7 +2140,7 @@ void MainWindow::purgeMachine(Machine * mach)
         mach->sessionlist.clear();
         mach->day.clear();
     } else {
-        QMessageBox::warning(this, STR_MessageBox_Error,
+        QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error,
                              tr("A file permission error or simillar screwed up the purge process, you will have to delete the following folder manually:")
                              +"\n\n"+
                              QDir::toNativeSeparators(mach->getDataPath()), QMessageBox::Ok, QMessageBox::Ok);
@@ -2298,7 +2298,7 @@ void MainWindow::FreeSessions()
 void MainWindow::MachineUnsupported(Machine * m)
 {
     Q_ASSERT(m != nullptr);
-    QMessageBox::information(this, STR_MessageBox_Error, QObject::tr("Sorry, your %1 %2 machine is not currently supported.").arg(m->brand()).arg(m->model()), QMessageBox::Ok);
+    QMessageBox::information(this, MessageBoxType::STR_MessageBox_Error, QObject::tr("Sorry, your %1 %2 machine is not currently supported.").arg(m->brand()).arg(m->model()), QMessageBox::Ok);
 }
 
 void MainWindow::doReprocessEvents()
@@ -2489,7 +2489,7 @@ void MainWindow::on_actionChange_Language_triggered()
 {
     // Pop up a message box asking if you would like to reset Channel event/waveform names
     // Sorry Translators who frequently language hop, this is an extra step, but this one is for the users. :/
-    if (QMessageBox::question(this,STR_MessageBox_Warning,tr("Changing the language will reset custom Event and Waveform names/labels/descriptions.")+"\n\n"+tr("Are you sure you want to do this?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::No) {
+    if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning,tr("Changing the language will reset custom Event and Waveform names/labels/descriptions.")+"\n\n"+tr("Are you sure you want to do this?"), QMessageBox::Yes, QMessageBox::No) == QMessageBox::No) {
         return;
     }
 
@@ -2616,7 +2616,7 @@ void MainWindow::on_actionPurgeCurrentDaysOximetry_triggered()
     QDate date = getDaily()->getDate();
     Day * day = p_profile->GetDay(date, MT_OXIMETER);
     if (day) {
-        if (QMessageBox::question(this, STR_MessageBox_Warning,
+        if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning,
             tr("Are you sure you want to delete oximetry data for %1").
                 arg(getDaily()->getDate().toString(Qt::DefaultLocaleLongDate))+"<br/><br/>"+
             tr("<b>Please be aware you can not undo this operation!</b>"),
@@ -2638,7 +2638,7 @@ void MainWindow::on_actionPurgeCurrentDaysOximetry_triggered()
 
         getDaily()->ReloadGraphs();
     } else {
-        QMessageBox::information(this, STR_MessageBox_Information,
+        QMessageBox::information(this, MessageBoxType::STR_MessageBox_Information,
             tr("Select the day with valid oximetry data in daily view first."),QMessageBox::Ok);
     }
 }
@@ -2697,7 +2697,7 @@ void MainWindow::on_actionExport_CSV_triggered()
 
 void MainWindow::on_actionExport_Review_triggered()
 {
-    QMessageBox::information(nullptr, STR_MessageBox_Information, QObject::tr("Sorry, this feature is not implemented yet"), QMessageBox::Ok);
+    QMessageBox::information(nullptr, MessageBoxType::STR_MessageBox_Information, QObject::tr("Sorry, this feature is not implemented yet"), QMessageBox::Ok);
 }
 
 void MainWindow::on_mainsplitter_splitterMoved(int, int)

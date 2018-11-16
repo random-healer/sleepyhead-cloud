@@ -253,10 +253,10 @@ void OximeterImport::on_directImportButton_clicked()
     if (oximodule->commandDriven()) {
         if (devid != ui->cms50DeviceName->text()) {
             if (ui->cms50CheckName->isChecked()) {
-                mainwin->Notify(STR_MessageBox_Information, tr("Renaming this oximeter from '%1' to '%2'").arg(devid).arg(ui->cms50DeviceName->text()));
+                mainwin->Notify(MessageBoxType::STR_MessageBox_Information, tr("Renaming this oximeter from '%1' to '%2'").arg(devid).arg(ui->cms50DeviceName->text()));
                 oximodule->setDeviceID(ui->cms50DeviceName->text());
             } else {
-                QMessageBox::information(this, STR_MessageBox_Information, tr("Oximeter name is different.. If you only have one and are sharing it between profiles, set the name to the same on both profiles."), QMessageBox::Ok);
+                QMessageBox::information(this, MessageBoxType::STR_MessageBox_Information, tr("Oximeter name is different.. If you only have one and are sharing it between profiles, set the name to the same on both profiles."), QMessageBox::Ok);
             }
         }
     }
@@ -421,7 +421,7 @@ void OximeterImport::on_fileImportButton_clicked()
         }
     }
     if (!success) {
-        QMessageBox::warning(this, STR_MessageBox_Warning, tr("No Oximetery module could parse the given file:")+QString("\n\n%1").arg(filename), QMessageBox::Ok);
+        QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Warning, tr("No Oximetery module could parse the given file:")+QString("\n\n%1").arg(filename), QMessageBox::Ok);
         return;
     }
     ui->informationButton->setVisible(false);
@@ -797,7 +797,7 @@ void OximeterImport::on_saveButton_clicked()
     QVector<OxiRecord> * oxirec = nullptr;
 
     if (!oximodule->oxisessions.contains(oximodule->startTime())) {
-        QMessageBox::warning(this, STR_MessageBox_Error, tr("Something went wrong getting session data"), QMessageBox::Ok);
+        QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error, tr("Something went wrong getting session data"), QMessageBox::Ok);
         reject();
         return;
     }

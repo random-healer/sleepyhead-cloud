@@ -163,9 +163,9 @@ void ProfileSelect::editProfile()
                 break;
             } else {
                 if (tries < 3) {
-                    QMessageBox::warning(this, STR_MessageBox_Error, tr("Incorrect Password"), QMessageBox::Ok);
+                    QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error, tr("Incorrect Password"), QMessageBox::Ok);
                 } else {
-                    QMessageBox::warning(this, STR_MessageBox_Error, tr("You entered the password wrong too many times."),
+                    QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error, tr("You entered the password wrong too many times."),
                                          QMessageBox::Ok);
                     reject();
                 }
@@ -187,7 +187,7 @@ void ProfileSelect::deleteProfile()
 
     QDialog confirmdlg;
     QVBoxLayout layout(&confirmdlg);
-    QLabel message(QString("<b>"+STR_MessageBox_Warning+":</b> "+tr("You are about to destroy profile '%1'.")+"<br/><br/>"+tr("Enter the word DELETE below to confirm.")).arg(name), &confirmdlg);
+    QLabel message(QString("<b>"+ MessageBoxType::STR_MessageBox_Warning+":</b> "+tr("You are about to destroy profile '%1'.")+"<br/><br/>"+tr("Enter the word DELETE below to confirm.")).arg(name), &confirmdlg);
     layout.insertWidget(0,&message,1);
     QLineEdit lineedit(&confirmdlg);
     layout.insertWidget(1, &lineedit, 1);
@@ -213,7 +213,7 @@ void ProfileSelect::deleteProfile()
     Profile * profile = Profiles::profiles[name];
     p_profile = profile;
     if (!profile->Load()) {
-        QMessageBox::warning(this, STR_MessageBox_Error,
+        QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error,
             QString(tr("Could not open profile.. You will need to delete this profile directory manually")+
             "\n\n"+tr("You will find it under the following location:")+"\n\n%1").arg(QDir::toNativeSeparators(GetAppRoot() + "/Profiles/" + profile->user->userName())), QMessageBox::Ok);
             return;
@@ -243,9 +243,9 @@ void ProfileSelect::deleteProfile()
                 break;
             } else {
                 if (tries < 3) {
-                    QMessageBox::warning(this, STR_MessageBox_Error, tr("You entered an incorrect password"), QMessageBox::Ok);
+                    QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error, tr("You entered an incorrect password"), QMessageBox::Ok);
                 } else {
-                    QMessageBox::warning(this, STR_MessageBox_Error,
+                    QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error,
                                          tr("If you're trying to delete because you forgot the password, you need to delete it manually."),
                                          QMessageBox::Ok);
                 }
@@ -258,12 +258,12 @@ void ProfileSelect::deleteProfile()
 
         if (!path.isEmpty()) {
             if (!removeDir(path)) {
-                QMessageBox::information(this, STR_MessageBox_Error,
+                QMessageBox::information(this, MessageBoxType::STR_MessageBox_Error,
                                          tr("There was an error deleting the profile directory, you need to manually remove it.")+QString("\n\n%1").arg(path),
                                          QMessageBox::Ok);
             }
             qDebug() << "Delete" << path;
-            QMessageBox::information(this, STR_MessageBox_Information, QString(tr("Profile '%1' was succesfully deleted").arg(name)),QMessageBox::Ok);
+            QMessageBox::information(this, MessageBoxType::STR_MessageBox_Information, QString(tr("Profile '%1' was succesfully deleted").arg(name)),QMessageBox::Ok);
         }
 
         int row = ui->listView->currentIndex().row();
@@ -315,7 +315,7 @@ void ProfileSelect::on_listView_activated(const QModelIndex &index)
         if (!lockhost.isEmpty()) {
             if (lockhost.compare(QHostInfo::localHostName()) == 0) {
                 // Localhost has it locked..
-                if (QMessageBox::warning(nullptr, STR_MessageBox_Warning,
+                if (QMessageBox::warning(nullptr, MessageBoxType::STR_MessageBox_Warning,
                                       QObject::tr("There is a lockfile already present for profile '%1'.").arg(name)+"\n\n"+
                                       QObject::tr("You can only work with one instance of an individual SleepyHead profile at a time.")+"\n\n"+
                                       QObject::tr("Please close any other instances of SleepyHead running with this profile before proceeding.")+"\n\n"+
@@ -325,7 +325,7 @@ void ProfileSelect::on_listView_activated(const QModelIndex &index)
                 }
 
             } else {
-                if (QMessageBox::warning(nullptr, STR_MessageBox_Warning,
+                if (QMessageBox::warning(nullptr, MessageBoxType::STR_MessageBox_Warning,
                                       QObject::tr("There is a lockfile already present for this profile '%1', claimed on '%2'.").arg(name).arg(lockhost)+"\n\n"+
                                       QObject::tr("You can only work with one instance of an individual SleepyHead profile at a time.")+"\n\n"+
                                       QObject::tr("If you are using cloud storage, make sure SleepyHead is closed and syncing has completed first on the other computer before proceeding."),
@@ -374,9 +374,9 @@ void ProfileSelect::on_listView_activated(const QModelIndex &index)
             tries++;
 
             if (tries < 3) {
-                QMessageBox::warning(this, STR_MessageBox_Error, tr("Incorrect Password"), QMessageBox::Ok);
+                QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error, tr("Incorrect Password"), QMessageBox::Ok);
             } else {
-                QMessageBox::warning(this, STR_MessageBox_Error,
+                QMessageBox::warning(this, MessageBoxType::STR_MessageBox_Error,
                                      tr("You entered an Incorrect Password too many times. Exiting!"), QMessageBox::Ok);
             }
         } while (tries < 3);

@@ -471,7 +471,7 @@ void showInGraphicalShell(const QString & pathIn)
     const QString error = QString::fromLocal8Bit(browserProc.readAllStandardError());
     success = success && error.isEmpty();
     if (!success) {
-        QMessageBox::warning(NULL,STR_MessageBox_Error, "Could not find the file browser for your system, you will have to find your profile directory yourself."+"\n\n"+error, QMessageBox::Ok);
+        QMessageBox::warning(NULL,MessageBoxType::STR_MessageBox_Error, "Could not find the file browser for your system, you will have to find your profile directory yourself."+"\n\n"+error, QMessageBox::Ok);
 //        showGraphicalShellError(parent, app, error);
     }*/
 #endif
@@ -506,7 +506,7 @@ void Profile::DataFormatError(Machine *m)
         msg = msg + QObject::tr("<i>Your old machine data should be regenerated provided this backup feature has not been disabled in preferences during a previous data import.</i>") + "<br/><br/>";
         backups = true;
     } else {
-        msg = msg + "<font size=+1>"+STR_MessageBox_Warning+":</font> "+QObject::tr("SleepyHead does not yet have any automatic card backups stored for this device.") + "<br/><br/>";
+        msg = msg + "<font size=+1>"+ MessageBoxType::STR_MessageBox_Warning+":</font> "+QObject::tr("SleepyHead does not yet have any automatic card backups stored for this device.") + "<br/><br/>";
         msg = msg + QObject::tr("This means you will need to import this machine data again afterwards from your own backups or data card.") + "<br/><br/>";
     }
 
@@ -525,7 +525,7 @@ void Profile::DataFormatError(Machine *m)
     if (question->exec() == QMessageBox::Yes) {
         if (!m->Purge(3478216)) {
             // Purge failed.. probably a permissions error.. let the user deal with it.
-            QMessageBox::critical(nullptr, STR_MessageBox_Error,
+            QMessageBox::critical(nullptr, MessageBoxType::STR_MessageBox_Error,
                                   QObject::tr("Sorry, the purge operation failed, which means this version of SleepyHead can't start.")+"\n\n"+
                                   QObject::tr("The machine data folder needs to be removed manually.")+"\n\n"+
                                   QObject::tr("This folder currently resides at the following location:")+"\n\n"+
@@ -539,13 +539,13 @@ void Profile::DataFormatError(Machine *m)
             if (!p_profile->session->backupCardData()) {
                 // Automatic backups not available for Intellipap users yet, so don't taunt them..
                 if (m->loaderName() != STR_MACH_Intellipap) {
-                    if (QMessageBox::question(nullptr, STR_MessageBox_Question, QObject::tr("Would you like to switch on automatic backups, so next time a new version of SleepyHead needs to do so, it can rebuild from these?"),
+                    if (QMessageBox::question(nullptr, MessageBoxType::STR_MessageBox_Question, QObject::tr("Would you like to switch on automatic backups, so next time a new version of SleepyHead needs to do so, it can rebuild from these?"),
                                               QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes)) {
                         p_profile->session->setBackupCardData(true);
                     }
                 }
             }
-            QMessageBox::information(nullptr, STR_MessageBox_Information,
+            QMessageBox::information(nullptr, MessageBoxType::STR_MessageBox_Information,
                                      QObject::tr("SleepyHead will now start the import wizard so you can reinstall your %1 data.").arg(m->brand())
                                      ,QMessageBox::Ok, QMessageBox::Ok);
             mainwin->startImportDialog();
@@ -555,7 +555,7 @@ void Profile::DataFormatError(Machine *m)
 
     } else {
         delete question;
-        QMessageBox::information(nullptr, STR_MessageBox_Information,
+        QMessageBox::information(nullptr, MessageBoxType::STR_MessageBox_Information,
             QObject::tr("SleepyHead will now exit, then (attempt to) launch your computers file manager so you can manually back your profile up:")+"\n\n"+
             QDir::toNativeSeparators(Get(p_preferences[STR_GEN_DataFolder].toString()))+"\n\n"+
             QObject::tr("Use your file manager to make a copy of your profile directory, then afterwards, restart Sleepyhead and complete the upgrade process.")

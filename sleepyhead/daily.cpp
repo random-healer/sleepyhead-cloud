@@ -327,14 +327,14 @@ Daily::Daily(QWidget *parent,gGraphView * shared)
     ui->splitter->setVisible(false);
 
     if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
-        ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_POUND);
         ui->weightSpinBox->setDecimals(0);
         ui->ouncesSpinBox->setVisible(true);
-        ui->ouncesSpinBox->setSuffix(STR_UNIT_OUNCE);
+        ui->ouncesSpinBox->setSuffix(UnitWeight::STR_UNIT_OUNCE);
     } else {
         ui->ouncesSpinBox->setVisible(false);
         ui->weightSpinBox->setDecimals(3);
-        ui->weightSpinBox->setSuffix(STR_UNIT_KG);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_KG);
     }
     GraphView->setEmptyText(STR_Empty_NoData);
     previous_date=QDate();
@@ -699,14 +699,14 @@ void Daily::on_ReloadDay()
     ui->calendar->setFocus(Qt::ActiveWindowFocusReason);
 
     if (p_profile->general->unitSystem()== UnitSystem::US_Archiac) {
-        ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_POUND);
         ui->weightSpinBox->setDecimals(0);
         ui->ouncesSpinBox->setVisible(true);
-        ui->ouncesSpinBox->setSuffix(STR_UNIT_OUNCE);
+        ui->ouncesSpinBox->setSuffix(UnitWeight::STR_UNIT_OUNCE);
     } else {
         ui->ouncesSpinBox->setVisible(false);
         ui->weightSpinBox->setDecimals(3);
-        ui->weightSpinBox->setSuffix(STR_UNIT_KG);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_KG);
     }
     this->setCursor(Qt::ArrowCursor);
     other_time=time.restart();
@@ -981,7 +981,7 @@ QString Daily::getCPAPInformation(Day * day)
     html+="</td></tr>\n";
     if ((day->settingExists(CPAP_BrokenSummary))) {
         html+="<tr><td>&nbsp;</td></tr>\n";
-        html+=QString("<tr><td colspan=2><i>%1</i></td></tr>").arg("<b>"+STR_MessageBox_PleaseNote+":</b> "+ tr("This day has missing pressure, mode and settings data."));
+        html+=QString("<tr><td colspan=2><i>%1</i></td></tr>").arg("<b>"+ MessageBoxType::STR_MessageBox_PleaseNote+":</b> "+ tr("This day has missing pressure, mode and settings data."));
     }
 
     html+="</table>\n";
@@ -1085,7 +1085,7 @@ QString Daily::getStatisticsInfo(Day * day)
 
     if (GraphView->isEmpty() && ((ccnt>0) || (cpap && day->summaryOnly()))) {
         html+="<tr><td colspan=5>&nbsp;</td></tr>\n";
-        html+=QString("<tr><td colspan=5 align=center><i>%1</i></td></tr>").arg("<b>"+STR_MessageBox_PleaseNote+"</b> "+ tr("This day just contains summary data, only limited information is available ."));
+        html+=QString("<tr><td colspan=5 align=center><i>%1</i></td></tr>").arg("<b>"+ MessageBoxType::STR_MessageBox_PleaseNote+"</b> "+ tr("This day just contains summary data, only limited information is available ."));
     } else if (cpap) {
         html+="<tr><td colspan=5>&nbsp;</td></tr>";
 
@@ -1144,7 +1144,7 @@ QString Daily::getSleepTime(Day * day)
         return html;
 
     html+="<table cellspacing=0 cellpadding=0 border=0 width='100%'>\n";
-    html+="<tr><td align='center'><b>"+STR_TR_Date+"</b></td><td align='center'><b>"+tr("Sleep")+"</b></td><td align='center'><b>"+tr("Wake")+"</b></td><td align='center'><b>"+STR_UNIT_Hours+"</b></td></tr>";
+    html+="<tr><td align='center'><b>"+STR_TR_Date+"</b></td><td align='center'><b>"+tr("Sleep")+"</b></td><td align='center'><b>"+tr("Wake")+"</b></td><td align='center'><b>"+ UnitTime::STR_UNIT_Hours+"</b></td></tr>";
     int tt = (int)qint64(day->total_time())/1000L;
     QDateTime date = QDateTime::fromTime_t((uint)(day->first()/1000L));
     QDateTime date2 = QDateTime::fromTime_t((uint)(day->last()/1000L));
@@ -1487,7 +1487,7 @@ void Daily::Load(QDate date)
                 ui->weightSpinBox->setValue(kg);
                 ui->weightSpinBox->blockSignals(false);
                 ui->ouncesSpinBox->setVisible(false);
-                ui->weightSpinBox->setSuffix(STR_UNIT_KG);
+                ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_KG);
             } else {
                 float ounces=(kg*1000.0)/ounce_convert;
                 int pounds=ounces/16.0;
@@ -1501,10 +1501,10 @@ void Daily::Load(QDate date)
                 ui->ouncesSpinBox->blockSignals(false);
                 ui->weightSpinBox->blockSignals(false);
 
-                ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
+                ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_POUND);
                 ui->weightSpinBox->setDecimals(0);
                 ui->ouncesSpinBox->setVisible(true);
-                ui->ouncesSpinBox->setSuffix(STR_UNIT_OUNCE);
+                ui->ouncesSpinBox->setSuffix(UnitWeight::STR_UNIT_OUNCE);
             }
             double height=p_profile->user->height()/100.0;
             if (height>0 && kg>0) {
@@ -1566,16 +1566,16 @@ void Daily::UnitsChanged()
         ui->ouncesSpinBox->setValue(oz);
 
         ui->weightSpinBox->setDecimals(0);
-        ui->weightSpinBox->setSuffix(STR_UNIT_POUND);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_POUND);
         ui->ouncesSpinBox->setVisible(true);
-        ui->ouncesSpinBox->setSuffix(STR_UNIT_OUNCE);
+        ui->ouncesSpinBox->setSuffix(UnitWeight::STR_UNIT_OUNCE);
     } else {
         kg=(ui->weightSpinBox->value()*(ounce_convert*16.0))+(ui->ouncesSpinBox->value()*ounce_convert);
         kg/=1000.0;
         ui->weightSpinBox->setDecimals(3);
         ui->weightSpinBox->setValue(kg);
         ui->ouncesSpinBox->setVisible(false);
-        ui->weightSpinBox->setSuffix(STR_UNIT_KG);
+        ui->weightSpinBox->setSuffix(UnitWeight::STR_UNIT_KG);
     }
 }
 

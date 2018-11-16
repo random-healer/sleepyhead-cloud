@@ -922,7 +922,7 @@ jumpnext:
             break;
 
         case ST_HOURS:
-            b = STR_UNIT_Hours;
+            b = UnitTime::STR_UNIT_Hours;
             break;
 
         case ST_SESSIONS:
@@ -1198,7 +1198,7 @@ bool SummaryChart::mouseMoveEvent(QMouseEvent *event, gGraph *graph)
                         break;
 
                     case ST_HOURS:
-                        a = STR_UNIT_Hours;
+                        a = UnitTime::STR_UNIT_Hours;
                         break;
 
                     case ST_SESSIONS:

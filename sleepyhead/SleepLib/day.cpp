@@ -1467,7 +1467,7 @@ bool Day::searchMachine(MachineType mt) {
 QString Day::getCPAPMode()
 {
     Machine * mach = machine(MT_CPAP);
-    if (!mach) return STR_MessageBox_Error;
+    if (!mach) return MessageBoxType::STR_MessageBox_Error;
 
     CPAPLoader * loader = qobject_cast<CPAPLoader *>(mach->loader());
 
@@ -1501,11 +1501,11 @@ QString Day::getCPAPMode()
 QString Day::getPressureRelief()
 {
     Machine * mach = machine(MT_CPAP);
-    if (!mach) return STR_MessageBox_Error;
+    if (!mach) return MessageBoxType::STR_MessageBox_Error;
 
     CPAPLoader * loader = qobject_cast<CPAPLoader *>(mach->loader());
 
-    if (!loader) return STR_MessageBox_Error;
+    if (!loader) return MessageBoxType::STR_MessageBox_Error;
 
     QString pr_str;
 

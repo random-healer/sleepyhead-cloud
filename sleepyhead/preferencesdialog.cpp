@@ -221,8 +221,8 @@ PreferencesDialog::PreferencesDialog(QWidget *parent, Profile *_profile) :
     ui->maskLeaks4Slider->setValue(profile->cpap->custom4cmH2OLeaks()*10.0);
     ui->maskLeaks20Slider->setValue(profile->cpap->custom20cmH2OLeaks()*10.0);
 
-    ui->maskLeaks4Label->setText(tr("%1 %2").arg(profile->cpap->custom4cmH2OLeaks(), 5, 'f', 1).arg(STR_UNIT_LPM));
-    ui->maskLeaks20Label->setText(tr("%1 %2").arg(profile->cpap->custom20cmH2OLeaks(), 5, 'f', 1).arg(STR_UNIT_LPM));
+    ui->maskLeaks4Label->setText(tr("%1 %2").arg(profile->cpap->custom4cmH2OLeaks(), 5, 'f', 1).arg(UnitPerMinute::STR_UNIT_LPM));
+    ui->maskLeaks20Label->setText(tr("%1 %2").arg(profile->cpap->custom20cmH2OLeaks(), 5, 'f', 1).arg(UnitPerMinute::STR_UNIT_LPM));
 
     /*    QLocale locale=QLocale::system();
         QString shortformat=locale.dateFormat(QLocale::ShortFormat);
@@ -1065,18 +1065,18 @@ void PreferencesDialog::on_okButton_clicked()
 void PreferencesDialog::on_scrollDampeningSlider_valueChanged(int value)
 {
     if (value > 0) {
-        ui->scrollDampDisplay->setText(QString("%1%2").arg(value * 10).arg(STR_UNIT_ms));
+        ui->scrollDampDisplay->setText(QString("%1%2").arg(value * 10).arg(UnitTime::STR_UNIT_ms));
     } else { ui->scrollDampDisplay->setText(STR_TR_Off); }
 }
 
 void PreferencesDialog::on_tooltipTimeoutSlider_valueChanged(int value)
 {
-    ui->tooltipTimeoutDisplay->setText(QString("%1%2").arg(double(value)/1000.0,0,'f',1).arg(STR_UNIT_s));
+    ui->tooltipTimeoutDisplay->setText(QString("%1%2").arg(double(value)/1000.0,0,'f',1).arg(UnitTime::STR_UNIT_s));
 }
 
 void PreferencesDialog::on_resetChannelDefaults_clicked()
 {
-    if (QMessageBox::question(this, STR_MessageBox_Warning, QObject::tr("Are you sure you want to reset all your channel colors and settings to defaults?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
+    if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning, QObject::tr("Are you sure you want to reset all your channel colors and settings to defaults?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
         schema::resetChannels();
         saveWaveInfo();
         InitChanInfo();
@@ -1086,7 +1086,7 @@ void PreferencesDialog::on_resetChannelDefaults_clicked()
 void PreferencesDialog::on_createSDBackups_clicked(bool checked)
 {
     if (!checked && p_profile->session->backupCardData()) {
-        if (QMessageBox::question(this, STR_MessageBox_Warning, tr("Switching off automatic backups is not a good idea, because SleepyHead needs these to rebuild the database if errors are found.")+"\n\n"+
+        if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning, tr("Switching off automatic backups is not a good idea, because SleepyHead needs these to rebuild the database if errors are found.")+"\n\n"+
                               tr("Are you really sure you want to do this?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
         } else {
             ui->createSDBackups->setChecked(true);
@@ -1127,7 +1127,7 @@ void PreferencesDialog::on_waveSearch_textChanged(const QString &arg1)
 
 void PreferencesDialog::on_resetWaveformChannels_clicked()
 {
-    if (QMessageBox::question(this, STR_MessageBox_Warning, QObject::tr("Are you sure you want to reset all your waveform channel colors and settings to defaults?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
+    if (QMessageBox::question(this, MessageBoxType::STR_MessageBox_Warning, QObject::tr("Are you sure you want to reset all your waveform channel colors and settings to defaults?"), QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::Yes) {
         schema::resetChannels();
         saveChanInfo(); // reset clears EVERYTHING, so have to put these back in case they cancel.
         InitWaveInfo();
@@ -1157,12 +1157,12 @@ void PreferencesDialog::on_waveView_doubleClicked(const QModelIndex &index)
 
 void PreferencesDialog::on_maskLeaks4Slider_valueChanged(int value)
 {
-    ui->maskLeaks4Label->setText(tr("%1 %2").arg(value/10.0f, 5,'f',1).arg(STR_UNIT_LPM));
+    ui->maskLeaks4Label->setText(tr("%1 %2").arg(value/10.0f, 5,'f',1).arg(UnitPerMinute::STR_UNIT_LPM));
 }
 
 void PreferencesDialog::on_maskLeaks20Slider_valueChanged(int value)
 {
-    ui->maskLeaks20Label->setText(tr("%1 %2").arg(value/10.0f, 5,'f',1).arg(STR_UNIT_LPM));
+    ui->maskLeaks20Label->setText(tr("%1 %2").arg(value/10.0f, 5,'f',1).arg(UnitPerMinute::STR_UNIT_LPM));
 }
 
 void PreferencesDialog::on_calculateUnintentionalLeaks_toggled(bool)

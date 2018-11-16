@@ -120,7 +120,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
 
 
 
-//    uc = new SummaryChart(STR_UNIT_Hours, GT_BAR);
+//    uc = new SummaryChart(UnitTime::STR_UNIT_Hours, GT_BAR);
 //    uc->addSlice(NoChannel, COLOR_Green, ST_HOURS);
 //    UC->AddLayer(uc);
 
@@ -152,7 +152,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
     SES = createGraph(STR_GRAPH_Sessions, STR_TR_Sessions, STR_TR_Sessions + tr("\n(count)"));
 
 
-    ahihr = new SummaryChart(STR_UNIT_EventsPerHour, GT_POINTS);
+    ahihr = new SummaryChart(UnitPerMinute::STR_UNIT_EventsPerHour, GT_POINTS);
     ahihr->addSlice(ahicode, COLOR_Blue, ST_MAX);
     ahihr->addSlice(ahicode, COLOR_Orange, ST_WAVG);
     AHIHR->AddLayer(ahihr);
@@ -195,7 +195,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
     sa->addSlice(CPAP_SensAwake, COLOR_Brown, ST_CNT);
     SA->AddLayer(sa);
 
-    us = new SummaryChart(STR_UNIT_Hours, GT_SESSIONS);
+    us = new SummaryChart(UnitTime::STR_UNIT_Hours, GT_SESSIONS);
     us->addSlice(NoChannel, COLOR_DarkBlue, ST_HOURS);
     us->addSlice(NoChannel, COLOR_Blue, ST_SESSIONS);
     US->AddLayer(us);
@@ -248,7 +248,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
     tv->addSlice(CPAP_TidalVolume, COLOR_Green, ST_max, maxperc);
     TV->AddLayer(tv);
 
-    mv = new SummaryChart(STR_UNIT_LPM, GT_POINTS);
+    mv = new SummaryChart(UnitPerMinute::STR_UNIT_LPM, GT_POINTS);
     mv->addSlice(CPAP_MinuteVent, COLOR_LightBlue, ST_MIN);
     mv->addSlice(CPAP_MinuteVent, COLOR_Blue, ST_mid, 0.5);
     mv->addSlice(CPAP_MinuteVent, COLOR_LightGreen, ST_PERC, percentile);
@@ -256,7 +256,7 @@ Overview::Overview(QWidget *parent, gGraphView *shared) :
     MV->AddLayer(mv);
 
     // should merge...
-    tgmv = new SummaryChart(STR_UNIT_LPM, GT_POINTS);
+    tgmv = new SummaryChart(UnitPerMinute::STR_UNIT_LPM, GT_POINTS);
     tgmv->addSlice(CPAP_TgMV, COLOR_LightBlue, ST_MIN);
     tgmv->addSlice(CPAP_TgMV, COLOR_Blue, ST_mid, 0.5);
     tgmv->addSlice(CPAP_TgMV, COLOR_LightGreen, ST_PERC, percentile);
@@ -354,10 +354,10 @@ void Overview::RebuildGraphs(bool reset)
     ttia = new gTTIAChart();
     TTIA->AddLayer(ttia);
 
-//    LK = createGraph("Leaks", STR_TR_Leaks, STR_TR_UnintentionalLeaks + "\n(" + STR_UNIT_LPM + ")");
+//    LK = createGraph("Leaks", STR_TR_Leaks, STR_TR_UnintentionalLeaks + "\n(" + UnitPerMinute::STR_UNIT_LPM + ")");
 //    LK->AddLayer(new gSummaryChart(CPAP_Leak, MT_CPAP));
 
-//    TOTLK = createGraph("TotalLeaks", STR_TR_TotalLeaks, STR_TR_TotalLeaks + "\n(" + STR_UNIT_LPM + ")");
+//    TOTLK = createGraph("TotalLeaks", STR_TR_TotalLeaks, STR_TR_TotalLeaks + "\n(" + UnitPerMinute::STR_UNIT_LPM + ")");
 //    TOTLK->AddLayer(new gSummaryChart(CPAP_LeakTotal, MT_CPAP));
 
 //    NLL = createGraph("TimeInLL", tr("% in %1").arg(schema::channel[CPAP_LargeLeak].label()), tr("Large Leaks\n(% of night)"));
@@ -404,7 +404,7 @@ void Overview::RebuildGraphs(bool reset)
 
     }
 
-/*    PULSE = createGraph(schema::channel[OXI_Pulse].code(), schema::channel[OXI_Pulse].label(), STR_TR_PulseRate + "\n(" + STR_UNIT_BPM + ")");
+/*    PULSE = createGraph(schema::channel[OXI_Pulse].code(), schema::channel[OXI_Pulse].label(), STR_TR_PulseRate + "\n(" + UnitPerMinute::STR_UNIT_BPM + ")");
     PULSE->AddLayer(new gSummaryChart(OXI_Pulse, MT_OXIMETER));
 
     SPO2 = createGraph(schema::channel[OXI_SPO2].code(), schema::channel[OXI_SPO2].label(), tr("Oxygen Saturation\n(%)"));

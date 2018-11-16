@@ -156,39 +156,69 @@ namespace SleepyHead
 		// Commonly used translatable text strings
 		///////////////////////////////////////////////////////////////////////////////////////////////
 
-		extern QString STR_UNIT_CM;
-		extern QString STR_UNIT_INCH;
-		extern QString STR_UNIT_FOOT;
-		extern QString STR_UNIT_POUND;
-		extern QString STR_UNIT_OUNCE;
-		extern QString STR_UNIT_KG;
+		class UnitLength
+		{
+		public:
+			static QString STR_UNIT_CM;
+			static QString STR_UNIT_INCH;
+			static QString STR_UNIT_FOOT;
+		};
+
+		class UnitWeight
+		{
+		public:
+			static QString STR_UNIT_POUND;
+			static QString STR_UNIT_OUNCE;
+			static QString STR_UNIT_KG;
+		};
+
 		extern QString STR_UNIT_CMH2O;
-		extern QString STR_UNIT_Hours;
-		extern QString STR_UNIT_Minutes;
-		extern QString STR_UNIT_Seconds;
-		extern QString STR_UNIT_h; // (h)ours, (m)inutes, (s)econds
-		extern QString STR_UNIT_m;
-		extern QString STR_UNIT_s;
-		extern QString STR_UNIT_ms;
-		extern QString STR_UNIT_BPM;       // Beats per Minute
-		extern QString STR_UNIT_LPM;       // Litres per Minute
-		extern QString STR_UNIT_ml;        // millilitres
-		extern QString STR_UNIT_Litres;
+
+		class UnitTime
+		{
+		public:
+			static QString STR_UNIT_Hours;
+			static QString STR_UNIT_Minutes;
+			static QString STR_UNIT_Seconds;
+			static QString STR_UNIT_h; // (h)ours, (m)inutes, (s)econds
+			static QString STR_UNIT_m;
+			static QString STR_UNIT_s;
+			static QString STR_UNIT_ms;
+		};
+
+		class UnitPerMinute
+		{
+		public:
+			static QString STR_UNIT_EventsPerHour;
+			static QString STR_UNIT_BreathsPerMinute;
+			static QString STR_UNIT_BPM;       // Beats per Minute
+			static QString STR_UNIT_LPM;       // Litres per Minute
+		};
+
+		class UnitVolume
+		{
+		public:
+			static QString STR_UNIT_Litres;
+			static QString STR_UNIT_ml;        // millilitres
+		};
+
 		extern QString STR_UNIT_Hz;
-		extern QString STR_UNIT_EventsPerHour;
 		extern QString STR_UNIT_Percentage;
-		extern QString STR_UNIT_BreathsPerMinute;
 		extern QString STR_UNIT_Unknown;
 		extern QString STR_UNIT_Ratio;
 		extern QString STR_UNIT_Severity;
 		extern QString STR_UNIT_Degrees;
 
-		extern QString STR_MessageBox_Question;
-		extern QString STR_MessageBox_Information;
-		extern QString STR_MessageBox_Error;
-		extern QString STR_MessageBox_Warning;
-		extern QString STR_MessageBox_Busy;
-		extern QString STR_MessageBox_PleaseNote;
+		class MessageBoxType
+		{
+		public:
+			static QString STR_MessageBox_Question;
+			static QString STR_MessageBox_Information;
+			static QString STR_MessageBox_Error;
+			static QString STR_MessageBox_Warning;
+			static QString STR_MessageBox_Busy;
+			static QString STR_MessageBox_PleaseNote;
+		};
 
 		extern QString STR_MessageBox_Yes;
 		extern QString STR_MessageBox_No;

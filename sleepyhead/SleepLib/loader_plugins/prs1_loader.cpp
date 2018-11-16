@@ -2929,7 +2929,7 @@ void PRS1Loader::initChannels()
         QObject::tr("Pressure Pulse"),
         QObject::tr("A pulse of pressure 'pinged' to detect a closed airway."),
         QObject::tr("PP"),
-        STR_UNIT_EventsPerHour,    DEFAULT,    QColor("dark red")));
+		UnitPerMinute::STR_UNIT_EventsPerHour,    DEFAULT,    QColor("dark red")));
 
     channel.add(GRP_CPAP, chan = new Channel(PRS1_FlexMode = 0xe105, SETTING,  MT_CPAP,  SESSION,
         "PRS1FlexMode", QObject::tr("Flex Mode"),

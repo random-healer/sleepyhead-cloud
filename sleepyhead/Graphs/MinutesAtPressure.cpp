@@ -262,11 +262,11 @@ void MinutesAtPressure::paint(QPainter &painter, gGraph &graph, const QRegion &r
 
             if (ipap_minutes > 0) {
                 good = true;
-                str += ichan.label()+": "+QString("%1 %2").arg(ipap_minutes,3,'f',1).arg(STR_UNIT_Minutes)+"\n";
+                str += ichan.label()+": "+QString("%1 %2").arg(ipap_minutes,3,'f',1).arg(UnitTime::STR_UNIT_Minutes)+"\n";
             }
             if (epap_minutes > 0) {
                 good = true;
-                str += echan.label()+": "+QString("%1 %2").arg(epap_minutes,3,'f',1).arg(STR_UNIT_Minutes)+"\n";
+                str += echan.label()+": "+QString("%1 %2").arg(epap_minutes,3,'f',1).arg(UnitTime::STR_UNIT_Minutes)+"\n";
             }
             if (good) {
                 str+="\n";
@@ -584,7 +584,7 @@ void MinutesAtPressure::paint(QPainter &painter, gGraph &graph, const QRegion &r
     GetTextExtent(text, w,h);
     graph.renderText(text, (left-4) - w, ypos + hix/2.0 + float(h)/2.0);
 
-    text = STR_UNIT_Minutes;
+    text = UnitTime::STR_UNIT_Minutes;
     rec = QRectF(titleWidth-4, ypos+hix, marginWidth, hix);
     rec.moveRight(left - 4);
 

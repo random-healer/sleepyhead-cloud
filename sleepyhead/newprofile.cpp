@@ -47,7 +47,7 @@ NewProfile::NewProfile(QWidget *parent) :
     m_passwordHashed = false;
     ui->heightEdit2->setVisible(false);
     ui->heightEdit->setDecimals(2);
-    ui->heightEdit->setSuffix(STR_UNIT_CM);
+    ui->heightEdit->setSuffix(UnitLength::STR_UNIT_CM);
 
     {
         // process countries list
@@ -154,7 +154,7 @@ void NewProfile::on_nextButton_clicked()
 
     case 1:
         if (ui->userNameEdit->text().isEmpty()) {
-            QMessageBox::information(this, STR_MessageBox_Error, tr("Please provide a username for this profile"), QMessageBox::Ok);
+            QMessageBox::information(this, MessageBoxType::STR_MessageBox_Error, tr("Please provide a username for this profile"), QMessageBox::Ok);
             return;
         }
 
@@ -164,7 +164,7 @@ void NewProfile::on_nextButton_clicked()
 
         if (ui->passwordGroupBox->isChecked()) {
             if (ui->passwordEdit1->text() != ui->passwordEdit2->text()) {
-                QMessageBox::information(this, STR_MessageBox_Error, tr("Passwords don't match"), QMessageBox::Ok);
+                QMessageBox::information(this, MessageBoxType::STR_MessageBox_Error, tr("Passwords don't match"), QMessageBox::Ok);
                 return;
             }
 
@@ -393,13 +393,13 @@ void NewProfile::edit(const QString name)
         ui->heightEdit2->setVisible(true);
         ui->heightEdit->setDecimals(0);
         ui->heightEdit2->setDecimals(0);
-        ui->heightEdit->setSuffix(STR_UNIT_FOOT); // foot
-        ui->heightEdit2->setSuffix(STR_UNIT_INCH); // inches
+        ui->heightEdit->setSuffix(UnitLength::STR_UNIT_FOOT); // foot
+        ui->heightEdit2->setSuffix(UnitLength::STR_UNIT_INCH); // inches
     } else { // good wholesome metric
         ui->heightEdit->setValue(v);
         ui->heightEdit2->setVisible(false);
         ui->heightEdit->setDecimals(2);
-        ui->heightEdit->setSuffix(STR_UNIT_CM);
+        ui->heightEdit->setSuffix(UnitLength::STR_UNIT_CM);
     }
 }
 
@@ -419,16 +419,16 @@ void NewProfile::on_heightCombo_currentIndexChanged(int index)
         //metric
         ui->heightEdit2->setVisible(false);
         ui->heightEdit->setDecimals(2);
-        ui->heightEdit->setSuffix(STR_UNIT_CM);
+        ui->heightEdit->setSuffix(UnitLength::STR_UNIT_CM);
         double v = ui->heightEdit->value() * 30.48;
         v += ui->heightEdit2->value() * 2.54;
         ui->heightEdit->setValue(v);
     } else {        //evil
         ui->heightEdit->setDecimals(0);
         ui->heightEdit2->setDecimals(0);
-        ui->heightEdit->setSuffix(STR_UNIT_FOOT);
+        ui->heightEdit->setSuffix(UnitLength::STR_UNIT_FOOT);
         ui->heightEdit2->setVisible(true);
-        ui->heightEdit2->setSuffix(STR_UNIT_INCH);
+        ui->heightEdit2->setSuffix(UnitLength::STR_UNIT_INCH);
         int v = ui->heightEdit->value() / 2.54;
         int feet = v / 12;
         int inches = v % 12;
