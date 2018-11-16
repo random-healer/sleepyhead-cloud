@@ -615,9 +615,6 @@ bool EDFParser::Parse()
     }
 
     startdate = qint64(startDate.toTime_t()) * 1000L;
-    //startdate-=timezoneOffset();
-
-    //qDebug() << startDate.toString("yyyy-MM-dd HH:mm:ss");
 
     num_header_bytes = QString::fromLatin1(header.num_header_bytes, 8).toLong(&ok);
 

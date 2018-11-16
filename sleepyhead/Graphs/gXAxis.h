@@ -87,6 +87,9 @@ class gXAxis: public Layer
     QImage m_image;
 
     bool m_roundDays;
+
+private:
+	qint64 timezoneOffset();
 };
 
 class gXAxisDay: public Layer

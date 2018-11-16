@@ -42,11 +42,6 @@ class OldDBVersion {};
 const quint32 magic = 0xC73216AB; // Magic number for SleepyHead Data Files.. Don't touch!
 
 //const int max_number_event_fields=10;
-// This should probably move somewhere else
-//! \fn timezoneOffset();
-//! \brief Calculate the timezone Offset in milliseconds between system timezone and UTC
-qint64 timezoneOffset();
-
 
 /*! \enum SummaryType
     \brief Calculation/Display method to select from dealing with summary information
