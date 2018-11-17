@@ -64,6 +64,8 @@
 
 #include <QOpenGLFunctions>
 
+#include "SleepyHead-Bridge.h"
+
 using namespace SleepyHead::Common;
 
 QProgressBar *qprogress;
@@ -82,6 +84,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     Q_ASSERT(p_profile != nullptr);
+
+	//SleepyHeadBridge::Utility::Test();
 
     ui->setupUi(this);
 
